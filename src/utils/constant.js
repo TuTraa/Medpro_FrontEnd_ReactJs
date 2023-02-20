@@ -1,15 +1,32 @@
 export const path = {
     HOME: '/',
+    HOMEPAGE: '/home',
     LOGIN: '/login',
     LOG_OUT: '/logout',
-    SYSTEM: '/system'
+    SYSTEM: '/system',
+    DETAIL_DOCTOR: '/detail-doctor/:id',
+    DOCTOR: '/doctor',
+    VERIFY_EMAIL_BOOKING: '/verify-booking',
 };
 
 export const languages = {
     VI: 'vi',
     EN: 'en'
 };
- 
+
+export const USER_ROLE = {
+    ADMIN: "R1",
+    DOCTOR: "R2",
+    PATIENT: "R3"
+}
+
+export const CRUD_ACTION = {
+    CREATE: "CREATE",
+    EDIT: "EDIT",
+    DELETE: "DELETE",
+    READ: "READ",
+
+}
 export const manageActions = {
     ADD: "ADD",
     EDIT: "EDIT",

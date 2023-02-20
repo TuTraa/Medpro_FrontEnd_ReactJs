@@ -1,0 +1,70 @@
+.doctor-infor{
+    border-left: 1px solid rgb(204, 201, 201);
+    margin-top: 1rem;
+    padding-left:2rem;
+    .content-right-label-adress{
+        font-weight: 400;
+        font-size: 14px;
+        color: #666;
+    }
+    .content-right-adress-name{
+        font-weight: bold;
+    }
+    .content-right-adress{
+        
+    }
+    hr{
+        height: .5px;
+        width: 500px;
+        color: rgb(120, 117, 117);
+    }
+    .price-row{
+        display: flex;
+        .label-price{}
+        .price{
+            margin-left: 2px;
+        }
+        .more-infor{
+            color:rgb(68, 183, 183);
+            margin-left: 2px;
+        }
+
+    }
+    .infor-price-more{
+        margin-top: 1rem;
+        .infor-price{
+        border: 1px solid rgb(213, 211, 211);
+        background-color: #f8f8f8;
+        padding: 5px 0px 0px 0px;
+
+            .min-max-price{
+                margin: 0px 3px;
+
+                display: flex;
+                justify-content: space-between;
+                .label-min-max{
+                }
+            }
+            .infor-detail{
+                margin-left:3px;
+                font-size: 12px;
+                color: #666;
+            }
+            .note{
+                margin-top: 5px;
+                background-color: #eaeaea;
+                border-top: 1px solid #d1d1d1;
+                padding: 5px 2px;
+            }
+
+
+        }
+        .hide-infor-price{
+            margin-top: 1rem;
+            color:rgb(26, 178, 178);
+            margin-left: 2px;
+        }
+        .infor-detail{}
+
+    }
+}

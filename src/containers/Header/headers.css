@@ -1,0 +1,8 @@
+.search-wrapper {
+  background-color: aqua;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+.search-wrapper .input_holder .search_icon span{
+    color: black;
+}

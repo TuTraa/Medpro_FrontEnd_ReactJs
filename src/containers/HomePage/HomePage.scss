@@ -1,0 +1,154 @@
+.section-slide {
+    &.medicalFacility {
+        background-color: #eeeeee;
+    }
+
+    &.specialty {
+        background-color: #fff;
+    }
+
+    &.OutSandingDoctor {
+        background-color: #fff;
+    }
+
+    height: 330px;
+    background:#f5f5f5;
+
+    .slide-title {
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        align-items: center;
+
+        .text {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .button {
+            background-color: rgb(230, 230, 230);
+            color: #4c4c4c;
+            padding: 1rem;
+            text-align: center;
+            font-size: 12px;
+
+            &:hover {
+                background-color: #f5fc69;
+            }
+        }
+    }
+
+    .slide-content {
+        .slick-disabled {
+            display: none !important;
+        }
+
+        .slide-item {
+            height: 220px;
+            cursor: pointer;
+
+            .bg-image {
+                height: 170px;
+                width: 315px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+
+                // &.slick-img {
+                //     background-image: url('https://cdn.bookingcare.vn/fr/w300/2019/12/16/181822-san-phu-khoa.jpg');
+
+                // }
+
+                // &.slick-img-facility {
+                //     background-image: url('https://cdn.bookingcare.vn/fr/w500/2020/06/04/093035-benh-vien-thu-cuc-1.jpg');
+
+                // }
+
+                // &.slick-img-facility1 {
+                //     background-image: url('https://cdn.bookingcare.vn/fr/w500/2021/09/14/095119-benh-vien-cho-ray-h1.jpg');
+                // }
+
+                &.slick-img-doctor {
+                    // background-image: url('https://cdn.bookingcare.vn/fr/w200/2017/12/23/162751bac-si-nguyen-xuan-thanh.jpg');
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .img-doctor-out {
+                padding: 2rem 0 0rem 0;
+                border: 1px solid rgb(216, 216, 216);
+                margin-right: 10px;
+            }
+
+        }
+    }
+}
+
+.slick-prev {
+    position: relative;
+    margin-left: 1rem;
+    border: 2px solid rgb(211, 211, 211) !important;
+
+}
+
+.slick-next {
+    border: 2px solid rgb(205, 204, 204) !important;
+    position: relative;
+    margin-right: 1rem;
+}
+
+.slick-prev,
+.slick-next {
+    z-index: 10;
+    background-color: rgb(255, 255, 255) !important;
+    height: 40px !important;
+    width: 40px !important;
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.slick-prev::before {
+    font-family: "Font Awesome 5 free" !important;
+    content: "\f359" !important;
+    color: rgb(152, 152, 152) !important;
+    font-size: 25px !important;
+
+}
+
+.slick-next::before {
+    color: rgb(152, 152, 152) !important;
+    font-family: "Font Awesome 5 free" !important;
+    content: "\f35a" !important;
+    font-size: 25px !important;
+}
+
+.section-about {
+    height: 600px;
+
+    .about-left {
+        p {
+            font-size: 25px;
+            font-weight: 600px;
+            padding: 10px;
+            margin-top: 50px;
+        }
+    }
+
+    .about-right {
+        margin-top: 10rem;
+        font-style: italic;
+
+    }
+}
+
+.home-footer {
+    text-align: center;
+
+    a {
+        text-decoration: unset;
+    }
+}
