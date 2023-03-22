@@ -1,3 +1,6 @@
+a{
+    text-decoration: none;
+}
 .section-slide {
     &.medicalFacility {
         background-color: #eeeeee;
@@ -24,7 +27,9 @@
             font-size: 25px;
             font-weight: 600;
         }
-
+        a{
+            text-decoration: none;
+            color: #4c4c4c !important;
         .button {
             background-color: rgb(230, 230, 230);
             color: #4c4c4c;
@@ -32,10 +37,14 @@
             text-align: center;
             font-size: 12px;
 
+
+
             &:hover {
                 background-color: #f5fc69;
             }
         }
+    }
+
     }
 
     .slide-content {

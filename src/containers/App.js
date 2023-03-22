@@ -19,9 +19,16 @@ import CustomScrollbars from "../components/CustomScrollbars";
 import detailDoctor from "./patient/doctor/detailDoctor";
 import doctor from "../routes/doctor";
 import VerifyEmail from "./patient/VerifyEmail";
+import specialtyDetail from "./patient/specialty/specialtyDetail";
+import ClinicDetail from "./patient/clinic/clinicDetail";
+import allSpecialties from "./patient/specialty/allSpecialties";
+import MenuVertical from "./Header/menuVertical";
+import bookingInstructions from "./patient/bookingInstructions";
+import myScheduleExamination from "./patient/medpro/myScheduleExamination";
 
 
 class App extends Component {
+
   handlePersistorState = () => {
     const { persistor } = this.props;
     let { bootstrapped } = persistor.getState();
@@ -41,6 +48,7 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <Fragment>
         <Router history={history}>
@@ -67,6 +75,26 @@ class App extends Component {
                     component={detailDoctor}
                   />
                   <Route
+                    path={path.DETAIL_SPECIALTY}
+                    component={specialtyDetail}
+                  />
+                  <Route
+                    path={path.ALL_SPECIALTIES}
+                    component={allSpecialties}
+                  />
+                  <Route
+                    path={path.BOOKING_INTROCDUCTION}
+                    component={bookingInstructions}
+                  />
+                  <Route
+                    path={path.MY_SCHEDULE_EXAMINATION}
+                    component={myScheduleExamination}
+                  />
+                  <Route
+                    path={path.DETAIL_CLINIC}
+                    component={ClinicDetail}
+                  />
+                  <Route
                     path={path.DOCTOR}
                     component={userIsAuthenticated(doctor)}
                   />
@@ -77,7 +105,9 @@ class App extends Component {
                 </Switch>
               </CustomScrollbars>
             </div>
-
+            {
+              this.props.isShowMenuVertical && <MenuVertical />
+            }
             <ToastContainer
               position="bottom-right"
               autoClose={5000}
@@ -101,6 +131,8 @@ const mapStateToProps = (state) => {
   return {
     started: state.app.started,
     isLoggedIn: state.user.isLoggedIn,
+    isShowMenuVertical: state.app.isShowMenuVertical,
+
   };
 };
 

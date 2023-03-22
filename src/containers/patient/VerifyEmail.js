@@ -44,7 +44,7 @@ class VerifyEmail extends Component {
         console.log('state', errCode, statusVerify)
         return (
             <>
-                <HomeHeader />
+                <HomeHeader isShowBanner={false} />
 
                 {
                     statusVerify === false ?

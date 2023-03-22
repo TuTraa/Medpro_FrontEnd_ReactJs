@@ -1,0 +1,30 @@
+
+.banner-medpro{
+    height: 557px !important;
+    .banner-medpro-1{
+        background: url('../../assets//images/bannerMedpro/banner.png');
+        height: 550px !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .banner-medpro-2{
+        background: url('../../assets//images/bannerMedpro/home_banner_web_11.png');
+        height: 550px !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .banner-medpro-3{
+        background: url('../../assets//images/bannerMedpro/banner3.png');
+        height: 550px !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .slick-prev,.slick-next{
+        display: none !important;
+        opacity: 0 !important;
+    }
+
+}

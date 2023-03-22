@@ -64,6 +64,13 @@ class DoctorSchedule extends Component {
         this.setState({
             arrDays: arrDate,
         })
+        if (this.props.doctorId && arrDate.length > 0) {
+            let res = await getSchedulebyDate(this.props.doctorId, arrDate[0].value);
+            this.setState({
+                arrTime: res.data.data
+            })
+        }
+
 
     }
     async componentDidUpdate(prevProps, prevState, snapshot) {
@@ -125,7 +132,7 @@ class DoctorSchedule extends Component {
                     </div>
                     <div className='all-availible-time'>
                         <div className='text-calendar'>
-                            <span><i class="fas fa-calendar-alt"></i> <FormattedMessage id="patient.detail-doctor.schedule" /></span>
+                            <span><i className="fas fa-calendar-alt"></i> <FormattedMessage id="patient.detail-doctor.schedule" /></span>
                         </div>
                         <div className='time-content'>
                             {arrTime && arrTime.length > 0 ? arrTime.map((item, index) => {
@@ -142,7 +149,7 @@ class DoctorSchedule extends Component {
                                 <div className='no-schedule'><FormattedMessage id="patient.detail-doctor.no-schedule" /></div>}
                         </div>
                         {arrTime && arrTime.length > 0 ? <div className='hand-booking'><FormattedMessage id="patient.detail-doctor.select" />
-                            <i class="far fa-hand-point-up"></i>
+                            <i className="far fa-hand-point-up"></i>
                             <FormattedMessage id="patient.detail-doctor.put" /><sup><FormattedMessage id="patient.detail-doctor.money" /></sup>) </div> : ''}
 
 

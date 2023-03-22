@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { FormattedMessage } from 'react-intl';
 import './HomeHeader.scss';
 import { languages } from "../../utils/constant"
-import { changLangueAPP } from "../../store/actions/appActions";
+import { changLangueAPP, onOffMenuVectical } from "../../store/actions/appActions";
 import './HomePage.scss';
 import { withRouter } from "react-router";
 
@@ -14,6 +14,9 @@ class HomeHeader extends Component {
     this.props.changLangueAPPRedux(language);
     //fire redux event:aciton
 
+  }
+  isShowMenu = () => {
+    this.props.onOffMenuVectical()
   }
   returnHome = () => {
     if (this.props.history) {
@@ -29,7 +32,7 @@ class HomeHeader extends Component {
         <div className="home-header-container">
           <div className="home-header-content">
             <div className="left-content">
-              <i className="fas fa-bars"></i>
+              <i className="fas fa-bars" onClick={() => this.isShowMenu()}></i>
               <div className="header-logo" src='logo' onClick={() => this.returnHome()}></div>
             </div>
             <div className="center-content">
@@ -57,7 +60,7 @@ class HomeHeader extends Component {
             </div>
           </div>
         </div>
-        {this.props.ishowBanner === true &&
+        {this.props.isShowBanner === true &&
           <div className="home-header-banner">
             <div className="content-up">
               <div className="title1"><FormattedMessage id="banner.title1" /></div>
@@ -110,7 +113,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    changLangueAPPRedux: (language) => dispatch(changLangueAPP(language))
+    changLangueAPPRedux: (language) => dispatch(changLangueAPP(language)),
+    onOffMenuVectical: () => dispatch(onOffMenuVectical()),
   };
 };
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HomeHeader));

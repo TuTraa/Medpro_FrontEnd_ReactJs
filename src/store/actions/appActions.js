@@ -10,7 +10,10 @@ export const setContentOfConfirmModal = (contentOfConfirmModal) => ({
     contentOfConfirmModal: contentOfConfirmModal
 });
 
-export const changLangueAPP = (languageInput) =>({
-    type:actionTypes.CHANGE_LANGUE,
-    language:languageInput,
-})
+export const changLangueAPP = (languageInput) => ({
+    type: actionTypes.CHANGE_LANGUE,
+    language: languageInput,
+});
+export const onOffMenuVectical = () => ({
+    type: actionTypes.IS_SHOW_MENU_VERTICAL,
+});

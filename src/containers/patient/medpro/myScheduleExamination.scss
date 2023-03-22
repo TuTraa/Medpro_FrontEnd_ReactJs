@@ -1,0 +1,148 @@
+.my-schedule-examination{
+    color: rgb(7, 7, 78);
+    .bg-my-schedule-examination{
+        background: url('../../../assets/images/bannerMedpro/intructions.jpg');
+        height: 210px !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-size: 27px;
+            font-weight: 510;
+            color: #fff;
+        }
+    }
+    .input-email-phone{
+        margin-top: 200px;
+        padding-top: 100px;
+        width: 30%;
+        margin: 0 auto;
+        .text-input-emai-phone{
+            text-align: center;
+            font-weight: 610;
+            font-size: 20px;
+        }
+    }
+    .form-schedule-examination{
+        text-align: center;
+        padding: 2rem;
+        .text-hello{
+            font-weight: 610;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .table-infor{
+            table{
+                tr{
+                    background-color: #fff;
+                    .pay{
+                        .qr{
+                            background: url('../../../assets/images/QR/z4199058055242_1fc99ed03bdec1fdec733d278988fc39.jpg');
+                            height: 250px !important;
+                            width: 250px;
+                            margin: 0 auto;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center;
+                        }
+                        .stk{
+                            text-align: center;
+                            font-size: 15px;
+                            color: #ff6f6f;
+                            .send-image{
+                                .input-image{
+                                    color: rgb(42, 8, 74);
+                                    width: 300px;
+                                    margin: 0 auto;
+                                    .preview-image{
+                                        margin-left: 100px;
+                                        width: 70px;
+                                        margin: 0 auto;
+                                    }
+                                }
+
+                                .button {
+                                    display: flex;
+                                    justify-content: center;
+                                }
+                            }
+                        }
+                    }
+                    .waiting {
+                        animation: colorBackground 5s infinite;
+                        -webkit-animation: colorBackground 5s infinite;
+                        -moz-animation: colorBackground 5s infinite;
+                        -o-animation: colorBackground 5s infinite;
+                        text-align: center;
+                        font-size: 19px;
+                        font-weight: 610;
+                       }
+                       @keyframes colorBackground {
+                        0% {
+                         color: #fbcf61
+                        }
+                        20% {
+                         color: #6bd57e
+                        }
+                        40% {
+                         color: #ff6f6f
+                        }
+                        60% {
+                         color: #57cff4
+                        }
+                        80% {
+                         color: #0ed4c8
+                        }
+                        100% {
+                         color: #fbcf61
+                        }
+                       }
+                       @-webkit-keyframes colorBackground {
+                        0% {
+                         color: #fbcf61
+                        }
+                        20% {
+                         color: #6bd57e
+                        }
+                        40% {
+                         color: #ff6f6f
+                        }
+                        60% {
+                         color: #57cff4
+                        }
+                        80% {
+                         color: #0ed4c8
+                        }
+                        100% {
+                         color: #fbcf61
+                        }
+                       }
+                       @-moz-keyframes colorBackground {
+                        0% {
+                         color: #fbcf61
+                        }
+                        20% {
+                         color: #6bd57e
+                        }
+                        40% {
+                         color: #ff6f6f
+                        }
+                        60% {
+                         color: #57cff4
+                        }
+                        80% {
+                         color: #0ed4c8
+                        }
+                        100% {
+                         color: #fbcf61
+                        }
+                       }
+                }
+            }
+        }
+    }
+}

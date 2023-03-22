@@ -47,7 +47,7 @@ class ProfileDoctor extends Component {
             :
             moment.unix(+dataTime.date / 1000).locale('en').format('ddd - MM/DD/YYYY');
         if (dataTime && !_.isEmpty(dataTime)) {
-            this.props.getDateProfile(`${time} ${date}`);
+            this.props.getDateProfile(`${time} ${date}`, dataTime.date);
 
             return (
                 <>
@@ -101,11 +101,14 @@ class ProfileDoctor extends Component {
                     </div>
 
                 </div>
-                <div className='price_profile'><FormattedMessage id="patient.modal.price" /> : {language === languages.VI ? <NumberFormat
-                    value={priceVi}
-                    displayType={'text'}
-                    thousandSeparator={true}
-                /> : `${priceEn}`} <FormattedMessage id="patient.modal.money" /></div>
+                <div className='price_profile'><FormattedMessage id="patient.modal.price" /> : {language === languages.VI ?
+                    <NumberFormat
+                        value={priceVi}
+                        displayType={'text'}
+                        thousandSeparator={true}
+                    />
+                    :
+                    `${priceEn}`} <FormattedMessage id="patient.modal.money" /></div>
             </>
         );
     }

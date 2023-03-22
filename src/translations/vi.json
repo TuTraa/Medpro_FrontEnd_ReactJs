@@ -33,10 +33,16 @@
             "manage-specialty": "quản lý chuyên khoa",
             "specialty": "chuyên khoa",
             "handbook": "cẩm nang",
-            "manage-handbook": "quản lý cẩm nang"
+            "booking": "Lịch hẹn",
+            "manage-booking-waiting": "Lịch hẹn đang chờ",
+            "manage-booking-finished": "Lịch hẹn đã hoàn thành",
+            "manage-booking-cancel": "Lịch hẹn đã hủy",
+            "manage-handbook": "quản lý cẩm nang",
+            "manage-booking-waiting-title": "Quản lý lịch hẹn đang chờ"
         },
         "doctor": {
-            "manage-schedule": "Quản lý kế hoạch khám bệnh"
+            "manage-schedule": "Quản lý kế hoạch khám bệnh",
+            "infor-schedule": "Thông tin lịch khám"
         }
     },
     "manage-user": {

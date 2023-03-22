@@ -2,7 +2,7 @@ import actionTypes from "./actionTypes";
 import {
   getAllCodeService, createNewUserService, getAllUsers,
   deleteUserService, editUserService, getTopDoctorHomeService,
-  getAllDoctorService, saveDetailDoctor, getAllSpecialtys
+  getAllDoctorService, saveDetailDoctor, getAllSpecialtys, getAllClinic
 } from "../../services/userService";
 import { toast } from "react-toastify"
 import { dispatch } from "../../redux";
@@ -217,7 +217,6 @@ export const fetchTopDoctor = () => {
   return async (dispatch, getState) => {
     try {
       let resDoctor = await (await getTopDoctorHomeService(10)).data;
-      console.log('resdoctor', resDoctor)
       if (resDoctor && resDoctor.errCode === 0) {
         dispatch({
           type: actionTypes.FETCH_TOP_DOCTORS_SUCCESS,
@@ -325,12 +324,14 @@ export const getRequireDoctorInfor = () => {
       let resPayment = await (await getAllCodeService("PAYMENT")).data;
       let resProvince = await (await getAllCodeService("PROVINCE")).data;
       let resPecialty = await (await getAllSpecialtys()).data;
+      let resClinic = await (await getAllClinic()).data;
       // let resProvince = await (await getAllCodeService("PROVINCE")).data;
       let data = {
         resPrice: resPrice.data,
         resPayment: resPayment.data,
         resProvince: resProvince.data,
-        resPecialty: resPecialty.data
+        resPecialty: resPecialty.data,
+        resClinic: resClinic.data
       }
       if (resPrice && resPrice.errCode === 0 && resPayment && resPayment.errCode === 0
         && resProvince && resProvince.errCode === 0 && resPecialty && resPecialty.errCode === 0) {

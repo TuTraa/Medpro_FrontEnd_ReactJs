@@ -104,7 +104,7 @@ class UserRedux extends Component {
                 position: '',
                 role: '',
                 avatar: '',
-                previewImgUrl:''
+                previewImgUrl: ''
             })
         }
     }
@@ -170,7 +170,7 @@ class UserRedux extends Component {
         if (users.image) {
 
             imageBase64 = new Buffer(users.image, 'base64').toString('binary');
-            console.log('click edit users',imageBase64)
+            console.log('click edit users', imageBase64)
         }
         this.setState({
             id: users.id,
@@ -204,7 +204,7 @@ class UserRedux extends Component {
                 roleId: this.state.role,
                 phoneNumber: this.state.phoneNumber,
                 positionId: this.state.position,
-                avatar:this.state.avatar,
+                avatar: this.state.avatar,
             }
         );
         this.setState({
@@ -314,7 +314,7 @@ class UserRedux extends Component {
                                     <input type="file"
                                         onChange={(event) => { this.handleOnchangeImage(event) }}
                                         className="form-control" id="previewImg" hidden />
-                                    <label className='lable-upload' htmlFor='previewImg'>tải ảnh <i class="fas fa-upload"></i> </label>
+                                    <label className='lable-upload' htmlFor='previewImg'>tải ảnh <i className="fas fa-upload"></i> </label>
                                     <div
                                         className='preview-image'
                                         style={{ backgroundImage: `url(${this.state.previewImgUrl})` }}

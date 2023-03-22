@@ -8,6 +8,8 @@ import MedicalFacility from "./Section/MedicalFacility";
 import OutStandingDoctor from "./Section/OutStandingDoctor";
 import About from "./Section/About";
 import HomeFooter from "./HomeFooter";
+import BannerMedpro from "./bannerMedpro";
+import MedicalRegisterHome from "./Section/medicalRegisterHome";
 class HomePage extends Component {
   // handleAfterChange=(event,slick,currentSlide)=>{
   //   console.log('tutran')
@@ -23,24 +25,26 @@ class HomePage extends Component {
       // afterChange: this.handleAfterChange,
     }
     return (
-        <>
-        <HomeHeader isShowBanner={true} />
+      <>
+        <BannerMedpro isShowBanner={true} />
+        {/* <HomeHeader isShowBanner={true} /> */}
+        <MedicalRegisterHome />
         <Specialty settings={settings} />
         <MedicalFacility settings={settings} />
         <OutStandingDoctor settings={settings} />
         <About />
         <HomeFooter />
-        </>
+      </>
     )
   }
 }
 const mapStateToProps = (state) => {
-    return {
-      isLoggedIn: state.user.isLoggedIn,
-    };
+  return {
+    isLoggedIn: state.user.isLoggedIn,
   };
-  
-  const mapDispatchToProps = (dispatch) => {
-    return {};
-  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

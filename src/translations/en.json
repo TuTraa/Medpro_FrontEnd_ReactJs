@@ -36,7 +36,8 @@
             "manage-handbook": "Manage Handbook"
         },
         "doctor": {
-            "manage-schedule": "Manage Doctor's Chedule"
+            "manage-schedule": "Manage Doctor's Chedule",
+            "infor-schedule": "Infor Schedule"
         }
     },
     "manage-user": {

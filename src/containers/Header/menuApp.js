@@ -30,7 +30,7 @@ export const adminMenu = [
         name: 'menu.admin.clinic', menus: [
             {
                 name: 'menu.admin.manage-clinic', link: '/system/manage-clinic',
-            },
+            }
 
         ]
     },
@@ -50,12 +50,29 @@ export const adminMenu = [
 
         ]
     },
+    { //Quản lý Booking
+        name: 'menu.admin.booking', menus: [
+            {
+                name: 'menu.admin.manage-booking-waiting', link: '/system/manage-booking-waiting',
+            },
+            {
+                name: 'menu.admin.manage-booking-finished', link: '/system/manage-booking-finished',
+            },
+            {
+                name: 'menu.admin.manage-booking-cancel', link: '/system/manage-booking-cancel',
+            }
+
+        ]
+    },
 ];
 export const doctorMenu = [
     { //Quản lý người dùng 
         name: 'menu.admin.manage-user', menus: [
             {
                 name: 'menu.doctor.manage-schedule', link: '/doctor/manage-schedule',
+            },
+            {
+                name: 'menu.doctor.infor-schedule', link: '/doctor/infor-schedule',
             },
 
         ]

@@ -1,0 +1,24 @@
+div._loading_overlay_wrapper{
+    position: unset;
+    ._loading_overlay_overlay{
+        z-index: 1000000;
+    }
+}
+
+.manage-patient-container{
+    .m-p-title{
+        p{
+            font-size: 18px;
+            margin: 10px 0;
+            font-weight: 600;
+            text-align: center;
+        }
+
+    }
+    .manage-patient-body{
+        margin: auto 20px;
+    }
+    .all-infor-schedule{
+        margin: 20px 20px;
+    }
+}

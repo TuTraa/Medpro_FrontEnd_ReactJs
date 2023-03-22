@@ -30,7 +30,8 @@ class BookingModal extends Component {
             timeType: '',
             examinationtime: '',
             doctorName: '',
-            priceExamination: ''
+            priceExamination: '',
+            dayTime: ''
         }
     }
     async componentDidMount() {
@@ -100,9 +101,11 @@ class BookingModal extends Component {
             SelectedGender: selectedOption
         });
     }
-    getDateProfile = (date) => {
+    getDateProfile = (date, dayTime) => {
+        console.log('daytime:', dayTime)
         this.setState({
             examinationtime: date,
+            dayTime: dayTime,
         })
     }
     getNamePrice = (nameDoctor, price) => {
@@ -128,8 +131,9 @@ class BookingModal extends Component {
             examinationtime: this.state.examinationtime,
             doctorName: this.state.doctorName,
             priceExamination: this.state.priceExamination,
+            dayTime: this.state.dayTime,
         });
-        console.log("data api:", res)
+        console.log("data api:", res, "this state:", this.state)
         if (res && res.data && res.data.errCode === 0) {
             toast.success("save infor patient succeed!");
             this.props.closeModal();
@@ -228,8 +232,8 @@ class BookingModal extends Component {
 
                     </div>
                     <div className='booking-modal-footer'>
-                        <button type="button" class="btn btn-primary" onClick={this.hadleComfirmBooking}><FormattedMessage id="patient.modal.confirm" /></button>
-                        <button type="button" class="btn btn-danger" onClick={closeModal}><FormattedMessage id="patient.modal.cancel" /></button>
+                        <button type="button" className="btn btn-primary" onClick={this.hadleComfirmBooking}><FormattedMessage id="patient.modal.confirm" /></button>
+                        <button type="button" className="btn btn-danger" onClick={closeModal}><FormattedMessage id="patient.modal.cancel" /></button>
                     </div>
                 </div>
             </Modal>

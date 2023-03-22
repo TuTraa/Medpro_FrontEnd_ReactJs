@@ -6,6 +6,10 @@ import userRedux from '../containers/System/admin/userRedux';
 import Header from '../containers/Header/Header';
 import manageDoctor from '../containers/System/admin/manageDoctor';
 import manageSpecialty from '../containers/System/specialty/manageSpecialty';
+import manageClinic from '../containers/System/clinic/manageClinic';
+import examinationScheduleWaiting from '../containers/System/admin/examination schedule/examinationScheduleWaiting';
+import examinationScheduleFinished from '../containers/System/admin/examination schedule/examinationScheduleFinished';
+import examinationScheduleCancel from '../containers/System/admin/examination schedule/examinationScheduleCancel';
 
 class System extends Component {
     render() {
@@ -21,6 +25,10 @@ class System extends Component {
                             <Route path="/system/user-redux" component={userRedux} />
                             <Route path="/system/manage-doctor" component={manageDoctor} />
                             <Route path="/system/manage-specialty" component={manageSpecialty} />
+                            <Route path="/system/manage-clinic" component={manageClinic} />
+                            <Route path="/system/manage-booking-waiting" component={examinationScheduleWaiting} />
+                            <Route path="/system/manage-booking-finished" component={examinationScheduleFinished} />
+                            <Route path="/system/manage-booking-cancel" component={examinationScheduleCancel} />
                             <Route component={() => { return (<Redirect to={systemMenuPath} />) }} />
                         </Switch>
                     </div>

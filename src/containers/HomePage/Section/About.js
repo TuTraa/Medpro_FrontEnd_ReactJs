@@ -13,9 +13,9 @@ class About extends Component {
                         <iframe width="94%"
                             height="400px" src="https://www.youtube.com/embed/FyDQljKtWnI"
                             title="CÀ PHÊ KHỞI NGHIỆP VTV1 - BOOKINGCARE - HỆ THỐNG ĐẶT LỊCH KHÁM TRỰC TUYẾN"
-                            frameborder="0"
+                            // frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
+                        >
                         </iframe>
                     </div>
                     <div className="about-right col-5">
@@ -24,7 +24,7 @@ class About extends Component {
                         các phòng khám/ tại nhà, tư vấn sức khỏe trực tuyến, giới thiệu cung ứng sản phẩm, dịch vụ sức
                         khỏe...
                     </div>
-                    
+
                 </div>
             </div>
         )

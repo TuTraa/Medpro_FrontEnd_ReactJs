@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import * as actions from '../../../store/actions';
 import { languages } from "../../../utils/constant";
 import { withRouter } from "react-router";
+import { Link } from "react-router-dom";
 class OutStandingDoctor extends Component {
   constructor(props) {
     super(props);
@@ -31,15 +32,15 @@ class OutStandingDoctor extends Component {
   }
   render() {
     let language = this.props.language;
-    console.log('top doctor redux', this.props.topDoctorsRedux)
     let arrDoctors = this.state.arrDoctors;
+    console.log('arrDoctor:', arrDoctors)
     return (
       <div className="section-slide OutSandingDoctor">
 
         <div className=" slide-content container">
           <div className="slide-title">
             <div className="text"><FormattedMessage id="home-page.out-Standing-Doctor" /></div>
-            <div className="button"><FormattedMessage id="home-page.more-infor" /></div>
+            <Link to={`/all-specialties`}><div className="button"><FormattedMessage id="home-page.more-infor" /></div></Link >
           </div>
           <Slider {...this.props.settings}>
             {arrDoctors && arrDoctors.length > 0
@@ -49,7 +50,7 @@ class OutStandingDoctor extends Component {
                   imageBase64 = new Buffer(item.image, 'base64').toString('binary')
                 }
                 return (
-                  <div className="slide-item text-center" key={index} onClick={()=>this.handleViewDetailDoctor(item)}>
+                  <div className="slide-item text-center" key={index} onClick={() => this.handleViewDetailDoctor(item)}>
                     <div className="img-doctor-out">
                       <div className="slick-img-doctor bg-image" style={{ backgroundImage: `url(${imageBase64})` }}>
                       </div>

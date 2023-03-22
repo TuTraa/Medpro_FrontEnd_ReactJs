@@ -95,7 +95,7 @@ class ManageSpecialty extends Component {
                         onChange={this.handleEditorChange}
                         value={this.state.descriptionMarkdown} />
                 </div>
-                <button type="button" class="btn btn-primary mt-3" onClick={() => this.handleSaveNewSpecialty()}>Lưu</button>
+                <button type="button" className="btn btn-primary mt-3" onClick={() => this.handleSaveNewSpecialty()}>Lưu</button>
             </div>
         );
     }

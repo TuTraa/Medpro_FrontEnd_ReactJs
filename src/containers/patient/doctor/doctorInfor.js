@@ -11,11 +11,19 @@ class DoctorInfor extends Component {
         super(props);
         this.state = {
             doctorInfor: {},
-            isShowDetail: false,
+            isShowDetail: true,
         }
     }
     async componentDidMount() {
+        if (this.props.doctorId) {
+            let res = await getExtraInforDoctorById(this.props.doctorId);
+            this.setState({
+                doctorInfor: res.data.data
+            })
+        }
+
     }
+
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.doctorId !== prevProps.doctorId) {
             let res = await getExtraInforDoctorById(this.props.doctorId);
@@ -33,7 +41,6 @@ class DoctorInfor extends Component {
         let { language } = this.props;
         let { isShowDetail } = this.state;
         let { doctorInfor } = this.state;
-        console.log('doctorinfor', doctorInfor)
         return (
             <div className='doctor-infor'>
                 <div className='content-right-label-adress'><FormattedMessage id={"patient.extra-infor.adress"} /></div>
