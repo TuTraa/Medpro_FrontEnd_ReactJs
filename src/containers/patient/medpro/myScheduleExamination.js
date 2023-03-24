@@ -172,7 +172,7 @@ class MyScheduleExamination extends Component {
                                                         </div>
                                                     }
                                                     {
-                                                        item.statusId === 'S2' && item.pay === false &&
+                                                        item.statusId === 'S2' && item.pay !== true &&
                                                         <div className='pay'>
                                                             <div className='waiting'>
                                                                 <p>Thanh Toán ngay để được giảm 10% viện phí</p>

@@ -7,10 +7,8 @@ import Header from '../containers/Header/Header';
 import manageDoctor from '../containers/System/admin/manageDoctor';
 import manageSpecialty from '../containers/System/specialty/manageSpecialty';
 import manageClinic from '../containers/System/clinic/manageClinic';
-import examinationScheduleWaiting from '../containers/System/admin/examination schedule/examinationScheduleWaiting';
-import examinationScheduleFinished from '../containers/System/admin/examination schedule/examinationScheduleFinished';
-import examinationScheduleCancel from '../containers/System/admin/examination schedule/examinationScheduleCancel';
-
+import examinationSchedule from '../containers/System/admin/examination schedule/examinationSchedule';
+import examinationScheduleHistory from '../containers/System/admin/examination schedule/examinationScheduleHistory';
 class System extends Component {
     render() {
         const { systemMenuPath, isLoggedIn } = this.props;
@@ -19,16 +17,14 @@ class System extends Component {
                 {isLoggedIn && <Header />}
                 <div className="system-container">
                     <div className="system-list">
-
                         <Switch>
                             <Route path="/system/user-manage" component={UserManage} />
                             <Route path="/system/user-redux" component={userRedux} />
                             <Route path="/system/manage-doctor" component={manageDoctor} />
                             <Route path="/system/manage-specialty" component={manageSpecialty} />
                             <Route path="/system/manage-clinic" component={manageClinic} />
-                            <Route path="/system/manage-booking-waiting" component={examinationScheduleWaiting} />
-                            <Route path="/system/manage-booking-finished" component={examinationScheduleFinished} />
-                            <Route path="/system/manage-booking-cancel" component={examinationScheduleCancel} />
+                            <Route path="/system/manage-booking-cancel" component={examinationSchedule} />
+                            <Route path="/system/manage-booking-history" component={examinationScheduleHistory} />
                             <Route component={() => { return (<Redirect to={systemMenuPath} />) }} />
                         </Switch>
                     </div>

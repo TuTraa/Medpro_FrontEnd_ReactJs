@@ -21,6 +21,7 @@ class ManagePatient extends Component {
             isOpenRemedyModal: false,
             dataModal: {},
             isShowLoading: false,
+            cancelOrFinish: false,
         }
     }
     async componentDidMount() {
@@ -41,8 +42,9 @@ class ManagePatient extends Component {
 
     }
 
-    btnConfirm = (item) => {
+    btnConfirm = (item, cancelOrFinish) => {
         let data = {
+            idBooking: item.id,
             doctorId: item.doctorId,
             patientId: item.patientId,
             patientName: item.patientData.firstName,
@@ -52,8 +54,8 @@ class ManagePatient extends Component {
         this.setState({
             isOpenRemedyModal: true,
             dataModal: data,
+            cancelOrFinish: cancelOrFinish
         })
-        console.log('check data:', data)
     }
 
     closeModal = () => {
@@ -107,9 +109,16 @@ class ManagePatient extends Component {
             this.getDataPatient(currentDate);
         })
     }
+
+    renderPage = () => {
+        let { currentDate } = this.state;
+        this.getDataPatient(currentDate);
+    }
+
     render() {
         let yesterday = new Date(new Date().setHours(0, 0, 0, 0));
-        let { dataPatient, isOpenRemedyModal, dataModal } = this.state;
+        let { dataPatient, isOpenRemedyModal, dataModal, cancelOrFinish } = this.state;
+        console.log('data patient:', dataPatient)
         let { language } = this.props;
         return (
             <>
@@ -145,7 +154,8 @@ class ManagePatient extends Component {
                                         <th>Địa Chỉ</th>
                                         <th>Giới Tính</th>
                                         <th>Số Điện Thoại</th>
-                                        <th>Actions</th>
+                                        <th>Lý do khám</th>
+                                        <th style={{ width: '20%' }}>Actions</th>
                                     </tr>
                                     {dataPatient && dataPatient.length > 0 ? dataPatient.map((item, index) => {
                                         let timeType = language === languages.VI ? item.timeTypeDataPatient.valueVi : item.timeTypeDataPatient.valueEn
@@ -158,9 +168,13 @@ class ManagePatient extends Component {
                                                 <td>{item.patientData.address}</td>
                                                 <td>{gender}</td>
                                                 <td>{item.patientData.phoneNumber}</td>
+                                                <td>{item.reason}</td>
                                                 <td>
-                                                    <button type="button" className="btn btn-warning" onClick={() => this.btnConfirm(item)}>
-                                                        Xác Nhận
+                                                    <button type="button" className="btn btn-success" onClick={() => this.btnConfirm(item, false)}>
+                                                        Hoàn thành
+                                                    </button>
+                                                    <button type="button" className="btn btn-danger" onClick={() => this.btnConfirm(item, true)}>
+                                                        Không đến
                                                     </button>
                                                 </td>
 
@@ -169,7 +183,7 @@ class ManagePatient extends Component {
                                     })
                                         :
                                         <tr>
-                                            <td colSpan={7} style={{ textAlign: 'center' }}>NO DATA</td>
+                                            <td colSpan={8} style={{ textAlign: 'center' }}>NO DATA</td>
                                         </tr>
                                     }
 
@@ -178,7 +192,7 @@ class ManagePatient extends Component {
                         </div>
                     </div >
                     <RemedyModal dataModal={dataModal} isOpenRemedyModal={isOpenRemedyModal}
-                        closeModal={this.closeModal} sendRemedy={this.sendRemedy} />
+                        closeModal={this.closeModal} sendRemedy={this.sendRemedy} cancelOrFinish={cancelOrFinish} renderPage={this.renderPage} />
 
                     <div style={{ height: 200 }}>
                         {/* <button onClick={handleButtonClick}>Toggle active</button> */}

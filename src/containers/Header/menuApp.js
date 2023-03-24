@@ -53,14 +53,11 @@ export const adminMenu = [
     { //Quản lý Booking
         name: 'menu.admin.booking', menus: [
             {
-                name: 'menu.admin.manage-booking-waiting', link: '/system/manage-booking-waiting',
-            },
-            {
-                name: 'menu.admin.manage-booking-finished', link: '/system/manage-booking-finished',
-            },
-            {
                 name: 'menu.admin.manage-booking-cancel', link: '/system/manage-booking-cancel',
-            }
+            },
+            {
+                name: 'menu.admin.manage-booking-history', link: '/system/manage-booking-history',
+            },
 
         ]
     },

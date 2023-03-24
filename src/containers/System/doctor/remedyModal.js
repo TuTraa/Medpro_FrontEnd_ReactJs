@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import "./remedyModal.scss"
 import { Modal, Button, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import _ from "lodash";
+import { postStatusId } from '../../../services/userService';
 import Select from 'react-select';
 import { toast } from "react-toastify";
 import CommonUtils from '../../../utils/CommonUtils';
@@ -15,6 +16,7 @@ class RemedyModal extends Component {
         this.state = {
             email: '',
             imgBase64: '',
+            cancelOrFinish: false
         }
     }
     async componentDidMount() {
@@ -44,7 +46,7 @@ class RemedyModal extends Component {
         let file = data[0];
         if (file) {
             let base64 = await CommonUtils.getBase64(file);
-            let objUrl = URL.createObjectURL(file);
+            // let objUrl = URL.createObjectURL(file);
             this.setState({
                 imgBase64: base64,
             })
@@ -52,48 +54,72 @@ class RemedyModal extends Component {
 
     }
 
-    handleSendRemedy = () => {
-        this.props.sendRemedy(this.state)
+    handleSendRemedy = async () => {
+        let { cancelOrFinish, dataModal } = this.props;
+        let id = dataModal.idBooking;
+        console.log('idBooking :', id)
+        let { email, imgBase64 } = this.state;
+        if (cancelOrFinish) {
+            let res = await (await postStatusId({ id: id, statusId: "S1" })).data;
+            if (res && res.data.errCode === 0) {
+                this.props.renderPage();
+                toast.success('cancel booking success!')
+            }
+            else {
+                toast.error('Cancel Booking error!')
+            }
+        } else {
+            this.props.sendRemedy({ email: email, imgBase64: imgBase64 })
+            // this.props.renderPage();
+        }
+        // this.props.closeModal();
     }
 
     render() {
-        let { isOpenRemedyModal, dataModal, closeRemedyModal } = this.props;
+        let { isOpenRemedyModal, closeModal, cancelOrFinish } = this.props;
+        console.log('email state datamodal:', this.state.email)
 
         return (
             <Modal isOpen={isOpenRemedyModal} className={"booking-modal-container"}
-                size="lg"
+                size="modal-sm"
                 centered
                 backdrop={true}
             >
                 <div className="modal-header">
-                    <h5 className="modal-title">Modal title</h5>
+                    <h5 className="modal-title">{cancelOrFinish ? 'Hủy đơn' : 'Gửi đơn thuốc'}</h5>
                     <button type="button" className="close" aria-label="Close" onClick={this.props.closeModal}>
-                        <span aria-hidden="true">×</span>
+                        {/* <span aria-hidden="true">×</span> */}
                     </button>
                 </div>
                 <ModalBody>
-                    <div className='row'>
-                        <div className='col-6 form-goup'>
-                            <label>Email Patient</label>
-                            <input className='form-control' type='email' value={this.state.email}
-                                onChange={(event) => { this.handleOchangeEmail(event) }}
-                            >
+                    {cancelOrFinish
+                        ?
+                        <div>Khách hàng không đến !</div>
+                        :
+                        <div className='row'>
+                            <div className='col-6 form-goup'>
+                                <label>Email Patient</label>
+                                <input className='form-control' type='email' value={this.state.email}
+                                    onChange={(event) => { this.handleOchangeEmail(event) }}
+                                >
 
-                            </input>
-                        </div>
-                        <div className='col-6 form-goup'>
-                            <label>Chon file don thuoc</label>
-                            <input className='form-control-file' type='file'
-                                onChange={(event) => { this.handleOnchangeImage(event) }}
-                            >
+                                </input>
+                            </div>
+                            <div className='col-6 form-goup'>
+                                <label>Chon file don thuoc</label>
+                                <input className='form-control-file' type='file'
+                                    onChange={(event) => { this.handleOnchangeImage(event) }}
+                                >
 
-                            </input>
+                                </input>
+                            </div>
                         </div>
-                    </div>
+                    }
+
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" onClick={() => this.handleSendRemedy()}>Send</Button>{' '}
-                    <Button color="secondary" onClick={this.props.closeModal}>Cancel</Button>
+                    <Button color="primary" onClick={() => this.handleSendRemedy()}>Xác nhận</Button>{' '}
+                    <Button color="secondary" onClick={closeModal}>Đóng</Button>
                 </ModalFooter>
             </Modal>
         );

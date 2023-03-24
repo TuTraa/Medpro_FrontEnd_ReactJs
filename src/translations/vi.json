@@ -34,11 +34,9 @@
             "specialty": "chuyên khoa",
             "handbook": "cẩm nang",
             "booking": "Lịch hẹn",
-            "manage-booking-waiting": "Lịch hẹn đang chờ",
-            "manage-booking-finished": "Lịch hẹn đã hoàn thành",
-            "manage-booking-cancel": "Lịch hẹn đã hủy",
+            "manage-booking-cancel": "Quản Lý lịch hẹn",
             "manage-handbook": "quản lý cẩm nang",
-            "manage-booking-waiting-title": "Quản lý lịch hẹn đang chờ"
+            "manage-booking-history": "Lịch sử"
         },
         "doctor": {
             "manage-schedule": "Quản lý kế hoạch khám bệnh",

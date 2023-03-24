@@ -76,13 +76,45 @@ const getAllClinic = () => {
 const getDetailClinic = (id) => {
   return axios.get(`/api/get-detail-clinic?id=${id}`);
 }
-
 const getAllPatientForDoctor = (data) => {
-  return axios.get(`/api/get-list-patient-for-doctor?doctorId=${data.doctorId}&dataTime=${data.date}`)
+  return axios.get(`/api/get-list-patient-for-doctor?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
 }
+//data now
 const getAllPatientForDoctorS0 = (data) => {
-  return axios.get(`/api/get-list-patient-for-doctor-S0?doctorId=${data.doctorId}&dataTime=${data.date}`)
+  return axios.get(`/api/get-list-patient-for-doctor-S0?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
 }
+const getAllPatientForDoctorCancel = (data) => {
+  return axios.get(`/api/get-list-patient-for-doctor-cancel?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
+}
+const getAllPatientForDoctorNotCome = (data) => {
+  return axios.get(`/api/get-list-patient-for-doctor-notCome?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
+}
+const getAllPatientForDoctorIsActive = (data) => {
+  return axios.get(`/api/get-list-patient-for-doctor-isActive?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
+}
+const getAllPatientForDoctorDone = (data) => {
+  return axios.get(`/api/get-list-patient-for-doctor-done?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
+}
+//////////////////
+
+
+//date History
+const getAllPatientForDoctorS0History = (data) => {
+  return axios.get(`/api/get-list-patient-for-doctor-S0-history?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
+}
+const getAllPatientForDoctorCancelHistory = (data) => {
+  return axios.get(`/api/get-list-patient-for-doctor-cancel-history?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
+}
+const getAllPatientForDoctorNotComeHistory = (data) => {
+  return axios.get(`/api/get-list-patient-for-doctor-notCome-history?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
+}
+const getAllPatientForDoctorIsActiveHistory = (data) => {
+  return axios.get(`/api/get-list-patient-for-doctor-isActive-history?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
+}
+const getAllPatientForDoctorDoneHistory = (data) => {
+  return axios.get(`/api/get-list-patient-for-doctor-done-history?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
+}
+/////////////////////////////
 
 const postSendRemedy = (data) => {
   return axios.post(`/api/send-remedy`, data)
@@ -109,5 +141,8 @@ export {
   postBookingApointment, postVerifyBookingApointment, createNewSpecialty,
   getAllSpecialtys, getDetailSpecialty, createNewClinic, getAllClinic, getDetailClinic,
   getAllPatientForDoctor, postSendRemedy, getAllPatientForDoctorS0, getMyEmination,
-  postImagePaied, postStatusId
+  postImagePaied, postStatusId, getAllPatientForDoctorCancel, getAllPatientForDoctorDone,
+  getAllPatientForDoctorNotCome, getAllPatientForDoctorIsActive, getAllPatientForDoctorCancelHistory,
+  getAllPatientForDoctorS0History, getAllPatientForDoctorIsActiveHistory,
+  getAllPatientForDoctorNotComeHistory, getAllPatientForDoctorDoneHistory,
 };
