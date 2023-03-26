@@ -37,6 +37,9 @@ const getDetailInforDoctor = (inputId) => {
 const saveBulkScheduleDoctor = (data) => {
   return axios.post(`api/bulk-create-schedule`, data)
 }
+const deleteBulkScheduleDoctor = (data) => {
+  return axios.post(`api/bulk-delete-schedule`, data)
+}
 
 const getSchedulebyDate = (doctorId, date) => {
   return axios.get(`/api/get-Schedule-byDate?doctorId=${doctorId}&date=${date}`)
@@ -95,6 +98,9 @@ const getAllPatientForDoctorIsActive = (data) => {
 const getAllPatientForDoctorDone = (data) => {
   return axios.get(`/api/get-list-patient-for-doctor-done?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
 }
+const getAllPatientForDoctorChange = (data) => {
+  return axios.get(`/api/get-list-patient-for-doctor-change?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
+}
 //////////////////
 
 
@@ -113,6 +119,9 @@ const getAllPatientForDoctorIsActiveHistory = (data) => {
 }
 const getAllPatientForDoctorDoneHistory = (data) => {
   return axios.get(`/api/get-list-patient-for-doctor-done-history?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
+}
+const getAllPatientForDoctorChangeHistory = (data) => {
+  return axios.get(`/api/get-list-patient-for-doctor-change-history?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
 }
 /////////////////////////////
 
@@ -145,4 +154,5 @@ export {
   getAllPatientForDoctorNotCome, getAllPatientForDoctorIsActive, getAllPatientForDoctorCancelHistory,
   getAllPatientForDoctorS0History, getAllPatientForDoctorIsActiveHistory,
   getAllPatientForDoctorNotComeHistory, getAllPatientForDoctorDoneHistory,
+  getAllPatientForDoctorChange, getAllPatientForDoctorChangeHistory, deleteBulkScheduleDoctor
 };

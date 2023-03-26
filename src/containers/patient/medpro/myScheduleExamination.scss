@@ -72,6 +72,19 @@
                             }
                         }
                     }
+                    .changeS2{
+                        button{
+                            width: 100px;
+                            margin-left: 20px !important;
+
+                        }
+                    }
+                    .not-come{
+                        text-align: center;
+                        font-size: 19px;
+                        font-weight: 610;
+                        color: #f0a607;
+                    }
                     .waiting {
                         animation: colorBackground 5s infinite;
                         -webkit-animation: colorBackground 5s infinite;

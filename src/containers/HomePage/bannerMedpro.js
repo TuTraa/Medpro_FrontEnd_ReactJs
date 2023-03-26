@@ -74,10 +74,157 @@ class BannerMedpro extends Component {
                     <div className="banner-medpro">
                         <Slider {...settings}>
                             <div className="banner-medpro-1">
+                                <div className=" row">
+                                    <div className="col-7" style={{ height: '100px' }}>
+
+                                    </div>
+                                    <div className="menu-banner col-4">
+                                        <div className="menu-banner-in container">
+                                            <p>Chọn dịch vụ</p>
+                                            <div className="all-item row" >
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item1"></div>
+                                                        <div className="text-item">lịch của bạn</div>
+                                                    </div>
+                                                </div>
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item2"></div>
+                                                        <div className="text-item">gói sức khỏe toàn diện</div>
+                                                    </div>
+                                                </div>
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item3"></div>
+                                                        <div className="text-item">Xét nghiệm tại nhà</div>
+                                                    </div>
+                                                </div>
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item4"></div>
+                                                        <div className="text-item">Thanh toán viện phí</div>
+                                                    </div>
+                                                </div>
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item5"></div>
+                                                        <div className="text-item">Khám hậu covid   </div>
+                                                    </div>
+                                                </div>
+                                                {/* <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item"></div>
+                                                        <div className="text-item">text item</div>
+                                                    </div>
+                                                </div> */}
+                                            </div>
+                                        </div>
+                                        <div className="col-1"></div>
+                                    </div>
+                                </div>
                             </div>
                             <div className="banner-medpro-2">
+                                <div className=" row">
+                                    <div className="col-7" style={{ height: '100px' }}>
+
+                                    </div>
+                                    <div className="menu-banner col-4">
+                                        <div className="menu-banner-in container">
+                                            <p>Chọn dịch vụ</p>
+                                            <div className="all-item row" >
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item1"></div>
+                                                        <div className="text-item">lịch của bạn</div>
+                                                    </div>
+                                                </div>
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item2"></div>
+                                                        <div className="text-item">gói sức khỏe toàn diện</div>
+                                                    </div>
+                                                </div>
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item3"></div>
+                                                        <div className="text-item">Xét nghiệm tại nhà</div>
+                                                    </div>
+                                                </div>
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item4"></div>
+                                                        <div className="text-item">Thanh toán viện phí</div>
+                                                    </div>
+                                                </div>
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item5"></div>
+                                                        <div className="text-item">Khám hậu covid   </div>
+                                                    </div>
+                                                </div>
+                                                {/* <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item"></div>
+                                                        <div className="text-item">text item</div>
+                                                    </div>
+                                                </div> */}
+                                            </div>
+                                        </div>
+                                        <div className="col-1"></div>
+                                    </div>
+                                </div>
                             </div>
                             <div className="banner-medpro-3">
+                                <div className=" row">
+                                    <div className="col-7" style={{ height: '100px' }}>
+
+                                    </div>
+                                    <div className="menu-banner col-4">
+                                        <div className="menu-banner-in container">
+                                            <p>Chọn dịch vụ</p>
+                                            <div className="all-item row" >
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item1"></div>
+                                                        <div className="text-item">lịch của bạn</div>
+                                                    </div>
+                                                </div>
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item2"></div>
+                                                        <div className="text-item">gói sức khỏe toàn diện</div>
+                                                    </div>
+                                                </div>
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item3"></div>
+                                                        <div className="text-item">Xét nghiệm tại nhà</div>
+                                                    </div>
+                                                </div>
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item4"></div>
+                                                        <div className="text-item">Thanh toán viện phí</div>
+                                                    </div>
+                                                </div>
+                                                <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item5"></div>
+                                                        <div className="text-item">Khám hậu covid   </div>
+                                                    </div>
+                                                </div>
+                                                {/* <div className="item col-4">
+                                                    <div className="item-flex">
+                                                        <div className="image-item"></div>
+                                                        <div className="text-item">text item</div>
+                                                    </div>
+                                                </div> */}
+                                            </div>
+                                        </div>
+                                        <div className="col-1"></div>
+                                    </div>
+                                </div>
                             </div>
                         </Slider>
                     </div>

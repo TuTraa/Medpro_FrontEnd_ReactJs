@@ -5,7 +5,8 @@ import { FormattedMessage } from 'react-intl';
 import {
     getAllPatientForDoctorCancel, getAllPatientForDoctorS0,
     getAllPatientForDoctorIsActive, getAllPatientForDoctorNotCome,
-    getAllPatientForDoctorDone, postStatusId, postImagePaied
+    getAllPatientForDoctorDone, postStatusId, postImagePaied,
+    getAllPatientForDoctorChange
 }
     from '../../../../services/userService';
 import moment from 'moment/moment';
@@ -173,7 +174,7 @@ class ExaminationScheduleCancel extends Component {
             res = await (await getAllPatientForDoctorCancel({ doctorId: doctorId, date: date, phone: phone })).data
         }
         if (selectStatusId === 'S5') {
-            res = await (await getAllPatientForDoctorNotCome({ doctorId: doctorId, date: date, phone: phone })).data
+            res = await (await getAllPatientForDoctorChange({ doctorId: doctorId, date: date, phone: phone })).data
         }
         // console.log('res data patient:', res)
         console.log('data all waiting:', res.allScheduleForDoctor)
@@ -241,8 +242,7 @@ class ExaminationScheduleCancel extends Component {
             res = await (await getAllPatientForDoctorCancel({ doctorId: 'All', date: 'All', phone: '' })).data
         }
         if (selectStatusId === 'S5') {
-            return;
-            res = await (await getAllPatientForDoctorNotCome({ doctorId: 'All', date: 'All', phone: '' })).data
+            res = await (await getAllPatientForDoctorChange({ doctorId: 'All', date: 'All', phone: '' })).data
         }
         this.setState({
             selectDay: { label: 'Tất cả ngày', value: 'All' },

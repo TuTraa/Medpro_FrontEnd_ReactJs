@@ -1,9 +1,9 @@
 export const adminMenu = [
     { //Quản lý người dùng 
         name: 'menu.admin.manage-user', menus: [
-            {
-                name: 'menu.admin.crud', link: '/system/user-manage',
-            },
+            // {
+            //     name: 'menu.admin.crud', link: '/system/user-manage',
+            // },
             {
                 name: 'menu.admin.crud-redux', link: '/system/user-redux',
             },
@@ -14,7 +14,7 @@ export const adminMenu = [
             //     name: 'menu.admin.manage-admin', link: '/system/user-admin',
             // },
             {
-                name: 'menu.doctor.manage-schedule', link: '/doctor/manage-schedule',
+                name: 'menu.doctor.manage-schedule', link: '/system/manage-schedule',
             },
 
 

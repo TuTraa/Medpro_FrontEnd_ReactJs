@@ -3,13 +3,14 @@ import { connect } from "react-redux";
 import { FormattedMessage } from 'react-intl';
 import './myScheduleExamination.scss';
 import BannerMedpro from '../../HomePage/bannerMedpro';
-import { getMyEmination, postImagePaied } from '../../../services/userService';
+import { getMyEmination, postImagePaied, postStatusId } from '../../../services/userService';
 import moment from 'moment/moment';
 import { languages } from '../../../utils/constant';
 import NumberFormat from 'react-number-format';
 import CommonUtils from '../../../utils/CommonUtils';
 import Lightbox from 'react-image-lightbox';
 import { toast } from "react-toastify";
+import ChangeCancelModal from './changeCancelModal';
 
 class MyScheduleExamination extends Component {
     constructor(props) {
@@ -25,11 +26,16 @@ class MyScheduleExamination extends Component {
             imageDataBase: '',
             previewImgUrl: '',
             noSuccess: 0,
+            isOpenCancelChangeModal: false,
+            cancelOrChange: false,
+            idBooking: '',
+
 
 
         }
     }
     async componentDidMount() {
+
     }
     convertDate = (dataTime, date) => {
         let language = this.props.language;
@@ -74,7 +80,6 @@ class MyScheduleExamination extends Component {
             return;
         }
         let { email, phone } = this.state;
-        console.log('emai:', email, 'phone:', phone)
         let res = await getMyEmination({ email, phone });
         if (res && res.data && res.data.data && res.data.errCode === 0) {
             let AllData = res.data.data
@@ -104,15 +109,66 @@ class MyScheduleExamination extends Component {
         let { imageDataBase } = this.state;
         let res = await (await postImagePaied({ id: id, imagePaied: imageDataBase })).data
         if (res && res.data.errCode === 0) {
+            let { email, phone } = this.state;
+            let res = await getMyEmination({ email, phone });
+            if (res && res.data && res.data.data && res.data.errCode === 0) {
+                let AllData = res.data.data
+                this.setState({
+                    name: AllData.firstName,
+                    allInforExaminaions: AllData.patientData,
+                })
+            }
             toast.success('send image pay success!')
         }
         else {
             toast.error('send image pay errorr! ')
         }
     }
+    closeModal = () => {
+        this.setState({
+            isOpenCancelChangeModal: false,
+        })
+    }
+    openModalCancelChange = (id, statusId) => {
+        console.log('id:', id)
+        this.setState({
+            cancelOrChange: statusId,
+            isOpenCancelChangeModal: true,
+            idBooking: id,
+
+        })
+    }
+    changeStatusId = async () => {
+        let { cancelOrChange, idBooking } = this.state;
+        let res = await (await postStatusId({ id: idBooking, statusId: cancelOrChange })).data;
+        if (res && res.data.errCode === 0) {
+            let { email, phone } = this.state;
+            let res = await getMyEmination({ email, phone });
+            if (res && res.data && res.data.data && res.data.errCode === 0) {
+                let AllData = res.data.data
+                this.setState({
+                    name: AllData.firstName,
+                    allInforExaminaions: AllData.patientData,
+                })
+            }
+            toast.success('Change booking success!')
+        }
+        else {
+            let { email, phone } = this.state;
+            let res = await getMyEmination({ email, phone });
+            if (res && res.data && res.data.data && res.data.errCode === 0) {
+                let AllData = res.data.data
+                this.setState({
+                    name: AllData.firstName,
+                    allInforExaminaions: AllData.patientData,
+                })
+            }
+            toast.error('Change Booking error!')
+        }
+    }
     render() {
         // let timeType = this.state.allInforExaminaions.timeTypeDataPatient;
-        let { statusId } = this.state;
+        let { statusId, isOpenCancelChangeModal, cancelOrChange } = this.state;
         let { name, allInforExaminaions } = this.state;
         console.log('state infor examination:', this.state)
         return (
@@ -157,7 +213,7 @@ class MyScheduleExamination extends Component {
                                             <tr>
                                                 <td>Thời gian</td>
                                                 {this.convertDate(item.timeTypeDataPatient, item.date)}
-                                                <td rowSpan={6}>
+                                                <td rowSpan={item.statusId === "S2" ? "7" : "6"}>
                                                     {
                                                         item.statusId === 'S00' &&
                                                         <div className='waiting'>Đặt lịch chưa được xác nhận
@@ -166,9 +222,44 @@ class MyScheduleExamination extends Component {
                                                     }
                                                     {
                                                         item.statusId === 'S0' &&
-                                                        < div className='waiting'>
+                                                        < div className='not-come'>
                                                             Đang chờ xác nhận
                                                             <p>Medpro sẽ liên hệ bạn sớm nhất </p>
+                                                        </div>
+                                                    }
+                                                    {
+                                                        item.statusId === 'S1' && item.pay &&
+                                                        < div className='not-come'>
+                                                            Medpro rất tiếc khi bạn không đến
+                                                            <p>Bạn muốn đặt lại hay hoàn trả lại chi phí đã thanh toán </p>
+                                                            <p>Xin vui lòng liên hệ 0123456789</p>
+                                                        </div>
+                                                    }
+                                                    {
+                                                        item.statusId === 'S3' &&
+                                                        < div className='not-come'>
+                                                            Cảm ơn quý khách rất nhiều khi đã đến với Medpro!
+                                                        </div>
+                                                    }
+                                                    {
+                                                        item.statusId === 'S4' && item.pay &&
+                                                        < div className='not-come'>
+                                                            Lịch hẹn đã được hủy !
+                                                            <p>Bạn muốn đặt lại hay hoàn trả lại chi phí đã thanh toán </p>
+                                                            <p>Xin vui lòng liên hệ 0123456789</p>
+                                                        </div>
+                                                    }
+                                                    {
+                                                        item.statusId === 'S4' && item.pay !== true &&
+                                                        < div className='not-come'>
+                                                            Lịch hẹn đã được hủy !
+                                                        </div>
+                                                    }
+                                                    {
+                                                        item.statusId === 'S5' &&
+                                                        < div className='not-come'>
+                                                            Bạn muốn thay đổi lịch hẹn
+                                                            <p>Chúng tôi sẽ liên hệ với bạn sớm nhất</p>
                                                         </div>
                                                     }
                                                     {
@@ -208,7 +299,7 @@ class MyScheduleExamination extends Component {
                                                     }
                                                     {
                                                         item.statusId === 'S2' && item.pay === true &&
-                                                        <div className='waiting'>
+                                                        <div className='not-come'>
                                                             <p>Bạn đã thanh toán thành Công</p>
                                                             <p>Vui lòng đến sớm 15p để chúng tôi có thể phục vụ bạn  1 cách tốt nhất </p>
                                                         </div>
@@ -246,6 +337,17 @@ class MyScheduleExamination extends Component {
                                                         `${item.doctorData.doctorinfor.priceTypeData.valueEn}`} <FormattedMessage id="patient.detail-doctor.money" />
                                                 </td>
                                             </tr>
+                                            {
+                                                item.statusId === "S2" && <tr>
+                                                    <td>Thay đổi/Hủy</td>
+
+                                                    <td className='changeS2'>
+                                                        <button type="button" class="btn btn-secondary " onClick={() => this.openModalCancelChange(item.id, "S5")}>Thay đổi</button>
+                                                        <button type="button" class="btn btn-warning " onClick={() => this.openModalCancelChange(item.id, "S4")}>Hủy</button>
+                                                    </td>
+                                                </tr>
+                                            }
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -263,6 +365,8 @@ class MyScheduleExamination extends Component {
                     />
 
                 }
+                <ChangeCancelModal isOpenCancelChangeModal={isOpenCancelChangeModal} closeModal={this.closeModal}
+                    changeStatusId={this.changeStatusId} cancelOrChange={cancelOrChange} />
             </div >
         );
     }

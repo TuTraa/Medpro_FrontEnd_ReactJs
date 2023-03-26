@@ -1,6 +1,8 @@
 .parent-menu-vertical{
     display: flex;
     .vertica-menu{
+        animation: menuVertical .6s;
+        animation-fill-mode: forwards;
         position: fixed;
         top: 0;
         left: 0;
@@ -37,5 +39,13 @@
         top: 0;
         right: 0;
         background-color: rgba(18, 16, 16, 0.7);;
+    }
+}
+@keyframes menuVertical {
+    from{
+        margin-left: -300px;
+    }
+    to{
+        margin-left: 0px;
     }
 }
