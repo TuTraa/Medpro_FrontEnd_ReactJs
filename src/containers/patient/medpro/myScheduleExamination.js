@@ -11,6 +11,7 @@ import CommonUtils from '../../../utils/CommonUtils';
 import Lightbox from 'react-image-lightbox';
 import { toast } from "react-toastify";
 import ChangeCancelModal from './changeCancelModal';
+import HomeFooter from '../../HomePage/HomeFooter';
 
 class MyScheduleExamination extends Component {
     constructor(props) {
@@ -367,6 +368,7 @@ class MyScheduleExamination extends Component {
                 }
                 <ChangeCancelModal isOpenCancelChangeModal={isOpenCancelChangeModal} closeModal={this.closeModal}
                     changeStatusId={this.changeStatusId} cancelOrChange={cancelOrChange} />
+                <HomeFooter />
             </div >
         );
     }

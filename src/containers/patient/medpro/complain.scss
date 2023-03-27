@@ -1,0 +1,101 @@
+.complain{
+    .bg-my-schedule-examination{
+        background: url('../../../assets/images/bannerMedpro/intructions.jpg');
+        height: 210px !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-size: 27px;
+            font-weight: 510;
+            color: #fff;
+        }
+    }
+    .content-complain{
+        p{
+            font-size: 17px;
+        }
+        background-color: #FCFAF6;
+        width: 70%;
+        margin: 0 auto;
+        .detail{
+            width: 60%;
+            margin: 0 auto;
+            .step{
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    }
+    .question-frequently{
+        .isS0{
+            color: #45c3d2;
+        }
+        .link-back{
+            display: flex;
+        }
+
+        h3{
+            border-bottom: 1px solid rgb(209, 209, 209);
+            padding-bottom: 20px;
+            font-weight: 610;
+        }
+        .topic-questions{
+            font-size: 20px;
+            font-weight: 500;
+            color:#45c3d2;
+        }
+    }
+    .All-Role{
+        width: 80%;
+        margin: 0 auto;
+        .all-role-item{
+            width: 80%;
+            margin: 0 auto;
+            .role-item{ 
+                padding: 30px 0;
+                text-align: center;
+                .flex{
+                    display: flex;
+                    justify-content: center;
+                    i{
+                        font-size: 40px;
+                        color: #f9a870;
+                    }
+                    .is-active{
+                        color: #006e6f;
+                    }
+                }
+                P{
+                    padding-top: 10px;
+                    width: 55px;
+                    margin: 0 auto;
+                    padding-right: 0px;
+                }
+                .p-distance{
+                    width: 80px !important;
+                }
+            }
+
+        }
+        .content-role-item{
+            background-color: #f7f7f7;
+            h1{
+                padding: 20px 20px;
+            }
+            .content-bottom{
+                background-color: #FCFAF6;
+                padding: 30px 0;
+                .flex-content{
+                    width: 60%;
+                    margin: 0 auto;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

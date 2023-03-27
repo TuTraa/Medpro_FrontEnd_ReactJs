@@ -9,6 +9,7 @@ import DoctorInfor from '../doctor/doctorInfor';
 import ProfileDoctorNormal from '../specialty/profileDoctorNormal';
 import { getDetailClinic } from '../../../services/userService';
 import _ from "lodash"
+import HomeFooter from '../../HomePage/HomeFooter';
 
 class ClinicDetail extends Component {
     constructor(props) {
@@ -114,6 +115,7 @@ class ClinicDetail extends Component {
                         )
                     })
                 }
+                <HomeFooter />
             </div>
         );
     }

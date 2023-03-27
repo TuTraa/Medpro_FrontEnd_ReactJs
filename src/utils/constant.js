@@ -10,6 +10,11 @@ export const path = {
     DETAIL_CLINIC: '/detail-clinic/:id',
     BOOKING_INTROCDUCTION: '/booking-introduction',
     MY_SCHEDULE_EXAMINATION: '/yorn_schedule_examination',
+    ROLE_OF_MEDPRO: '/role_of_medpro',
+    QUESTION_ABOUT_MEDPRO: '/question_about_medpro',
+    CONTRACT_WITH_MEDPRO: '/contract_with_medpro',
+    TERMS_OF_USE: '/terms_of_use',
+    complain: '/complain',
     DOCTOR: '/doctor',
     VERIFY_EMAIL_BOOKING: '/verify-booking',
 };

@@ -22,20 +22,18 @@ class MenuVertical extends Component {
         return (
             <div className='parent-menu-vertical'>
                 <div className='vertica-menu'>
-                    <div className='item-menu'><p>Trang Chủ</p></div>
-                    <div className='item-menu'><p>Cảm Nang</p></div>
+                    <Link to={`/home`}><div className='item-menu'><p>Trang chủ</p></div></Link >
                     <div className='item-menu bg-gray'>Bạn Là Bệnh Nhân</div>
                     <Link to={`/yorn_schedule_examination`}><div className='item-menu'><p>Lịch Khám Của Bạn</p></div></Link >
 
                     <div className='item-menu bg-gray'>Bạn Là Bác Sĩ</div>
                     <div className='item-menu'><p>Trở Thành Đối Tác </p></div>
                     <div className='item-menu bg-gray'>Khác</div>
-                    <div className='item-menu'><p>Vai Trò Của Medpro</p></div>
-                    <div className='item-menu'><p>Các Câu Hỏi Thường Gặp</p></div>
-                    <div className='item-menu'><p>Liên Hệ</p></div>
-                    <div className='item-menu'><p>Điều Khoản Sử Dụng</p></div>
-                    <div className='item-menu'><p>Quy Trình Giải Quyết</p></div>
-                    <div className='item-menu'><p>Khiếu Nại</p></div>
+                    <Link to={`/role_of_medpro`}><div className='item-menu'><p>Vai trò của medpro</p></div></Link >
+                    <Link to={`/question_about_medpro`}><div className='item-menu'><p>Các Câu Hỏi Thường Gặp</p></div></Link >
+                    <Link to={`/contract_with_medpro`}><div className='item-menu'><p>Liên hệ</p></div></Link >
+                    <Link to={`/terms_of_use`}><div className='item-menu'><p>Điều khoản sử dụng</p></div></Link >
+                    <Link to={`/complain`}><div className='item-menu'><p>Quy Trình Giải Quyết Khiếu Nại</p></div></Link >
                 </div>
                 <div className='right-vertical-menu' onClick={() => this.props.onOffMenuVectical()}></div>
             </div>

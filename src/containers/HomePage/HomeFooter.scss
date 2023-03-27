@@ -1,0 +1,39 @@
+.footer-out{
+    margin-top: 30px;
+    color: #4b4b4e;
+    .footer-real{
+        border-top: 1px solid rgb(231, 231, 231);
+        padding-top: 30px;
+        background-color: #f8fafd;
+        .logo{
+            img{
+                width: 180px;
+            }
+        }
+        .infor{
+            font-size: 15px;
+            .title-footer{
+                color: #0352cc!important;
+                font-weight: 610;
+            }
+        }
+        .appstote{
+            img{
+                width: 130px;
+                margin: 10px;
+            }
+        }
+    }
+    .footer-link{
+        background-image: linear-gradient(45deg,#6a78d1,#00a4bd);
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p,a{
+            color: #f8fafd !important;
+            margin-top: 10px;
+        }
+    }
+}

@@ -1,7 +1,50 @@
 
 .banner-medpro{
     height: 557px !important;
+    overflow: hidden;
     .banner-medpro-1{
+        .install{
+            width: 600px;
+            margin-top: 70px ;
+            display: flex;
+            animation: installAnimation 2.5s;
+            animation-fill-mode: forwards;
+            .qr-out{
+                display: flex;
+                background-color: aliceblue;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 100px;
+                border-radius: 10px;
+                img{
+                    height: 80px;
+                    width: 80px !important;
+                }
+            }
+
+            .ch-ios{
+                p{
+                    color: aliceblue;
+                    font-size: 26px;
+                    text-align: center;
+                }
+                .ch-ios-flex{
+                    margin-left: 10px;
+                    display: flex;
+                    width: 320px;
+                    .ios{
+                        height: 50px !important;
+                        border-radius: 10px;
+                    }
+                    .ch {
+                        height: 50px !important;
+                        border-radius: 10px;
+                    }
+                }
+
+            }
+        }
         background: url('../../assets//images/bannerMedpro/banner.png');
         opacity: 0.94;
         height: 550px !important;
@@ -12,7 +55,7 @@
             .menu-banner-in{
                 width: 90%;
                 background-color:rgba(255, 255, 255, 0.92);
-                animation: allItemLoading 3.5s;
+                animation: allItemLoading 2.5s;
                 animation-fill-mode: forwards;
                 border-radius: 6px;
                 height: 320px;
@@ -88,6 +131,48 @@
 
     }
     .banner-medpro-2{
+        .install{
+            width: 600px;
+            margin-top: 70px ;
+            display: flex;
+            animation: installAnimation 3.5s;
+            animation-fill-mode: forwards;
+            .qr-out{
+                display: flex;
+                background-color: aliceblue;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 100px;
+                border-radius: 10px;
+                img{
+                    height: 80px;
+                    width: 80px !important;
+                }
+            }
+
+            .ch-ios{
+                p{
+                    color: aliceblue;
+                    font-size: 26px;
+                    text-align: center;
+                }
+                .ch-ios-flex{
+                    margin-left: 10px;
+                    display: flex;
+                    width: 320px;
+                    .ios{
+                        height: 50px !important;
+                        border-radius: 10px;
+                    }
+                    .ch {
+                        height: 50px !important;
+                        border-radius: 10px;
+                    }
+                }
+
+            }
+        }
         background: url('../../assets//images/bannerMedpro/home_banner_web_11.png');
         height: 550px !important;
         background-repeat: no-repeat;
@@ -171,6 +256,48 @@
         }
     }
     .banner-medpro-3{
+        .install{
+            width: 600px;
+            margin-top: 70px ;
+            display: flex;
+            animation: installAnimation 3.5s;
+            animation-fill-mode: forwards;
+            .qr-out{
+                display: flex;
+                background-color: aliceblue;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 100px;
+                border-radius: 10px;
+                img{
+                    height: 80px;
+                    width: 80px !important;
+                }
+            }
+
+            .ch-ios{
+                p{
+                    color: aliceblue;
+                    font-size: 26px;
+                    text-align: center;
+                }
+                .ch-ios-flex{
+                    margin-left: 10px;
+                    display: flex;
+                    width: 320px;
+                    .ios{
+                        height: 50px !important;
+                        border-radius: 10px;
+                    }
+                    .ch {
+                        height: 50px !important;
+                        border-radius: 10px;
+                    }
+                }
+
+            }
+        }
         background: url('../../assets//images/bannerMedpro/banner3.png');
         height: 550px !important;
         background-repeat: no-repeat;
@@ -262,10 +389,20 @@
 @keyframes allItemLoading{
     from{
         margin-right: -700px;
-        opacity: 0;
+        opacity: -0.2;
     }
     to{
         margin-right: 0px;
         opacity: 1;
+    }
+}
+@keyframes installAnimation {
+    from{
+        margin-left: -1000px !important;
+        opacity: -0.2;
+    }
+    to{
+        opacity: 1;
+        margin-left: 600px;
     }
 }

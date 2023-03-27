@@ -25,6 +25,12 @@ import allSpecialties from "./patient/specialty/allSpecialties";
 import MenuVertical from "./Header/menuVertical";
 import bookingInstructions from "./patient/bookingInstructions";
 import myScheduleExamination from "./patient/medpro/myScheduleExamination";
+import roleOfMedpro from "./patient/medpro/roleOfMedpro";
+import complain from "./patient/medpro/complain";
+import contractWithMedpro from "./patient/medpro/contractWithMedpro";
+import questionAboutMedpro from "./patient/medpro/questionAboutMedpro";
+import ternmsOfUse from "./patient/medpro/ternmsOfUse";
+
 
 
 class App extends Component {
@@ -101,6 +107,26 @@ class App extends Component {
                   <Route
                     path={path.VERIFY_EMAIL_BOOKING}
                     component={VerifyEmail}
+                  />
+                  <Route
+                    path={path.ROLE_OF_MEDPRO}
+                    component={roleOfMedpro}
+                  />
+                  <Route
+                    path={path.complain}
+                    component={complain}
+                  />
+                  <Route
+                    path={path.CONTRACT_WITH_MEDPRO}
+                    component={contractWithMedpro}
+                  />
+                  <Route
+                    path={path.QUESTION_ABOUT_MEDPRO}
+                    component={questionAboutMedpro}
+                  />
+                  <Route
+                    path={path.TERMS_OF_USE}
+                    component={ternmsOfUse}
                   />
                 </Switch>
               </CustomScrollbars>

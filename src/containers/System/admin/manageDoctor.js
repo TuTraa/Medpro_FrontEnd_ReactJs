@@ -195,8 +195,7 @@ class ManageDoctor extends Component {
             let markdown = res.data.Markdown;
             let sltSpecialty = "";
             let selectedPrice = "", selectedPayment = "", selectedProvince = "", nameClinic = "", adressClinic = "", note = "", selectSpecialty = "";
-            console.log('data infor doctor:', res.data.doctorinfor)
-
+            console.log('doctorInfor:', res.data.doctorinfor)
             if (res.data.doctorinfor) {
                 let sltPrice = res.data.doctorinfor.priceId;
                 let sltPayment = res.data.doctorinfor.paymentId;

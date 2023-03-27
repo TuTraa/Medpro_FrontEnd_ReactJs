@@ -7,6 +7,9 @@ import { changLangueAPP, onOffMenuVectical } from "../../store/actions/appAction
 import './HomePage.scss';
 import { withRouter } from "react-router";
 import Slider from "react-slick";
+import imageQR from "../../assets/images/item-menu-banner/download.png";
+import imageCH from "../../assets/images/item-menu-banner/apstore.svg";
+import imageIOS from "../../assets/images/item-menu-banner/ggplay.svg";
 
 
 class BannerMedpro extends Component {
@@ -112,6 +115,7 @@ class BannerMedpro extends Component {
                                                         <div className="text-item">Khám hậu covid   </div>
                                                     </div>
                                                 </div>
+
                                                 {/* <div className="item col-4">
                                                     <div className="item-flex">
                                                         <div className="image-item"></div>
@@ -120,7 +124,26 @@ class BannerMedpro extends Component {
                                                 </div> */}
                                             </div>
                                         </div>
+
                                         <div className="col-1"></div>
+                                    </div>
+                                </div>
+                                <div className="install">
+                                    <div className="qr-out">
+                                        <img src={imageQR} alt="react logo" />
+                                        {/* <div className="QR"></div> */}
+                                    </div>
+                                    <div className="ch-ios">
+                                        <p>Tải ứng dụng tại đây</p>
+                                        <div className="ch-ios-flex row">
+                                            <div className="ch col-6">
+                                                <img src={imageCH} alt="react logo" />
+                                            </div>
+
+                                            <div className="ios col-6">
+                                                <img src={imageIOS} alt="react logo" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -163,15 +186,27 @@ class BannerMedpro extends Component {
                                                         <div className="text-item">Khám hậu covid   </div>
                                                     </div>
                                                 </div>
-                                                {/* <div className="item col-4">
-                                                    <div className="item-flex">
-                                                        <div className="image-item"></div>
-                                                        <div className="text-item">text item</div>
-                                                    </div>
-                                                </div> */}
                                             </div>
                                         </div>
                                         <div className="col-1"></div>
+                                    </div>
+                                </div>
+                                <div className="install">
+                                    <div className="qr-out">
+                                        <img src={imageQR} alt="react logo" />
+                                        {/* <div className="QR"></div> */}
+                                    </div>
+                                    <div className="ch-ios">
+                                        <p>Tải ứng dụng tại đây</p>
+                                        <div className="ch-ios-flex row">
+                                            <div className="ch col-6">
+                                                <img src={imageCH} alt="react logo" />
+                                            </div>
+
+                                            <div className="ios col-6">
+                                                <img src={imageIOS} alt="react logo" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -214,15 +249,27 @@ class BannerMedpro extends Component {
                                                         <div className="text-item">Khám hậu covid   </div>
                                                     </div>
                                                 </div>
-                                                {/* <div className="item col-4">
-                                                    <div className="item-flex">
-                                                        <div className="image-item"></div>
-                                                        <div className="text-item">text item</div>
-                                                    </div>
-                                                </div> */}
                                             </div>
                                         </div>
                                         <div className="col-1"></div>
+                                    </div>
+                                </div>
+                                <div className="install">
+                                    <div className="qr-out">
+                                        <img src={imageQR} alt="react logo" />
+                                        {/* <div className="QR"></div> */}
+                                    </div>
+                                    <div className="ch-ios">
+                                        <p>Tải ứng dụng tại đây</p>
+                                        <div className="ch-ios-flex row">
+                                            <div className="ch col-6">
+                                                <img src={imageCH} alt="react logo" />
+                                            </div>
+
+                                            <div className="ios col-6">
+                                                <img src={imageIOS} alt="react logo" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
