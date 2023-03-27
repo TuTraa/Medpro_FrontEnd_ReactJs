@@ -130,7 +130,7 @@ class DatePicker extends Component {
     onInputBlur = (e) => {
     }
 
-    //dat.nt : Auto Fill cho dạng ngăn cách và format cụ thể (seperator có thể dc thay thế)
+    // dat.nt : Auto Fill cho dạng ngăn cách và format cụ thể (seperator có thể dc thay thế)
     SEPERATOR = "/";
     DATE_FORMAT_AUTO_FILL = "d/m/Y"; // Format không thay đổi
 
