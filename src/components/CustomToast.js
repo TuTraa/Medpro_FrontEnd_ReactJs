@@ -39,6 +39,7 @@ class CustomToast extends Component {
                             </div>
                     }
                 </div>
+
             </Fragment>
         );
     }
