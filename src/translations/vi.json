@@ -1,6 +1,6 @@
 {
     "homeHeder": {
-        "speciality": "chuyên khoa",
+        "speciality": "Chuyên khoa",
         "searchDoctor": "Tìm bác sĩ theo chuyên khoa",
         "health-facility": "Cơ sở y tế",
         "select-room": "Chọn bệnh viện phòng khám",
@@ -9,7 +9,7 @@
         "fee": "Gói khám",
         "check-health": "Khám sức khỏe tổng quát",
         "support": "Hỗ trợ",
-        "welcome": "xin chào"
+        "welcome": "Xin chào"
     },
     "banner": {
         "title1": "Nền Tảng y tế",
@@ -19,7 +19,35 @@
         "child3": "Khám tổng quát",
         "child4": "Xét nghiệm y học",
         "child5": "Sức khỏe tinh thần",
-        "child6": "Khám nha khoa"
+        "child6": "Khám nha khoa",
+        "your-appointment": "Lịch khám của bạn",
+        "medpro-0": "Chọn dịch vụ",
+        "medpro-1": "Khám toàn diện",
+        "medpro-2": "Xét nghiệm tại nhà",
+        "medpro-3": "Thanh toán viện phí",
+        "medpro-4": "Khám hậu covid",
+        "medpro-5": "Tải ứng dụng tại đây",
+        "medpro-6": "Giới thiệu",
+        "medpro-7": "Đặt lịch khám bệnh",
+        "medpro-8": "Medpro là giải pháp đặt lịch khám bệnh, chăm sóc sức khỏe trực tuyến cho cả gia đình. Người dùng chủ động trong việc khám chữa bệnh, được lựa chọn dịch vụ, chuyên khoa, bác sĩ tại các bệnh viện và phòng khám hàng đầu Việt Nam như Bệnh viện Đại học Y Dược TP.HCM, Bệnh viện Chợ Rẫy, Bệnh viện Nhi Đồng Thành Phố.",
+        "medpro-9": "Đặt khám nhanh chóng",
+        "medpro-10": "Bệnh Nhân chủ động chọn thông tin đặt khám (ngày khám và giờ khám)",
+        "medpro-11": "Thanh toán dễ dàng",
+        "medpro-12": "Người dùng chọn và thực hiện thanh toán trên phần mềm",
+        "medpro-13": "Nhận phiếu trực tuyến",
+        "medpro-14": "Bạn sẽ nhận được phiếu khám ngay trên phần mềm",
+        "medpro-15": "Tìm hiểu về quy trình",
+        "medpro-16": "đăng ký khám bệnh",
+        "medpro-17": "Phòng khám phổ biến",
+        "medpro-18": "Truyền thông nói về Medpro",
+        "medpro-19": "Medpro.vn là trung tâm thương mại điện tử phục vụ nhu cầu giới thiệu sản phẩm, dịch vụ trực tuyến về sức khỏe, bao gồm: Đăng dịch vụ phòng khám, đặt lịch khám chữa bệnh tại các phòng khám/ tại nhà, tư vấn sức khỏe trực tuyến, giới thiệu cung ứng sản phẩm, dịch vụ sức khỏe...",
+        "medpro-20": "Địa chỉ",
+        "medpro-21": "Điện thoại",
+        "medpro-22": "Liên hệ",
+        "medpro-23": "Điều khoản dịch vụ",
+        "medpro-24": "Chính sách bảo mật",
+        "medpro-25": "Quy định sử dụng",
+        "medpro-26": ": số 3,đường Cầu Giấy, phường Quan Hoa, quận Cầu Giấy, tp.Hà Nội"
     },
     "menu": {
         "admin": {
@@ -86,7 +114,7 @@
             "hide": "Ẩn bảng giá",
             "price15": "Giá tư vấn 15 phút :",
             "price30": "Giá tư vấn 30 phút :",
-            "prioritize": "Được ưu tiên khám trước khi đặt khám qua BookingCare."
+            "prioritize": "Được ưu tiên khám trước khi đặt khám qua Medpro."
         },
         "modal": {
             "note": "Đặt lịch miễn phí",

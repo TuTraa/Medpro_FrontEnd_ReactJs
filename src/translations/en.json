@@ -19,7 +19,35 @@
         "child3": "General examination",
         "child4": "Medical test",
         "child5": "Mental health",
-        "child6": "Dental examination"
+        "child6": "Dental examination",
+        "your-appointment": "Your appointment",
+        "medpro-0": "Choose service",
+        "medpro-1": "Comprehensive examination",
+        "medpro-2": "Test at home",
+        "medpro-3": "Pay hospital fees",
+        "medpro-4": "Post-covid check-up",
+        "medpro-5": "Download the app here",
+        "medpro-6": "Introduce",
+        "medpro-7": "Book a medical appointment",
+        "medpro-8": "Medpro is an online solution to schedule medical examination and health care for the whole family. Users are active in medical examination and treatment, can choose services, specialties, and doctors at leading hospitals and clinics in Vietnam such as University of Medicine and Pharmacy Hospital in Ho Chi Minh City, Cho Ray Hospital, and Hospital. City Children.",
+        "medpro-9": "Book quickly",
+        "medpro-10": "Patient actively chooses booking information (exam date and time)",
+        "medpro-11": "Easy payment",
+        "medpro-12": "User selects and makes payment on the software",
+        "medpro-13": "Get votes online",
+        "medpro-14": "You will receive the examination card right on the software",
+        "medpro-15": "Learn about the process",
+        "medpro-16": "medical register",
+        "medpro-17": "Popular clinic",
+        "medpro-18": "Media talk about Medpro",
+        "medpro-19": "Medpro.vn is an e-commerce center serving the needs of introducing online health products and services, including: Posting clinic services, booking medical examination and treatment appointments at clinics/at home, consulting Online health consultation, introduction of health products and services...",
+        "medpro-20": "Address",
+        "medpro-21": "Phone",
+        "medpro-22": "Contract",
+        "medpro-23": "Terms of Service",
+        "medpro-24": "Privacy Policy",
+        "medpro-25": "Usage rules",
+        "medpro-26": ": No. 3, Cau Giay Street, Quan Hoa Ward, Cau Giay District, Hanoi City"
     },
     "menu": {
         "admin": {
@@ -83,7 +111,7 @@
             "hide": "Hide price list",
             "price15": "15 minute consultation price :",
             "price30": "30 minute consultation price:",
-            "prioritize": "Get priority treatment before booking through BookingCare."
+            "prioritize": "Get priority treatment before booking through Medpro."
         },
         "modal": {
             "note": "Book an appointment for free",

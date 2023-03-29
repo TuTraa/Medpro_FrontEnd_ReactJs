@@ -28,11 +28,11 @@ class ContractWithMedpro extends Component {
                 <div className='content-complain'>
                     <h2 className='mt-4'>Thông tin liên hệ :</h2>
                     <div className='detail'>
-                        <p><strong>Nền tảng Đặt kh&aacute;m BookingCare</strong></p>
+                        <p><strong>Nền tảng Đặt kh&aacute;m Medpro</strong></p>
                         <p>ĐT: 02473.012.468</p>
-                        <p>Email: support@bookingcare.vn</p>
+                        <p>Email: support@medpro.vn</p>
                         <p><strong><em>Trực thuộc:</em></strong></p>
-                        <p>C&ocirc;ng ty CP C&ocirc;ng nghệ BookingCare</p>
+                        <p>C&ocirc;ng ty CP C&ocirc;ng nghệ Medpro</p>
                         <p>ĐKKD số: 0106790291, Sở &nbsp;KH-ĐT H&agrave; Nội cấp ng&agrave;y: 16/03/2015</p>
                         <p>Địa chỉ: 28 Th&agrave;nh Th&aacute;i, Dịch Vọng, Cầu Giấy, H&agrave; Nội</p>
                     </div>

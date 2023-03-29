@@ -24,7 +24,7 @@ class MenuVertical extends Component {
                 <div className='vertica-menu'>
                     <Link to={`/home`}><div className='item-menu'><p>Trang chủ</p></div></Link >
                     <div className='item-menu bg-gray'>Bạn Là Bệnh Nhân</div>
-                    <Link to={`/yorn_schedule_examination`}><div className='item-menu'><p>Lịch Khám Của Bạn</p></div></Link >
+                    <Link to={`/your_schedule_examination`}><div className='item-menu'><p>Lịch Khám Của Bạn</p></div></Link >
 
                     <div className='item-menu bg-gray'>Bạn Là Bác Sĩ</div>
                     <div className='item-menu'><p>Trở Thành Đối Tác </p></div>

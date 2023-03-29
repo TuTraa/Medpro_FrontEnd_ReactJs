@@ -10,6 +10,7 @@ import Slider from "react-slick";
 import imageQR from "../../assets/images/item-menu-banner/download.png";
 import imageCH from "../../assets/images/item-menu-banner/apstore.svg";
 import imageIOS from "../../assets/images/item-menu-banner/ggplay.svg";
+import { Link } from "react-router-dom";
 
 
 class BannerMedpro extends Component {
@@ -49,18 +50,24 @@ class BannerMedpro extends Component {
                             <div className="header-logo" src='logo' onClick={() => this.returnHome()}></div>
                         </div>
                         <div className="center-content">
-                            <div className="child-content">
-                                <div><b><FormattedMessage id="homeHeder.speciality" /></b></div>
-                                <div className="subs-title"><FormattedMessage id="homeHeder.searchDoctor" /></div>
-                            </div>
-                            <div className="child-content">
-                                <div><b><FormattedMessage id="homeHeder.health-facility" /></b></div>
-                                <div className="subs-title"><FormattedMessage id="homeHeder.select-room" /></div>
-                            </div>
-                            <div className="child-content">
-                                <div><b><FormattedMessage id="homeHeder.doctor" /></b></div>
-                                <div className="subs-title"><FormattedMessage id="homeHeder.select-doctor" /></div>
-                            </div>
+                            <Link to={`all-specialties`}>
+                                <div className="child-content">
+                                    <div><b><FormattedMessage id="homeHeder.speciality" /></b></div>
+                                    <div className="subs-title"><FormattedMessage id="homeHeder.searchDoctor" /></div>
+                                </div>
+                            </Link>
+                            <Link to={`all-clinic`}>
+                                <div className="child-content">
+                                    <div><b><FormattedMessage id="homeHeder.health-facility" /></b></div>
+                                    <div className="subs-title"><FormattedMessage id="homeHeder.select-room" /></div>
+                                </div>
+                            </Link>
+                            <Link to={`/all-doctor`}>
+                                <div className="child-content">
+                                    <div><b><FormattedMessage id="homeHeder.doctor" /></b></div>
+                                    <div className="subs-title"><FormattedMessage id="homeHeder.select-doctor" /></div>
+                                </div>
+                            </Link >
                             <div className="child-content">
                                 <div><b><FormattedMessage id="homeHeder.fee" /></b></div>
                                 <div className="subs-title"><FormattedMessage id="homeHeder.check-health" /></div>
@@ -83,36 +90,41 @@ class BannerMedpro extends Component {
                                     </div>
                                     <div className="menu-banner col-4">
                                         <div className="menu-banner-in container">
-                                            <p>Chọn dịch vụ</p>
+
+                                            <p><FormattedMessage id="banner.medpro-0" /></p>
                                             <div className="all-item row" >
                                                 <div className="item col-4">
                                                     <div className="item-flex">
-                                                        <div className="image-item1"></div>
-                                                        <div className="text-item">lịch của bạn</div>
+                                                        <Link to={`/your_schedule_examination`}>
+                                                            <div className="image-item1"></div>
+                                                        </Link>
+
+                                                        <div className="text-item"><FormattedMessage id="banner.your-appointment" /></div>
                                                     </div>
                                                 </div>
                                                 <div className="item col-4">
                                                     <div className="item-flex">
                                                         <div className="image-item2"></div>
-                                                        <div className="text-item">gói sức khỏe toàn diện</div>
+                                                        <div className="text-item"><FormattedMessage id="banner.medpro-1" /></div>
                                                     </div>
                                                 </div>
                                                 <div className="item col-4">
                                                     <div className="item-flex">
                                                         <div className="image-item3"></div>
-                                                        <div className="text-item">Xét nghiệm tại nhà</div>
+
+                                                        <div className="text-item"><FormattedMessage id="banner.medpro-2" /></div>
                                                     </div>
                                                 </div>
                                                 <div className="item col-4">
                                                     <div className="item-flex">
                                                         <div className="image-item4"></div>
-                                                        <div className="text-item">Thanh toán viện phí</div>
+                                                        <div className="text-item"><FormattedMessage id="banner.medpro-3" /></div>
                                                     </div>
                                                 </div>
                                                 <div className="item col-4">
                                                     <div className="item-flex">
                                                         <div className="image-item5"></div>
-                                                        <div className="text-item">Khám hậu covid   </div>
+                                                        <div className="text-item"><FormattedMessage id="banner.medpro-4" /></div>
                                                     </div>
                                                 </div>
 
@@ -134,7 +146,7 @@ class BannerMedpro extends Component {
                                         {/* <div className="QR"></div> */}
                                     </div>
                                     <div className="ch-ios">
-                                        <p>Tải ứng dụng tại đây</p>
+                                        <p><FormattedMessage id="banner.medpro-5" /></p>
                                         <div className="ch-ios-flex row">
                                             <div className="ch col-6">
                                                 <img src={imageCH} alt="react logo" />
@@ -154,36 +166,38 @@ class BannerMedpro extends Component {
                                     </div>
                                     <div className="menu-banner col-4">
                                         <div className="menu-banner-in container">
-                                            <p>Chọn dịch vụ</p>
+                                            <p><FormattedMessage id="banner.medpro-0" /></p>
                                             <div className="all-item row" >
                                                 <div className="item col-4">
                                                     <div className="item-flex">
-                                                        <div className="image-item1"></div>
-                                                        <div className="text-item">lịch của bạn</div>
+                                                        <Link to={`/your_schedule_examination`}>
+                                                            <div className="image-item1"></div>
+                                                        </Link>
+                                                        <div className="text-item"><FormattedMessage id="banner.your-appointment" /></div>
                                                     </div>
                                                 </div>
                                                 <div className="item col-4">
                                                     <div className="item-flex">
                                                         <div className="image-item2"></div>
-                                                        <div className="text-item">gói sức khỏe toàn diện</div>
+                                                        <div className="text-item"><FormattedMessage id="banner.medpro-1" /></div>
                                                     </div>
                                                 </div>
                                                 <div className="item col-4">
                                                     <div className="item-flex">
                                                         <div className="image-item3"></div>
-                                                        <div className="text-item">Xét nghiệm tại nhà</div>
+                                                        <div className="text-item"><FormattedMessage id="banner.medpro-2" /></div>
                                                     </div>
                                                 </div>
                                                 <div className="item col-4">
                                                     <div className="item-flex">
                                                         <div className="image-item4"></div>
-                                                        <div className="text-item">Thanh toán viện phí</div>
+                                                        <div className="text-item"><FormattedMessage id="banner.medpro-3" /></div>
                                                     </div>
                                                 </div>
                                                 <div className="item col-4">
                                                     <div className="item-flex">
                                                         <div className="image-item5"></div>
-                                                        <div className="text-item">Khám hậu covid   </div>
+                                                        <div className="text-item"><FormattedMessage id="banner.medpro-4" /></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -197,7 +211,7 @@ class BannerMedpro extends Component {
                                         {/* <div className="QR"></div> */}
                                     </div>
                                     <div className="ch-ios">
-                                        <p>Tải ứng dụng tại đây</p>
+                                        <p><FormattedMessage id="banner.medpro-5" /></p>
                                         <div className="ch-ios-flex row">
                                             <div className="ch col-6">
                                                 <img src={imageCH} alt="react logo" />
@@ -217,36 +231,38 @@ class BannerMedpro extends Component {
                                     </div>
                                     <div className="menu-banner col-4">
                                         <div className="menu-banner-in container">
-                                            <p>Chọn dịch vụ</p>
+                                            <p><FormattedMessage id="banner.medpro-0" /></p>
                                             <div className="all-item row" >
                                                 <div className="item col-4">
                                                     <div className="item-flex">
-                                                        <div className="image-item1"></div>
-                                                        <div className="text-item">lịch của bạn</div>
+                                                        <Link to={`/your_schedule_examination`}>
+                                                            <div className="image-item1"></div>
+                                                        </Link>
+                                                        <div className="text-item"><FormattedMessage id="banner.your-appointment" /></div>
                                                     </div>
                                                 </div>
                                                 <div className="item col-4">
                                                     <div className="item-flex">
                                                         <div className="image-item2"></div>
-                                                        <div className="text-item">gói sức khỏe toàn diện</div>
+                                                        <div className="text-item"><FormattedMessage id="banner.medpro-1" /></div>
                                                     </div>
                                                 </div>
                                                 <div className="item col-4">
                                                     <div className="item-flex">
                                                         <div className="image-item3"></div>
-                                                        <div className="text-item">Xét nghiệm tại nhà</div>
+                                                        <div className="text-item"><FormattedMessage id="banner.medpro-2" /></div>
                                                     </div>
                                                 </div>
                                                 <div className="item col-4">
                                                     <div className="item-flex">
                                                         <div className="image-item4"></div>
-                                                        <div className="text-item">Thanh toán viện phí</div>
+                                                        <div className="text-item"><FormattedMessage id="banner.medpro-3" /></div>
                                                     </div>
                                                 </div>
                                                 <div className="item col-4">
                                                     <div className="item-flex">
                                                         <div className="image-item5"></div>
-                                                        <div className="text-item">Khám hậu covid   </div>
+                                                        <div className="text-item"><FormattedMessage id="banner.medpro-4" /></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -260,7 +276,7 @@ class BannerMedpro extends Component {
                                         {/* <div className="QR"></div> */}
                                     </div>
                                     <div className="ch-ios">
-                                        <p>Tải ứng dụng tại đây</p>
+                                        <p><FormattedMessage id="banner.medpro-5" /></p>
                                         <div className="ch-ios-flex row">
                                             <div className="ch col-6">
                                                 <img src={imageCH} alt="react logo" />

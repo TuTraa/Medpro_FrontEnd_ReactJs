@@ -20,17 +20,17 @@ class HomeFooter extends Component {
                 <img src={footerLogo} alt="logo Footer" />
               </div>
               <div className="infor col-5">
-                <p className="title-footer">MEDPRO - Đặt Lịch Khám Bệnh</p>
-                <p>Địa chỉ: số 3,đường Cầu Giấy, phường Quan Hoa, quận Cầu Giấy, tp.Hà Nội</p>
+                <p className="title-footer">MEDPRO - <FormattedMessage id="banner.medpro-7" /></p>
+                <p><FormattedMessage id="banner.medpro-20" /> <FormattedMessage id="banner.medpro-26" /></p>
                 <p>Website: https://medpro.vn/</p>
                 <p>Email: tranvantu982001@gmail.com</p>
-                <p>Điện thoại: 0123987456</p>
+                <p><FormattedMessage id="banner.medpro-21" />: 0123987456</p>
               </div>
               <div className="action col-2">
-                <p>Liên hệ</p>
-                <p>Điều khoản dịch vụ</p>
-                <p>Chính sách bảo mật</p>
-                <p>Quy định sử dụng</p>
+                <p><FormattedMessage id="banner.medpro-22" /></p>
+                <p><FormattedMessage id="banner.medpro-23" /></p>
+                <p><FormattedMessage id="banner.medpro-24" /></p>
+                <p><FormattedMessage id="banner.medpro-25" /></p>
               </div>
               <div className="appstote col-3">
                 <img src={announced} alt="logo Footer" className="col-6" />

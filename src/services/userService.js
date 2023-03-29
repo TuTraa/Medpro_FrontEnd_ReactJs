@@ -22,6 +22,10 @@ const getTopDoctorHomeService = (limit) => {
   return axios.get(`/api/top-doctor-home?limit=${limit}`)
 }
 
+const findDoctor = (data) => {
+  return axios.get(`/api/find-doctor?province=${data.province}&specialty=${data.specialty}`)
+}
+
 const getAllDoctorService = () => {
   return axios.get(`/api/get-all-doctor`)
 }
@@ -79,6 +83,14 @@ const getAllClinic = () => {
 const getDetailClinic = (id) => {
   return axios.get(`/api/get-detail-clinic?id=${id}`);
 }
+
+const deleteClinic = (id) => {
+  return axios.post(`api/delete-clinic`, { id: id });
+}
+const editClinic = (data) => {
+  return axios.post(`api/edit-clinic`, data);
+}
+
 const getAllPatientForDoctor = (data) => {
   return axios.get(`/api/get-list-patient-for-doctor?doctorId=${data.doctorId}&dataTime=${data.date}&phone=${data.phone}`)
 }
@@ -154,5 +166,6 @@ export {
   getAllPatientForDoctorNotCome, getAllPatientForDoctorIsActive, getAllPatientForDoctorCancelHistory,
   getAllPatientForDoctorS0History, getAllPatientForDoctorIsActiveHistory,
   getAllPatientForDoctorNotComeHistory, getAllPatientForDoctorDoneHistory,
-  getAllPatientForDoctorChange, getAllPatientForDoctorChangeHistory, deleteBulkScheduleDoctor
+  getAllPatientForDoctorChange, getAllPatientForDoctorChangeHistory, deleteBulkScheduleDoctor, findDoctor,
+  deleteClinic, editClinic
 };

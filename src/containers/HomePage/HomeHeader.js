@@ -6,6 +6,7 @@ import { languages } from "../../utils/constant"
 import { changLangueAPP, onOffMenuVectical } from "../../store/actions/appActions";
 import './HomePage.scss';
 import { withRouter } from "react-router";
+import { Link } from "react-router-dom";
 
 
 class HomeHeader extends Component {
@@ -36,18 +37,24 @@ class HomeHeader extends Component {
               <div className="header-logo" src='logo' onClick={() => this.returnHome()}></div>
             </div>
             <div className="center-content">
-              <div className="child-content">
-                <div><b><FormattedMessage id="homeHeder.speciality" /></b></div>
-                <div className="subs-title"><FormattedMessage id="homeHeder.searchDoctor" /></div>
-              </div>
-              <div className="child-content">
-                <div><b><FormattedMessage id="homeHeder.health-facility" /></b></div>
-                <div className="subs-title"><FormattedMessage id="homeHeder.select-room" /></div>
-              </div>
-              <div className="child-content">
-                <div><b><FormattedMessage id="homeHeder.doctor" /></b></div>
-                <div className="subs-title"><FormattedMessage id="homeHeder.select-doctor" /></div>
-              </div>
+              <Link to={`all-specialties`}>
+                <div className="child-content">
+                  <div><b><FormattedMessage id="homeHeder.speciality" /></b></div>
+                  <div className="subs-title"><FormattedMessage id="homeHeder.searchDoctor" /></div>
+                </div>
+              </Link>
+              <Link to={`all-clinic`}>
+                <div className="child-content">
+                  <div><b><FormattedMessage id="homeHeder.health-facility" /></b></div>
+                  <div className="subs-title"><FormattedMessage id="homeHeder.select-room" /></div>
+                </div>
+              </Link>
+              <Link to={`/all-doctor`}>
+                <div className="child-content">
+                  <div><b><FormattedMessage id="homeHeder.doctor" /></b></div>
+                  <div className="subs-title"><FormattedMessage id="homeHeder.select-doctor" /></div>
+                </div>
+              </Link >
               <div className="child-content">
                 <div><b><FormattedMessage id="homeHeder.fee" /></b></div>
                 <div className="subs-title"><FormattedMessage id="homeHeder.check-health" /></div>

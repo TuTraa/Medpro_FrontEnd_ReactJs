@@ -38,8 +38,8 @@ class MedicalFacility extends Component {
 
         <div className=" slide-content container">
           <div className="slide-title">
-            <div className="text">Phòng khám phổ biến</div>
-            <Link to={`/all-specialties`}><div className="button"><FormattedMessage id="home-page.more-infor" /></div></Link >
+            <div className="text"><FormattedMessage id="banner.medpro-17" /></div>
+            <Link to={`/all-clinic`}><div className="button"><FormattedMessage id="home-page.more-infor" /></div></Link >
           </div>
           <Slider {...this.props.settings}>
             {allClinic && allClinic.length > 0 && allClinic.map((item, index) => {

@@ -9,7 +9,7 @@ class About extends Component {
             <div className="section-about container ">
                 <div className="row">
                     <div className="about-left col-7">
-                        <p>Truyền thông nói về BookingCare</p>
+                        <p><FormattedMessage id="banner.medpro-18" /></p>
                         <iframe width="94%"
                             height="400px" src="https://www.youtube.com/embed/FyDQljKtWnI"
                             title="CÀ PHÊ KHỞI NGHIỆP VTV1 - BOOKINGCARE - HỆ THỐNG ĐẶT LỊCH KHÁM TRỰC TUYẾN"
@@ -19,10 +19,7 @@ class About extends Component {
                         </iframe>
                     </div>
                     <div className="about-right col-5">
-                        Bookingcare.vn là trung tâm thương mại điện tử phục vụ nhu cầu giới thiệu sản phẩm,
-                        dịch vụ trực tuyến về sức khỏe, bao gồm: Đăng dịch vụ phòng khám, đặt lịch khám chữa bệnh tại
-                        các phòng khám/ tại nhà, tư vấn sức khỏe trực tuyến, giới thiệu cung ứng sản phẩm, dịch vụ sức
-                        khỏe...
+                        <FormattedMessage id="banner.medpro-19" />
                     </div>
 
                 </div>

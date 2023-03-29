@@ -50,7 +50,7 @@ class Conplain extends Component {
                         </div>
                         <h4>Khách hàng gửi khiếu nại tại địa chỉ : </h4>
                         <div className='step'>
-                            <p>Công Ty Cổ Phần Công Nghệ BookingCare</p>
+                            <p>Công Ty Cổ Phần Công Nghệ Medpro</p>
                             <p>Địa chỉ: 28 Thành Thái, Dịch Vọng, Cầu Giấy, Hà Nội</p>
                             <p>Hotline: 02473.012.468 - Email: support@Medpro.vn</p>
                         </div>

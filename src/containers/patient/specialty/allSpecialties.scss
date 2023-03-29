@@ -1,0 +1,43 @@
+.all-specialty{
+    width: 80%;
+    margin: 0 auto;
+    .title-all-specialty{
+        box-shadow: 0 2px 15px rgba(0,0,0,.5);
+        width: 500px;
+        margin: 50px auto;
+        height: 50px;
+        display: flex;
+        border-radius: 25px;
+        background-color: rgba(255,195,17,1.00);
+        font-family: 'Manrope', sans-serif;
+        h5{
+            justify-content: center;
+            width: 180px;
+            margin: auto;
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+    .all-item-specialty{
+        margin-top: 50px;
+        box-shadow: 0 2px 15px rgba(0,0,0,.5);
+        .item-specialty{
+            display: flex;
+            padding: 30px 20px 30px 0;
+            border-bottom: 1px solid gray;
+            .image-specialty{
+                height: 80px;
+                width: 140px;
+                margin: 0 20px;
+                background-color: aqua;
+                justify-content: center;
+                align-items: center;
+                background-size: cover;
+            }
+            p{
+                font-size: 17px;
+                font-family: 'Manrope', sans-serif;
+            }
+        }
+    }
+}

@@ -30,6 +30,8 @@ import complain from "./patient/medpro/complain";
 import contractWithMedpro from "./patient/medpro/contractWithMedpro";
 import questionAboutMedpro from "./patient/medpro/questionAboutMedpro";
 import ternmsOfUse from "./patient/medpro/ternmsOfUse";
+import allDoctor from "./patient/doctor/allDoctor";
+import allClinic from "./patient/clinic/allClinic";
 
 
 
@@ -127,6 +129,14 @@ class App extends Component {
                   <Route
                     path={path.TERMS_OF_USE}
                     component={ternmsOfUse}
+                  />
+                  <Route
+                    path={path.ALL_DOCTOR}
+                    component={allDoctor}
+                  />
+                  <Route
+                    path={path.ALL_CLINIC}
+                    component={allClinic}
                   />
                 </Switch>
               </CustomScrollbars>
