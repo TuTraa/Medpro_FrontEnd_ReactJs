@@ -12,13 +12,11 @@ class MedicalFacility extends Component {
   }
   async componentDidMount() {
     let resAllClinic = await (await getAllClinic()).data;
-    console.log('resclinic:', resAllClinic)
     if (resAllClinic && resAllClinic.data && resAllClinic.errCode === 0) {
       this.setState({
         allClinic: resAllClinic.data,
       })
     }
-    console.log(resAllClinic.data)
   }
 
   handleViewDetailDoctor = (item) => {
@@ -32,7 +30,6 @@ class MedicalFacility extends Component {
   render() {
 
     let { allClinic } = this.state;
-    console.log('allClinic state:', allClinic)
     return (
       <div className="section-slide medicalFacility"  >
 

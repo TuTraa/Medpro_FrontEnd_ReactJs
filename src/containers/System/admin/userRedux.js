@@ -170,7 +170,6 @@ class UserRedux extends Component {
         if (users.image) {
 
             imageBase64 = new Buffer(users.image, 'base64').toString('binary');
-            console.log('click edit users', imageBase64)
         }
         this.setState({
             id: users.id,
@@ -210,7 +209,7 @@ class UserRedux extends Component {
         this.setState({
             isEditUser: false,
 
-        }, console.log(this.state))
+        })
     }
     render() {
         let genders = this.state.genderArr;

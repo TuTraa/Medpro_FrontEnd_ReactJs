@@ -30,7 +30,6 @@ class Specialty extends Component {
 
   render() {
     let { dataSpecialty } = this.state;
-    console.log("state specialty", dataSpecialty);
 
 
     return (

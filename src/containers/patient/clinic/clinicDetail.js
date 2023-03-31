@@ -66,7 +66,6 @@ class ClinicDetail extends Component {
     //     this.setState({
     //         arrDoctorId: arrDoctor,
     //     })
-    //     console.log('doctor by location:', arrDoctor)
 
     // }
 

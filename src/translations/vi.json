@@ -129,7 +129,7 @@
             "confirm": "Xác Nhận",
             "cancel": "Hủy",
             "price": "Giá khám",
-            "money": "$"
+            "money": "VND"
         }
     },
     "admin": {

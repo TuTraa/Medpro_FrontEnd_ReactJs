@@ -131,7 +131,6 @@ class MyScheduleExamination extends Component {
         })
     }
     openModalCancelChange = (id, statusId) => {
-        console.log('id:', id)
         this.setState({
             cancelOrChange: statusId,
             isOpenCancelChangeModal: true,
@@ -171,7 +170,6 @@ class MyScheduleExamination extends Component {
         // let timeType = this.state.allInforExaminaions.timeTypeDataPatient;
         let { statusId, isOpenCancelChangeModal, cancelOrChange } = this.state;
         let { name, allInforExaminaions } = this.state;
-        console.log('state infor examination:', this.state)
         return (
             <div className='my-schedule-examination'>
                 <BannerMedpro isShowBanner={false} />

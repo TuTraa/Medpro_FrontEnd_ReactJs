@@ -18,7 +18,7 @@ class UserManage extends Component {
       arrUser: [],
       isOpenModalUser: false,
       isOpenModalEditUser: false,
-      dataEditUser:""
+      dataEditUser: ""
     };
   }
   async componentDidMount() {
@@ -46,9 +46,8 @@ class UserManage extends Component {
   toggleEditUserModal = (data) => {
     this.setState({
       isOpenModalEditUser: !this.state.isOpenModalEditUser,
-      dataEditUser :data
+      dataEditUser: data
     });
-    console.log(this.state.dataEditUser)
   };
 
   createNewUser = async (data) => {
@@ -64,20 +63,20 @@ class UserManage extends Component {
       console.log(e);
     }
   };
-  updateUser =async (data)=>{
-    try{
+  updateUser = async (data) => {
+    try {
       let respone = await editUserService(data);
-      if(respone && respone.data.errCode !==0){
+      if (respone && respone.data.errCode !== 0) {
         alert(respone.data.message)
       }
-      else{
+      else {
         await this.getAllUsersToHome();
         this.setState({
           isOpenModalEditUser: !this.state.isOpenModalEditUser,
         });
       }
     }
-    catch(e){
+    catch (e) {
       console.log(e);
     }
   }
@@ -107,7 +106,7 @@ class UserManage extends Component {
         )}
         {this.state.isOpenModalEditUser && (
           <ModalEditUser
-            dataEditUser = {this.state.dataEditUser}
+            dataEditUser={this.state.dataEditUser}
             isOpen={this.state.isOpenModalUser}
             toggleUserModal={this.toggleEditUserModal}
             updateUser={this.updateUser}
@@ -143,7 +142,7 @@ class UserManage extends Component {
                     <td>{users.address}</td>
                     <td>
                       <button type="button" className=" btn-edit"
-                      onClick={()=>this.toggleEditUserModal(users)}>
+                        onClick={() => this.toggleEditUserModal(users)}>
                         <i className="fas fa-edit"></i>
                       </button>
                       <button

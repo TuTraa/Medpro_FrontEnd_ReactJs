@@ -33,7 +33,6 @@ class OutStandingDoctor extends Component {
   render() {
     let language = this.props.language;
     let arrDoctors = this.state.arrDoctors;
-    console.log('outstanding arrDoctor:', arrDoctors)
     return (
       <div className="section-slide OutSandingDoctor">
 

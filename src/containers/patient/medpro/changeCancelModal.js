@@ -27,7 +27,6 @@ class ChangeCancelModal extends Component {
 
     render() {
         let { isOpenCancelChangeModal, cancelOrChange, closeModal } = this.props;
-        console.log('email state datamodal:', this.state.email)
 
         return (
             <Modal isOpen={isOpenCancelChangeModal} className={"booking-modal-container"}

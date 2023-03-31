@@ -37,7 +37,6 @@ class DefaultClass extends Component {
     }
     render() {
         let { arrPecialty } = this.state;
-        console.log('all specialty:', this.state)
 
         return (
             <>

@@ -25,10 +25,8 @@ class AllDoctor extends Component {
         this.props.getRequireDoctorInfor();
         let resDOctor = await findDoctor({ province: 'All', specialty: 'All' });
         if (resDOctor && resDOctor.data && resDOctor.data.data) {
-            console.log('resdoctor:', resDOctor.data.data)
 
             let resArrDoctor = resDOctor.data.data.data;
-            console.log('resArrDoctor:', resArrDoctor)
             this.setState({
                 arrDoctor: resArrDoctor,
             })
@@ -79,9 +77,7 @@ class AllDoctor extends Component {
     handleChangeSelect = async (option, name) => {
         let { selectedSpecialty } = this.state;
         let resDOctor = await findDoctor({ province: option.value, specialty: selectedSpecialty.value });
-        console.log(resDOctor)
         if (resDOctor && resDOctor.data.data) {
-            console.log(resDOctor.data.data.data)
             this.setState({
                 arrDoctor: resDOctor.data.data.data
             })
@@ -98,7 +94,6 @@ class AllDoctor extends Component {
         let { selectedProvince } = this.state;
         let resDOctor = await findDoctor({ province: selectedProvince.value, specialty: option.value });
         if (resDOctor && resDOctor.data.data) {
-            console.log(resDOctor.data.data.data)
             this.setState({
                 arrDoctor: resDOctor.data.data.data
             })
@@ -154,7 +149,6 @@ class AllDoctor extends Component {
     }
     render() {
         let { arrDoctor, arrProvince, arrSpecialty } = this.state;
-        console.log('arr specialty state :', this.state)
         return (
             <>
                 <BannerMedpro isShowBanner={false} />

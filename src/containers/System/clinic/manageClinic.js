@@ -76,7 +76,6 @@ class ManageClinic extends Component {
         }
         else {
             toast.error("Create New Specialty failed !");
-            console.log("create specialty err :", res)
         }
     }
     deleteClinic = async (id) => {

@@ -54,7 +54,6 @@ class ManageSpecialty extends Component {
     }
     handleSaveNewSpecialty = async () => {
         let res = await createNewSpecialty(this.state);
-        console.log("res specialty:", res)
         if (res && res.data && res.data.errCode === 0) {
             toast.success("Create New Specialty Success !");
             this.setState({
@@ -66,7 +65,6 @@ class ManageSpecialty extends Component {
         }
         else {
             toast.error("Create New Specialty failed !");
-            console.log("create specialty err :", res)
         }
     }
     render() {

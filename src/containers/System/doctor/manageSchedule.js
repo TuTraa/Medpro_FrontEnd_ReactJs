@@ -31,7 +31,6 @@ class ManageSchedule extends Component {
         this.setState({
             arrTime: res.data.data
         })
-        console.log('res day:', res.data.data)
     }
     async componentDidUpdate(prevProps, prevstate, snapshot) {
         if (prevProps.allDoctors !== this.props.allDoctors) {
@@ -51,7 +50,6 @@ class ManageSchedule extends Component {
 
             let data = this.props.allScheduleTime;
             if (data && data.length > 0 && resAllPaitent) {
-                console.log('data schedule:', data)
                 let arrTime = res.data.data;
                 timeRegistered = resAllPaitent.allScheduleForDoctor;
                 // let isSelected = this.isSelected(item)
@@ -81,7 +79,6 @@ class ManageSchedule extends Component {
     }
 
     handleChangeDatePicker = async (date) => {
-        console.log(date[0])
         let formatDate = this.state.currentDate;
         let { user } = this.props;
         let res = await getSchedulebyDate(user.id, formatDate);
@@ -91,7 +88,6 @@ class ManageSchedule extends Component {
         let arrTime = '';
         let timeRegistered = [];
         if (data && data.length > 0) {
-            console.log('data schedule:', data)
             if (res && res.data && res.data.data && res.data.errCode === 0) {
                 arrTime = res.data.data
                 timeRegistered = resAllPaitent.allScheduleForDoctor
@@ -118,7 +114,6 @@ class ManageSchedule extends Component {
             })
         }
         let selectDate = new Date(date[0]).getTime();
-        console.log('sltdate:', selectDate)
         this.setState({
             currentDate: selectDate
         })
@@ -172,7 +167,6 @@ class ManageSchedule extends Component {
                 })
             }
         }
-        console.log('notSelectedTime', notSelect)
         let res = await saveBulkScheduleDoctor({ arrSchedule: result, doctorId: user.id, date: "" + formatDate });
         let resNot = await deleteBulkScheduleDoctor({ arrSchedule: notSelect, doctorId: user.id, date: "" + formatDate });
         if (res.data.errCode === 0 && res && resNot.data.errCode === 0) {
@@ -182,7 +176,6 @@ class ManageSchedule extends Component {
     render() {
         let { rangeTime } = this.state;
         let { language } = this.props;
-        console.log('range time:', rangeTime)
         let yesterday = new Date(new Date().setHours(0, 0, 0, 0));
         return (
             <div className='manage-schedule-container'>
@@ -233,7 +226,6 @@ class ManageSchedule extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log("1111", state.user.userInfo)
     return {
         isLoggedIn: state.user.isLoggedIn,
         language: state.app.language,

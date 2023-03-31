@@ -82,13 +82,11 @@ class ManageDoctor extends Component {
         }
         if (prevProps.allRequiredDoctorInfor !== this.props.allRequiredDoctorInfor) {
             let { resPrice, resPayment, resProvince, resPecialty, resClinic } = this.props.allRequiredDoctorInfor;
-            console.log("resPecialty:", resPecialty[0].name)
             let dataSelectPrice = this.builtDataInputSelect(resPrice, "PRICE");
             let dataSelectPaymnet = this.builtDataInputSelect(resPayment);
             let dataSelectProvice = this.builtDataInputSelect(resProvince);
             let dataSelectSpecialty = this.builtDataInputSelect(resPecialty, "SPECIALTY");
             let dataSelectClinic = this.builtDataInputSelect(resClinic, "CLINIC");
-            console.log("specialtyzzzzz:", dataSelectSpecialty);
             this.setState({
                 listPrice: dataSelectPrice,
                 listPayment: dataSelectPaymnet,
@@ -133,7 +131,6 @@ class ManageDoctor extends Component {
             })
         }
         if (type === "SPECIALTY") {
-            console.log("resule Specialty:", result)
         }
         return result;
     }
@@ -190,12 +187,10 @@ class ManageDoctor extends Component {
         this.setState({ selectedOption });
         let { listPayment, listPrice, listProvince, listSpecialty } = this.state;
         let res = await (await getDetailInforDoctor(selectedOption.value)).data;
-        console.log(' select', res)
         if (res && res.errCode === 0 && res.data && res.data.Markdown) {
             let markdown = res.data.Markdown;
             let sltSpecialty = "";
             let selectedPrice = "", selectedPayment = "", selectedProvince = "", nameClinic = "", adressClinic = "", note = "", selectSpecialty = "";
-            console.log('doctorInfor:', res.data.doctorinfor)
             if (res.data.doctorinfor) {
                 let sltPrice = res.data.doctorinfor.priceId;
                 let sltPayment = res.data.doctorinfor.paymentId;
@@ -217,7 +212,6 @@ class ManageDoctor extends Component {
                     return item && item.value === sltSpecialty;
                 })
             }
-            console.log("selectSpecialty:", selectSpecialty)
             this.setState({
                 contentHtml: markdown.contentHTML,
                 contentMarkdown: markdown.contentMarkdown,
@@ -262,7 +256,6 @@ class ManageDoctor extends Component {
     render() {
         const { selectedOption } = this.state;
         let { hasOldData } = this.state;
-        console.log('list Clinic:', this.state.listClinic)
         return (
             <div className='manage-doctor-container'>
 

@@ -57,7 +57,6 @@ class RemedyModal extends Component {
     handleSendRemedy = async () => {
         let { cancelOrFinish, dataModal } = this.props;
         let id = dataModal.idBooking;
-        console.log('idBooking :', id)
         let { email, imgBase64 } = this.state;
         if (cancelOrFinish) {
             let res = await (await postStatusId({ id: id, statusId: "S1" })).data;
@@ -77,7 +76,6 @@ class RemedyModal extends Component {
 
     render() {
         let { isOpenRemedyModal, closeModal, cancelOrFinish } = this.props;
-        console.log('email state datamodal:', this.state.email)
 
         return (
             <Modal isOpen={isOpenRemedyModal} className={"booking-modal-container"}

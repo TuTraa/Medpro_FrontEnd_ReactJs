@@ -58,8 +58,6 @@ class DoctorSchedule extends Component {
     async componentDidMount() {
         // let { language } = this.props;
 
-        // console.log(moment(new Date()).format('dddd - DD/MM'))
-        // console.log(moment(new Date()).locale('en').format('dddd - DD/MM'));
         let arrDate = this.getArrDay();
         this.setState({
             arrDays: arrDate,
@@ -92,7 +90,6 @@ class DoctorSchedule extends Component {
         if (this.props.doctorId) {
             let id = this.props.doctorId;
             let res = await (await getSchedulebyDate(id, date)).data;
-            console.log("timetypeData:", res.data)
             if (res.errCode === 0) {
                 this.setState({
                     arrTime: res.data
@@ -115,7 +112,6 @@ class DoctorSchedule extends Component {
     render() {
         let { arrDays, arrTime, isModalBooking, dataScheduleTimeModal } = this.state;
         let { language } = this.props;
-        // console.log(arrTime)
         return (
             <>
                 <div className='doctor-schedule-container'>

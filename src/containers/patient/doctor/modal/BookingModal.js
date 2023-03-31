@@ -90,7 +90,6 @@ class BookingModal extends Component {
     }
 
     handleOnchangeDatePicker = (date) => {
-        console.log("date", date)
         this.setState({
             birthday: date[0]
         })
@@ -102,7 +101,6 @@ class BookingModal extends Component {
         });
     }
     getDateProfile = (date, dayTime) => {
-        console.log('daytime:', dayTime)
         this.setState({
             examinationtime: date,
             dayTime: dayTime,
@@ -133,7 +131,6 @@ class BookingModal extends Component {
             priceExamination: this.state.priceExamination,
             dayTime: this.state.dayTime,
         });
-        console.log("data api:", res, "this state:", this.state)
         if (res && res.data && res.data.errCode === 0) {
             toast.success("save infor patient succeed!");
             this.props.closeModal();

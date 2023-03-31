@@ -147,7 +147,6 @@ class ExaminationScheduleCancel extends Component {
         }
         if (prevProps.allDoctors !== this.props.allDoctors) {
             let dataSelect = this.buildDataInputSelect(this.props.allDoctors);
-            console.log('all doctor:', this.props.allDoctors)
             this.setState({
                 listDoctors: dataSelect,
             })
@@ -176,8 +175,6 @@ class ExaminationScheduleCancel extends Component {
         if (selectStatusId === 'S5') {
             res = await (await getAllPatientForDoctorChangeHistory({ doctorId: doctorId, date: date, phone: phone })).data
         }
-        // console.log('res data patient:', res)
-        console.log('data all waiting:', res.allScheduleForDoctor)
         if (res && res.errCode === 0) {
             this.setState({
                 dataPatient: res.allScheduleForDoctor,
@@ -188,7 +185,6 @@ class ExaminationScheduleCancel extends Component {
 
     btnConfirm = async (id, statusId) => {
         let res = await (await postStatusId({ id: id, statusId: statusId })).data;
-        console.log('res statusId:', res.data)
         if (res && res.data.errCode === 0 && statusId === 'S2') {
             let doctorId = this.state.selectDoctor.value;
             let phone = this.state.phone;
@@ -337,7 +333,6 @@ class ExaminationScheduleCancel extends Component {
         let { dataPatient, arrDays, arrStatusIdVi, listDoctors, isOpenRemedyModal, isConfirmModal, isRefuseModal } = this.state;
         let selectStatusId = this.state.selectStatusId.value
         let { language } = this.props;
-        console.log('phone', this.state.phone)
         return (
             <>
                 <LoadingOverlay
@@ -464,7 +459,6 @@ class ExaminationScheduleCancel extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log('all doctor2:', state.admin.allDoctors)
     return {
         language: state.app.language,
         user: state.user.userInfo,

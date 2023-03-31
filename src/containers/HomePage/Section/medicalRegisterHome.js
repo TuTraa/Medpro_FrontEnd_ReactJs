@@ -21,7 +21,6 @@ class MedicalRegisterHome extends Component {
 
         return (
             <div className='medical-register'>
-                <FormattedMessage id="banner.medpro-x" />
                 <div className='bg-medical-register'>
                     <div className='container  '>
                         <div className='row content-top'>

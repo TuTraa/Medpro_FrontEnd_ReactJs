@@ -7,12 +7,14 @@ import { languages } from '../../../utils/constant';
 import DoctorSchedule from './doctorSchedule';
 import DoctorInfor from './doctorInfor';
 import HomeFooter from '../../HomePage/HomeFooter';
+import _ from "lodash"
 
 class DetailDoctor extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            detailDoctor: {}
+            detailDoctor: {},
+            positionData: ''
         }
     }
     async componentDidMount() {
@@ -21,7 +23,8 @@ class DetailDoctor extends Component {
             let res = await (await getDetailInforDoctor(id)).data;
             if (res && res.errCode === 0) {
                 this.setState({
-                    detailDoctor: res.data
+                    detailDoctor: res.data,
+                    positionData: res.data.positionData,
                 })
             }
         }
@@ -31,12 +34,15 @@ class DetailDoctor extends Component {
     }
     render() {
         let { language } = this.props;
-        let { detailDoctor } = this.state;
+        let { detailDoctor, positionData } = this.state;
         let nameVi = '', nameEn = '';
         if (detailDoctor) {
             nameVi = `${detailDoctor.lastName} ${detailDoctor.firstName}`;
             nameEn = `${detailDoctor.firstName} ${detailDoctor.lastName}`;
+            positionData = detailDoctor.positionData && detailDoctor.positionData
         }
+
+
         return (
             <>
                 <HomeHeader isShowBanner={false} />
@@ -47,7 +53,7 @@ class DetailDoctor extends Component {
                         </div>
                         <div className='content-right'>
                             <div className='up'>
-                                {language === languages.VI ? nameVi : nameEn}
+                                {positionData && !_.isEmpty(positionData) && language === languages.VI ? `${this.state.positionData.valueVi}, ${nameVi}` : `${this.state.positionData.valueEn}, ${nameEn}`}
                             </div>
                             <div className='down'>
                                 {detailDoctor && detailDoctor.Markdown

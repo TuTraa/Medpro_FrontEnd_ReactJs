@@ -33,7 +33,6 @@ class ManagePatient extends Component {
     getDataPatient = async (currentDate) => {
         let { user } = this.props;
         let res = await (await getAllPatientForDoctor({ doctorId: user.id, date: currentDate })).data
-        // console.log('res data patient:', res)
         if (res && res.errCode === 0) {
             this.setState({
                 dataPatient: res.allScheduleForDoctor,
@@ -78,7 +77,6 @@ class ManagePatient extends Component {
             patientName: dataModal.patientName,
 
         });
-        // console.log('check modal:', res.data);
         if (res.data.errCode === 0) {
             this.setState({
                 isShowLoading: false,
@@ -118,7 +116,6 @@ class ManagePatient extends Component {
     render() {
         let yesterday = new Date(new Date().setHours(0, 0, 0, 0));
         let { dataPatient, isOpenRemedyModal, dataModal, cancelOrFinish } = this.state;
-        console.log('data patient:', dataPatient)
         let { language } = this.props;
         return (
             <>
