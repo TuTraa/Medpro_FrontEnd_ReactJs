@@ -341,8 +341,8 @@ class MyScheduleExamination extends Component {
                                                     <td>Thay đổi/Hủy</td>
 
                                                     <td className='changeS2'>
-                                                        <button type="button" class="btn btn-secondary " onClick={() => this.openModalCancelChange(item.id, "S5")}>Thay đổi</button>
-                                                        <button type="button" class="btn btn-warning " onClick={() => this.openModalCancelChange(item.id, "S4")}>Hủy</button>
+                                                        <button type="button" className="btn btn-secondary " onClick={() => this.openModalCancelChange(item.id, "S5")}>Thay đổi</button>
+                                                        <button type="button" className="btn btn-warning " onClick={() => this.openModalCancelChange(item.id, "S4")}>Hủy</button>
                                                     </td>
                                                 </tr>
                                             }

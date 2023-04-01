@@ -164,27 +164,29 @@ class ManageClinic extends Component {
                 <div className='edit-specialty'>
                     <div className='table-data-specialty'>
                         <table>
-                            <tr>
-                                <th style={{ width: '10%' }}>Stt</th>
-                                <th>Tên Phòng khám</th>
-                                <th style={{ width: '19%' }} > Action</th>
-                            </tr>
-                            {arrClinic && arrClinic.length > 0 && arrClinic.map((item, index) => {
-                                return (
-                                    <tr key={index}>
-                                        <td>{index + 1}</td>
-                                        <td>{item.name}</td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning" onClick={() => { this.builtDataEdit(item) }}>Sửa</button>
-                                            <button type="button" class="btn btn-danger"
-                                                onClick={() => { this.deleteClinic(item.id) }}
-                                            >
-                                                Xóa
-                                            </button>
-                                        </td>
-                                    </tr>
-                                )
-                            })}
+                            <tbody>
+                                <tr>
+                                    <th style={{ width: '10%' }}>Stt</th>
+                                    <th>Tên Phòng khám</th>
+                                    <th style={{ width: '19%' }} > Action</th>
+                                </tr>
+                                {arrClinic && arrClinic.length > 0 && arrClinic.map((item, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            <td>{index + 1}</td>
+                                            <td>{item.name}</td>
+                                            <td>
+                                                <button type="button" className="btn btn-warning" onClick={() => { this.builtDataEdit(item) }}>Sửa</button>
+                                                <button type="button" className="btn btn-danger"
+                                                    onClick={() => { this.deleteClinic(item.id) }}
+                                                >
+                                                    Xóa
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    )
+                                })}
+                            </tbody>
                         </table>
                     </div>
                 </div>

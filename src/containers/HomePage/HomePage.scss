@@ -1,7 +1,9 @@
 a{
     text-decoration: none;
+    font-family: 'Manrope', sans-serif;
 }
 .section-slide {
+    font-family: 'Manrope', sans-serif;
     &.medicalFacility {
         background-color: #eeeeee;
     }
@@ -136,6 +138,7 @@ a{
 }
 
 .section-about {
+    font-family: 'Manrope', sans-serif;
     height: 600px;
 
     .about-left {

@@ -113,6 +113,18 @@ class BookingModal extends Component {
         })
     }
     hadleComfirmBooking = async () => {
+        if (!this.state.fullName) {
+            alert('Missing Fullname !')
+            return;
+        }
+        if (!this.state.phoneNumber) {
+            alert('Missing Phone Number !')
+            return;
+        }
+        if (!this.state.email) {
+            alert('Missing Email !')
+            return;
+        }
         let date = new Date(this.state.birthday).getTime();
         let res = await postBookingApointment({
 
