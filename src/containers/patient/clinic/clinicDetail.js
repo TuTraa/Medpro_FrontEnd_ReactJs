@@ -76,7 +76,7 @@ class ClinicDetail extends Component {
             <div className='detail-specialty-container'>
                 <HomeHeader isShowBanner={false} />
                 <div className='description-specialty-out'>
-                    <div className='description-specialty container'>
+                    <div className='description-specialty'>
                         {dataSpecialty && !_.isEmpty(dataSpecialty) &&
                             <>
                                 <h3>{dataSpecialty.name}</h3>
@@ -102,7 +102,7 @@ class ClinicDetail extends Component {
                 {
                     arrDoctorId && arrDoctorId.length > 0 && arrDoctorId.map((item, index) => {
                         return (
-                            <div className='each-doctor mt-3 mb-2 container'>
+                            <div className='each-doctor mt-3 mb-2'>
                                 <div className='content-left'>
                                     <ProfileDoctorNormal doctorId={item} />
                                 </div>

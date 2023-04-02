@@ -205,7 +205,7 @@ class MyScheduleExamination extends Component {
                                     <table >
                                         <tbody>
                                             <tr>
-                                                <th style={{ width: '15%' }}></th>
+                                                <th style={{ width: '15%' }}>Danh Mục</th>
                                                 <th style={{ textAlign: 'center' }}>Thông Tin</th>
                                                 <th style={{ width: '25%', textAlign: 'center' }}>Trạng Thái</th>
                                             </tr>

@@ -19,12 +19,12 @@ class HomeFooter extends Component {
               <div className="logo col-2">
                 <img src={footerLogo} alt="logo Footer" />
               </div>
-              <div className="infor col-5">
+              <div className="infor col-6">
                 <p className="title-footer">MEDPRO - <FormattedMessage id="banner.medpro-7" /></p>
                 <p><FormattedMessage id="banner.medpro-20" /> <FormattedMessage id="banner.medpro-26" /></p>
-                <p>Website: https://medpro.vn/</p>
+                <p>Website: https://tutran.vn/</p>
                 <p>Email: tranvantu982001@gmail.com</p>
-                <p><FormattedMessage id="banner.medpro-21" />: 0123987456</p>
+                <p><FormattedMessage id="banner.medpro-21" />: 00984628943</p>
               </div>
               <div className="action col-2">
                 <p><FormattedMessage id="banner.medpro-22" /></p>
@@ -32,11 +32,12 @@ class HomeFooter extends Component {
                 <p><FormattedMessage id="banner.medpro-24" /></p>
                 <p><FormattedMessage id="banner.medpro-25" /></p>
               </div>
-              <div className="appstote col-3">
-                <img src={announced} alt="logo Footer" className="col-6" />
-                <img src={registered} alt="logo Footer" />
+              <div className="appstote col-2">
                 <img src={appStore} alt="logo Footer" />
-                <img src={ggplay} alt="logo Footer" />
+                <div className="ggplay">
+                  <img src={ggplay} alt="logo Footer" />
+
+                </div>
               </div>
             </div>
           </div>

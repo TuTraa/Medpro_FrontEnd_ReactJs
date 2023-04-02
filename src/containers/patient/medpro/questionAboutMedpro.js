@@ -36,7 +36,7 @@ class QuestionAboutMedpro extends Component {
                 <div className='bg-my-schedule-examination'>
                     <p>Câu hỏi thường gặp</p>
                 </div>
-                <div className='question-frequently container'>
+                <div className='question-frequently'>
                     <div className='link-back'>
                         <Link to={`/home`}><div className='item-menu'><p>Trang chủ</p></div></Link >
                         &nbsp; >> &nbsp; <div className={topicId !== 'S0' && 'isS0'} onClick={() => this.topicDetail('S0')}>Câu hỏi thường gặp </div> &nbsp;

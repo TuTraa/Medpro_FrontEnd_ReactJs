@@ -1,11 +1,14 @@
 .footer-out{
+
     font-family: 'Manrope', sans-serif;
     margin-top: 30px;
     color: #4b4b4e;
+    background-color: #f8fafd;
+    border-top: 1px solid rgb(231, 231, 231);
     .footer-real{
-        border-top: 1px solid rgb(231, 231, 231);
+        width: 85rem;
+        margin: 0 auto;
         padding-top: 30px;
-        background-color: #f8fafd;
         .logo{
             img{
                 width: 180px;
@@ -19,9 +22,16 @@
             }
         }
         .appstote{
+            position: relative;
             img{
                 width: 130px;
-                margin: 10px;
+                position: absolute !important;
+                right: 0;
+
+            }
+            .ggplay{
+                top: 50px !important;
+                margin-top: 50px !important;
             }
         }
     }

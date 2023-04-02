@@ -33,10 +33,10 @@ class MedicalFacility extends Component {
     return (
       <div className="section-slide medicalFacility"  >
 
-        <div className=" slide-content container">
+        <div className=" slide-content ">
           <div className="slide-title">
             <div className="text"><FormattedMessage id="banner.medpro-17" /></div>
-            <Link to={`/all-clinic`}><div className="button"><FormattedMessage id="home-page.more-infor" /></div></Link >
+            <Link to={`/all-clinics`}><div className="button"><FormattedMessage id="home-page.more-infor" /></div></Link >
           </div>
           <Slider {...this.props.settings}>
             {allClinic && allClinic.length > 0 && allClinic.map((item, index) => {
@@ -50,7 +50,7 @@ class MedicalFacility extends Component {
                   onClick={() => this.handleViewDetailDoctor(item)}
                 >
                   <div className="slick-img bg-image" style={{ backgroundImage: `url(${imageBase64})` }}></div>
-                  <span> {item.name}</span>
+                  <p className="name-slide mt-2"> {item.name}</p>
                 </div>
 
               )

@@ -36,10 +36,10 @@ class OutStandingDoctor extends Component {
     return (
       <div className="section-slide OutSandingDoctor">
 
-        <div className=" slide-content container">
+        <div className=" slide-content">
           <div className="slide-title">
             <div className="text"><FormattedMessage id="home-page.out-Standing-Doctor" /></div>
-            <Link to={`/all-doctor`}><div className="button"><FormattedMessage id="home-page.more-infor" /></div></Link >
+            <Link to={`/all-doctors`}><div className="button"><FormattedMessage id="home-page.more-infor" /></div></Link >
           </div>
           <Slider {...this.props.settings}>
             {arrDoctors && arrDoctors.length > 0
@@ -53,7 +53,7 @@ class OutStandingDoctor extends Component {
                     <div className="img-doctor-out">
                       <div className="slick-img-doctor bg-image" style={{ backgroundImage: `url(${imageBase64})` }}>
                       </div>
-                      <span> {item.positionData.valueVi + ', ' + item.lastName + ' ' + item.firstName}
+                      <span > {item.positionData.valueVi + ', ' + item.lastName + ' ' + item.firstName}
                       </span>
                       <p>{item.doctorinfor.specialtyData.name}</p>
                     </div>

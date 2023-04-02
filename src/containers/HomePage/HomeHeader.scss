@@ -2,34 +2,23 @@
     font-family: 'Manrope', sans-serif;
     height: 70px;
     width: 100%;
-    display: flex;
-    justify-content: center;
     position: sticky;
-    z-index: 10;
+    z-index: 12;
     top: 0;
     background-color: white;
     .home-header-content{
-        width: 80%;
         display: flex;
+        justify-content: space-between;
+        width: 85rem;
+        margin: 0 auto;
         height: 100%;
 
     }
-    .left-content{
-        width: 25%;
+    .open-nav-vertical{
+        z-index: 2;
         display: flex;
         align-items: center;
-        display: flex;
         justify-content: center;
-        .header-logo{
-            background: url("../../assets/images/header_logo.svg") center center no-repeat;
-            height: 50%;
-            width:42%;
-            padding: 0 20px;
-            margin-left: 40px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
         i{
             font-size: 25px;
             color: gray;
@@ -37,9 +26,29 @@
             padding-right: 10px;
         }
     }
+    .left-content{
+        margin-left: -4rem;
+        margin-right: 4rem;
+        width: 25%; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .header-logo{
+            background: url("../../assets/images/header_logo.svg") center center no-repeat;
+            height: 50%;
+            width: 45%;
+            padding: 0 20px;
+            margin-left: 40px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+    }
     .center-content{
         width: 50%;
         display: flex;
+        margin: 0 auto;
         justify-content: space-between;
         align-items: center;
         .child-content{

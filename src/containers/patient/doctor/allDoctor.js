@@ -152,7 +152,7 @@ class AllDoctor extends Component {
         return (
             <>
                 <BannerMedpro isShowBanner={false} />
-                <div className='all-doctor'>
+                <div className='all-doctors'>
                     <div className='tab-find'>
                         <div style={{ height: '20px' }}></div>
                         <div className="search">

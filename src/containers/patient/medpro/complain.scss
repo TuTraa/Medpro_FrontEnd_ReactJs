@@ -17,14 +17,15 @@
         }
     }
     .content-complain{
+        padding: 1rem 0;
         p{
             font-size: 17px;
         }
         background-color: #FCFAF6;
-        width: 70%;
+        width: 85rem;
         margin: 0 auto;
         .detail{
-            width: 60%;
+            width: 80%;
             margin: 0 auto;
             .step{
                 width: 90%;
@@ -33,6 +34,8 @@
         }
     }
     .question-frequently{
+        width: 84rem;
+        margin: 0 auto;
         .isS0{
             color: #45c3d2;
         }
@@ -52,7 +55,7 @@
         }
     }
     .All-Role{
-        width: 80%;
+        width: 85rem;
         margin: 0 auto;
         .all-role-item{
             width: 80%;

@@ -35,7 +35,7 @@ class Specialty extends Component {
     return (
       <div className="section-slide specialty">
 
-        <div className=" slide-content container">
+        <div className=" slide-content">
           <div className="slide-title">
             <div className="text"><FormattedMessage id="home-page.specialty" /></div>
             <Link to={`/all-specialties`}><div className="button"><FormattedMessage id="home-page.more-infor" /></div></Link >
@@ -51,7 +51,7 @@ class Specialty extends Component {
                   key={index}
                   onClick={() => this.handleViewDetailSpecialty(item)}>
                   <div className="slick-img bg-image" style={{ backgroundImage: `url(${imageBase64})` }}></div>
-                  <span> {item.name}</span>
+                  <p className="name-slide mt-2"> {item.name}</p>
                 </div>
               )
             })}

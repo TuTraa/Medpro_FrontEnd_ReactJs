@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import './bookingInstructions.scss'
 import { FormattedMessage } from 'react-intl';
 import BannerMedpro from '../HomePage/bannerMedpro';
+import HomeFooter from '../HomePage/HomeFooter';
 
 class BookingIntroduction extends Component {
     constructor(props) {
@@ -68,6 +69,7 @@ class BookingIntroduction extends Component {
                         </div>
                     </div>
                 </div>
+                <HomeFooter />
             </div>
 
         );

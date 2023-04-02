@@ -77,13 +77,13 @@ class SpecialtyDetail extends Component {
             <div className='detail-specialty-container'>
                 <HomeHeader isShowBanner={false} />
                 <div className='description-specialty-out'>
-                    <div className='description-specialty container'>
+                    <div className='description-specialty'>
                         {dataSpecialty && !_.isEmpty(dataSpecialty) &&
                             <div dangerouslySetInnerHTML={{ __html: dataSpecialty.descriptionHTML }}></div>
                         }
                     </div>
                 </div>
-                <div className='select-province container'>
+                <div className='select-province'>
                     <select onChange={(event) => { this.onchangSelectProvince(event) }}>
                         {listProvince && listProvince.length > 0 && listProvince.map((item, index) => {
 
@@ -99,7 +99,7 @@ class SpecialtyDetail extends Component {
                 {
                     arrDoctorId && arrDoctorId.length > 0 && arrDoctorId.map((item, index) => {
                         return (
-                            <div className='each-doctor mt-3 mb-2 container'>
+                            <div className='each-doctor mt-3 mb-2'>
                                 <div className='content-left'>
                                     <ProfileDoctorNormal doctorId={item} />
                                 </div>

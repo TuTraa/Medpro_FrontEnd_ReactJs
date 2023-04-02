@@ -9,26 +9,27 @@
         background-color: #fff;
         margin-bottom: 1rem;
         .description-specialty{
-            padding: 10px;
-
+            width: 85rem;
+            margin: 0 auto;
         }
     }
     .select-province{
+        width: 85rem;
+        margin: 0 auto;
         select{
-            padding: 5px;
+            // padding: 5px;
             border: 3px solid #fff;
             outline: none;
-            border-radius: 3px;
             cursor: pointer;
         }
-        padding: 5px;
     }
     .each-doctor{
+        width: 85rem;
+        margin: 0 auto;
         background-color: #fff;
         display: flex;
         justify-content: space-between;
         box-shadow: 0 1px 6px #20212447;
-        width: 100%;
         .content-left{
             width: 45%;
 

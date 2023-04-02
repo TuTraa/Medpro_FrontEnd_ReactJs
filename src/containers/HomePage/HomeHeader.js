@@ -32,8 +32,10 @@ class HomeHeader extends Component {
       <>
         <div className="home-header-container">
           <div className="home-header-content">
+            <div className="open-nav-vertical">
+              <i className="fas fa-bars" onClick={() => this.isShowMenu()} ></i>
+            </div>
             <div className="left-content">
-              <i className="fas fa-bars" onClick={() => this.isShowMenu()}></i>
               <div className="header-logo" src='logo' onClick={() => this.returnHome()}></div>
             </div>
             <div className="center-content">
@@ -43,13 +45,13 @@ class HomeHeader extends Component {
                   <div className="subs-title"><FormattedMessage id="homeHeder.searchDoctor" /></div>
                 </div>
               </Link>
-              <Link to={`all-clinic`}>
+              <Link to={`all-clinics`}>
                 <div className="child-content">
                   <div><b><FormattedMessage id="homeHeder.health-facility" /></b></div>
                   <div className="subs-title"><FormattedMessage id="homeHeder.select-room" /></div>
                 </div>
               </Link>
-              <Link to={`/all-doctor`}>
+              <Link to={`/all-doctors`}>
                 <div className="child-content">
                   <div><b><FormattedMessage id="homeHeder.doctor" /></b></div>
                   <div className="subs-title"><FormattedMessage id="homeHeder.select-doctor" /></div>

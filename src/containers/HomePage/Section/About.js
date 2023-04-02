@@ -6,7 +6,7 @@ class About extends Component {
     state = {}
     render() {
         return (
-            <div className="section-about container ">
+            <div className="section-about ">
                 <div className="row">
                     <div className="about-left col-7">
                         <p><FormattedMessage id="banner.medpro-18" /></p>
@@ -19,7 +19,9 @@ class About extends Component {
                         </iframe>
                     </div>
                     <div className="about-right col-5">
-                        <FormattedMessage id="banner.medpro-19" />
+                        <p>
+                            <FormattedMessage id="banner.medpro-19" />
+                        </p>
                     </div>
 
                 </div>
