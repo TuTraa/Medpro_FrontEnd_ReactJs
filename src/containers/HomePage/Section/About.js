@@ -8,7 +8,7 @@ class About extends Component {
         return (
             <div className="section-about ">
                 <div className="row">
-                    <div className="about-left col-7">
+                    <div className="about-left col-xxl-7 col-xl-7 col-lg-7 col-md-7">
                         <p><FormattedMessage id="banner.medpro-18" /></p>
                         <iframe width="94%"
                             height="400px" src="https://www.youtube.com/embed/FyDQljKtWnI"
@@ -18,7 +18,7 @@ class About extends Component {
                         >
                         </iframe>
                     </div>
-                    <div className="about-right col-5">
+                    <div className="about-right col-xxl-5 col-xl-5 col-lg-5 col-md-5">
                         <p>
                             <FormattedMessage id="banner.medpro-19" />
                         </p>

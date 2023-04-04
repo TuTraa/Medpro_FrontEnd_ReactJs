@@ -1,172 +1,398 @@
+.medical-register {
+    font-family     : 'Manrope', sans-serif;
+    height          : 600px;
+    background-color: #f8f9fa;
+    ;
 
-.medical-register{
-    font-family: 'Manrope', sans-serif;
-    height: 600px;
-    background-color: #f8f9fa;;
-    .bg-medical-register{
-        background: url('../../../assets/images/bannerMedpro/bg_new.9578e7c5.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
+    .bg-medical-register {
+        background         : url('../../../assets/images/bannerMedpro/bg_new.9578e7c5.jpg');
+        background-repeat  : no-repeat;
+        background-size    : cover;
         background-position: center;
-        height: 300px;
-        .medical-register-width{
-            width: 85rem;
+        height             : 300px;
+
+        .medical-register-width {
+            width : 77.5%;
             margin: 0 auto;
-        .content-top{
-            // border: 1px solid red;
-            padding-top: 50px;
-            .content-left{
-                .label{
-                    letter-spacing: 3px;
-                    text-transform: uppercase;
-                    font-weight: 510;
-                    font-size: 10px;
-                    color:#9bf4cf;
-                }
-                .text{
-                    font-size: 1.875rem;
-                    font-weight: 510;
-                    color: #fff;
+
+            .content-top {
+                // border: 1px solid red;
+                padding-top: 50px;
+
+                .content-left {
+                    .label {
+                        letter-spacing: 3px;
+                        text-transform: uppercase;
+                        font-weight   : 510;
+                        font-size     : 10px;
+                        color         : #9bf4cf;
+                    }
+
+                    .text {
+                        font-size  : 1.875rem;
+                        font-weight: 510;
+                        color      : #fff;
+                    }
+
                 }
 
-            }
-            .content-right{
-                font-size: 1.1rem;
-                color: #fff;
+                .content-right {
+                    font-size: 1.1rem;
+                    color    : #fff;
+                }
             }
         }
-    }
-        .content-bottom{
+
+        .content-bottom-all {
             margin-top: 60px;
 
-            .content-bottom-x{
-                height: 300px;
-                display: flex;
-                justify-content:space-between;
-                .content-bottom-1{
-                    
-                    background: url('../../../assets/images/bannerMedpro/new1.bb081b99.jpg');
-                    width:100%;
-                    justify-content: center;
-                    padding: 0 !important;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-position: center;
-                    border-radius: 10px;
-                    height: 200px;
-                    display: flex;
+            .on-off {
+                display: none;
+            }
 
-                    .text-content{
-                        margin-top: 140px;
-                        text-align: center;
+            .content-bottom-x {
+                height         : 300px;
+                display        : flex;
+                justify-content: space-between;
+
+
+
+                .content-bottom {
+
+                    width              : 100%;
+                    justify-content    : center;
+                    padding            : 0 !important;
+                    background-repeat  : no-repeat;
+                    background-size    : cover;
+                    background-position: center;
+                    border-radius      : 10px;
+                    height             : 200px;
+                    display            : flex;
+
+                    .text-content {
+                        margin-top      : 140px;
+                        text-align      : center;
                         background-color: #fff;
-                        height: 120px;
-                        width: 80%;
+                        height          : 120px;
+                        width           : 80%;
                         // box-shadow: 0 1px 6px #20212447;
-                        box-shadow: 0 5px 35px rgba(0,0,0,.1);
-                        transition:.3s;
-                        .label-combo3{
+                        box-shadow      : 0 5px 35px rgba(0, 0, 0, .1);
+                        transition      : .3s;
+
+                        .label-combo3 {
                             font-weight: 510;
-                            font-size: 15px;
-                            padding: 10px 0;
+                            font-size  : 15px;
+                            padding    : 10px 0;
                         }
-                        .content-combo3{
+
+                        .content-combo3 {
                             padding: 0 13px;
                         }
-                        &:hover{
+
+                        &:hover {
                             margin-top: 130px;
                             transition: .3s ease-in-out;
-                            .label-combo3{
+
+                            .label-combo3 {
                                 color: rgb(21, 72, 182);
                             }
                         }
                     }
                 }
-                .content-bottom-2{
-                    background: url('../../../assets/images/bannerMedpro/thanh\ toan.jpg');
-                    width:100%;
-                    justify-content: center;
-                    padding: 0 -10px;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-position: center;
-                    border-radius: 10px;
-                    height: 200px;
-                    display: flex;
-                    justify-content: center;
-
-                    .text-content{
-                        margin-top: 140px;
-                        text-align: center;
-                        background-color: #fff;
-                        height: 120px;
-                        width: 80%;
-                        // box-shadow: 0 1px 6px #20212447;
-                        box-shadow: 0 5px 35px rgba(0,0,0,.1);
-                        transition:.3s;
-                        .label-combo3{
-                            font-weight: 510;
-                            font-size: 15px;
-                            padding: 10px 0;
-                        }
-                        .content-combo3{
-                            padding: 0 13px;
-                        }
-                        &:hover{
-                            margin-top: 130px;
-                            transition: .3s ease-in-out;
-                            .label-combo3{
-                                color: rgb(45, 100, 219);
-                            }
-                        }
-                    }
-                }
-                .content-bottom-3{
-                    background: url('../../../assets/images/bannerMedpro/nhanphieu.jpg');
-                    width:100%;
-                    justify-content: center;
-                    padding: 0 -10px;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-position: center;
-                    border-radius: 10px;
-                    height: 200px;
-                    display: flex;
-                    justify-content: center;
-
-                    .text-content{
-                        margin-top: 140px;
-                        text-align: center;
-                        background-color: #fff;
-                        height: 120px;
-                        width: 80%;
-                        // box-shadow: 0 1px 6px #20212447;
-                        box-shadow: 0 5px 35px rgba(0,0,0,.1);
-                        transition:.3s;
-                        .label-combo3{
-                            font-weight: 510;
-                            font-size: 15px;
-                            padding: 10px 0;
-                        }
-                        .content-combo3{
-                            padding: 0 13px;
-                        }
-                        &:hover{
-                            margin-top: 130px;
-                            transition: .3s ease-in-out;
-                            .label-combo3{
-                                color: rgb(45, 100, 219);
-                            }
-                        }
-                    }
-                }
 
             }
 
         }
-        .link-register{
+
+        .link-register {
             text-align: center;
-            font-size: 17px;
+            font-size : 17px;
+        }
+    }
+}
+
+
+@media only screen and (max-width : 991.5px) {
+    .medical-register {
+        height: 1000px !important;
+
+        .bg-medical-register {
+            height: 300px;
+
+            .medical-register-width {
+                width: 77.5%;
+
+                .content-top {
+                    padding-top: 50px;
+
+                    .content-left {
+                        .label {
+                            font-size: 10px;
+                        }
+
+                        .text {
+                            font-size: 1.875rem;
+                        }
+
+                    }
+
+                    .content-right {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+
+            .content-bottom-all {
+                margin-top: 120px;
+
+                .on-off {
+                    display: block !important;
+                }
+
+                .content-bottom-x {
+                    height: 300px;
+
+                    .content-bottom {
+
+                        height: 200px;
+
+                        .text-content {
+                            margin-top: 140px;
+                            height    : 120px;
+                            width     : 80%;
+
+                            .label-combo3 {
+                                font-weight: 510;
+                                font-size  : 15px;
+                                padding    : 10px 0;
+                            }
+
+                            .content-combo3 {
+                                padding: 0 13px;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            .link-register {
+                text-align: center;
+                font-size : 17px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width : 768px) {
+    .medical-register {
+        height: 1040px !important;
+
+        .bg-medical-register {
+            height: 300px;
+
+            .medical-register-width {
+                width: 77.5%;
+
+                .content-top {
+                    padding-top: 50px;
+
+                    .content-left {
+                        .label {
+                            font-size: 10px;
+                        }
+
+                        .text {
+                            font-size: 1.875rem;
+                        }
+
+                    }
+
+                    .content-right {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+
+            .content-bottom-all {
+                margin-top: 120px;
+
+                .on-off {
+                    display: block !important;
+                }
+
+                .content-bottom-x {
+                    height: 300px;
+
+                    .content-bottom {
+
+                        height: 220px;
+
+                        .text-content {
+                            margin-top: 140px;
+
+                            .label-combo3 {
+                                font-weight: 510;
+                                font-size  : 15px;
+                                padding    : 10px 0;
+                            }
+
+                            .content-combo3 {
+                                padding: 0 13px;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            .link-register {
+                text-align: center;
+                font-size : 17px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 630px) {
+    .medical-register {
+        height: 1060px !important;
+
+        .bg-medical-register {
+            height: 350px;
+
+            .medical-register-width {
+
+                .content-top {
+                    padding-top: 50px;
+
+                    .content-left {
+                        .label {
+                            font-size: 10px;
+                        }
+
+                        .text {
+                            font-size: 1.875rem;
+                        }
+
+                    }
+                }
+            }
+
+            .content-bottom-all {
+
+                .content-bottom-x {
+                    height: 310px;
+
+                    .content-bottom {
+
+                        height: 190px;
+
+                        .text-content {
+                            height: 140px;
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 575.5px) {
+    .medical-register {
+        height: 1300px !important;
+
+        .bg-medical-register {
+            height: 350px;
+
+            .medical-register-width {
+
+                .content-top {
+                    padding-top: 50px;
+
+                    .content-left {
+                        .label {
+                            font-size: 10px;
+                        }
+
+                        .text {
+                            font-size: 1.875rem;
+                        }
+
+                    }
+                }
+            }
+
+            .content-bottom-all {
+
+                .content-bottom-x {
+                    height: 270px;
+
+                    .content-bottom {
+
+                        height: 190px;
+
+                        .text-content {
+                            height: 100px;
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 404px) {
+    .medical-register {
+        overflow: hidden;
+        height  : 1320px !important;
+
+        .bg-medical-register {
+            height: 350px;
+
+            .medical-register-width {
+                width: 98%;
+
+                .content-top {
+                    padding-top: 50px;
+
+                    .content-left {
+                        .label {
+                            font-size: 10px;
+                        }
+
+                        .text {
+                            font-size: 1.875rem;
+                        }
+
+                    }
+                }
+            }
+
+            .content-bottom-all {
+
+                .content-bottom-x {
+                    height: 270px;
+
+                    .content-bottom {
+
+                        height: 190px;
+
+                        .text-content {
+                            height: 100px;
+                        }
+                    }
+
+                }
+
+            }
         }
     }
 }

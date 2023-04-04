@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import "./remedyModal.scss"
 import { Modal, Button, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import _ from "lodash";
-import { postStatusId } from '../../../services/userService';
+import { postStatusId, sendResult } from '../../../services/userService';
 import Select from 'react-select';
 import { toast } from "react-toastify";
 import CommonUtils from '../../../utils/CommonUtils';
@@ -16,7 +16,8 @@ class RemedyModal extends Component {
         this.state = {
             email: '',
             imgBase64: '',
-            cancelOrFinish: false
+            cancelOrFinish: false,
+            result: '',
         }
     }
     async componentDidMount() {
@@ -41,6 +42,11 @@ class RemedyModal extends Component {
             email: event.target.value,
         })
     }
+    handleOchangeResult = (event) => {
+        this.setState({
+            result: event.target.value,
+        })
+    }
     handleOnchangeImage = async (event) => {
         let data = event.target.files;
         let file = data[0];
@@ -57,7 +63,7 @@ class RemedyModal extends Component {
     handleSendRemedy = async () => {
         let { cancelOrFinish, dataModal } = this.props;
         let id = dataModal.idBooking;
-        let { email, imgBase64 } = this.state;
+        let { email, imgBase64, result } = this.state;
         if (cancelOrFinish) {
             let res = await (await postStatusId({ id: id, statusId: "S1" })).data;
             if (res && res.data.errCode === 0) {
@@ -68,10 +74,10 @@ class RemedyModal extends Component {
                 toast.error('Cancel Booking error!')
             }
         } else {
+            let resSendResult = await sendResult({ id: id, result: result })
+            console.log('resSendResult:', resSendResult)
             this.props.sendRemedy({ email: email, imgBase64: imgBase64 })
-            // this.props.renderPage();
         }
-        // this.props.closeModal();
     }
 
     render() {
@@ -110,6 +116,13 @@ class RemedyModal extends Component {
                                 >
 
                                 </input>
+                            </div>
+                            <div className='col-12 form-goup'>
+                                <label>Chuẩn đoán của bác sĩ</label>
+                                <textarea className='form-control' type='text'
+                                    onChange={(event) => { this.handleOchangeResult(event) }}
+                                />
+
                             </div>
                         </div>
                     }

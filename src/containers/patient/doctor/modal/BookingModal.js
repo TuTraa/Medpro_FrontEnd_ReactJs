@@ -191,6 +191,8 @@ class BookingModal extends Component {
                                     <input className='form-control'
                                         value={this.state.phoneNumber}
                                         onChange={(event) => this.handleOnchangeInput(event, 'phoneNumber')}
+                                        type="text"
+                                        pattern="(\+84|0)\d{9,10}"
                                     />
                                 </div>
                             </div>

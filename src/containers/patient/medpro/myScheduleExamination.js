@@ -170,6 +170,7 @@ class MyScheduleExamination extends Component {
         // let timeType = this.state.allInforExaminaions.timeTypeDataPatient;
         let { statusId, isOpenCancelChangeModal, cancelOrChange } = this.state;
         let { name, allInforExaminaions } = this.state;
+        console.log('1111:', allInforExaminaions)
         return (
             <div className='my-schedule-examination'>
                 <BannerMedpro isShowBanner={false} />
@@ -201,7 +202,7 @@ class MyScheduleExamination extends Component {
                         <div className='text-hello'>Thông tin lịch khám của {name}</div>
                         {allInforExaminaions && allInforExaminaions.length > 0 && allInforExaminaions.map((item, index) => {
                             return (
-                                <div className='table-infor'>
+                                <div className='table-infor' key={index}>
                                     <table >
                                         <tbody>
                                             <tr>
@@ -212,7 +213,7 @@ class MyScheduleExamination extends Component {
                                             <tr>
                                                 <td>Thời gian</td>
                                                 {this.convertDate(item.timeTypeDataPatient, item.date)}
-                                                <td rowSpan={item.statusId === "S2" ? "7" : "6"}>
+                                                <td rowSpan={item.statusId === "S2" || "S3" ? "7" : "6"}>
                                                     {
                                                         item.statusId === 'S00' &&
                                                         <div className='waiting'>Đặt lịch chưa được xác nhận
@@ -346,7 +347,14 @@ class MyScheduleExamination extends Component {
                                                     </td>
                                                 </tr>
                                             }
-
+                                            {
+                                                item.statusId === "S3" && <tr>
+                                                    <td>Kết quả chuẩn đoán </td>
+                                                    <td >
+                                                        {item.result}
+                                                    </td>
+                                                </tr>
+                                            }
                                         </tbody>
                                     </table>
                                 </div>

@@ -98,10 +98,10 @@ class BannerMedpro extends Component {
                     <div className="banner-medpro">
                         <Slider {...settings}>
                             <div className="banner-medpro-1"></div>
-                            <div className="banner-medpro-2"></div>
-                            <div className="banner-medpro-3"></div>
+                            {/* <div className="banner-medpro-2"></div>
+                            <div className="banner-medpro-3"></div> */}
                         </Slider>
-                        <div className="menu-banner col-4">
+                        <div className="menu-banner">
                             <div className="menu-banner-in container">
 
                                 <p><FormattedMessage id="banner.medpro-0" /></p>
@@ -145,23 +145,23 @@ class BannerMedpro extends Component {
                                 </div>
                             </div>
 
-                            <div className="col-1"></div>
                         </div>
-
                         {/* install */}
                         <div className="install">
-                            <div className="qr-out">
-                                <img src={imageQR} alt="react logo" />
-                            </div>
-                            <div className="ch-ios">
-                                <p><FormattedMessage id="banner.medpro-5" /></p>
-                                <div className="ch-ios-flex row">
-                                    <div className="ch col-6">
-                                        <img src={imageCH} alt="react logo" />
-                                    </div>
+                            <div className="install-in">
+                                <div className="qr-out">
+                                    <img src={imageQR} alt="react logo" />
+                                </div>
+                                <div className="ch-ios">
+                                    <p><FormattedMessage id="banner.medpro-5" /></p>
+                                    <div className="ch-ios-flex row">
+                                        <div className="ch col-6">
+                                            <img src={imageCH} alt="react logo" />
+                                        </div>
 
-                                    <div className="ios col-6">
-                                        <img src={imageIOS} alt="react logo" />
+                                        <div className="ios col-6">
+                                            <img src={imageIOS} alt="react logo" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>

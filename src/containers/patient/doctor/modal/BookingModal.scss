@@ -19,6 +19,11 @@
         .booking-modal-body{
             padding-top: 15px;
             height: 100%;
+            .form-control{
+                input{
+                    outline: none;
+                }
+            } 
         }   
         .booking-modal-footer{
             display: flex;

@@ -16,23 +16,23 @@ class HomeFooter extends Component {
         <div className="footer-real" >
           <div className="container">
             <div className="row">
-              <div className="logo col-2">
+              <div className="logo col-xxl-2 col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <img src={footerLogo} alt="logo Footer" />
               </div>
-              <div className="infor col-6">
+              <div className="infor col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <p className="title-footer">MEDPRO - <FormattedMessage id="banner.medpro-7" /></p>
                 <p><FormattedMessage id="banner.medpro-20" /> <FormattedMessage id="banner.medpro-26" /></p>
                 <p>Website: https://tutran.vn/</p>
                 <p>Email: tranvantu982001@gmail.com</p>
-                <p><FormattedMessage id="banner.medpro-21" />: 00984628943</p>
+                <p><FormattedMessage id="banner.medpro-21" />: 0984628943</p>
               </div>
-              <div className="action col-2">
+              <div className="action col-xxl-2 col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <p><FormattedMessage id="banner.medpro-22" /></p>
                 <p><FormattedMessage id="banner.medpro-23" /></p>
                 <p><FormattedMessage id="banner.medpro-24" /></p>
                 <p><FormattedMessage id="banner.medpro-25" /></p>
               </div>
-              <div className="appstote col-2">
+              <div className="appstote col-xxl-2 col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <img src={appStore} alt="logo Footer" />
                 <div className="ggplay">
                   <img src={ggplay} alt="logo Footer" />

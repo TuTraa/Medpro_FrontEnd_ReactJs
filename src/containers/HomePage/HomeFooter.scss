@@ -1,50 +1,143 @@
-.footer-out{
+.footer-out {
 
-    font-family: 'Manrope', sans-serif;
-    margin-top: 30px;
-    color: #4b4b4e;
+    font-family     : 'Manrope', sans-serif;
+    margin-top      : 30px;
+    color           : #4b4b4e;
     background-color: #f8fafd;
-    border-top: 1px solid rgb(231, 231, 231);
-    .footer-real{
-        width: 85rem;
-        margin: 0 auto;
+    border-top      : 1px solid rgb(231, 231, 231);
+
+    .footer-real {
+        width      : 77.5%;
+        margin     : 0 auto;
         padding-top: 30px;
-        .logo{
-            img{
+
+        .logo {
+            img {
                 width: 180px;
             }
         }
-        .infor{
+
+        .infor {
             font-size: 15px;
-            .title-footer{
-                color: #0352cc!important;
+
+            .title-footer {
+                color      : #0352cc !important;
                 font-weight: 610;
             }
         }
-        .appstote{
+
+        .appstote {
             position: relative;
-            img{
-                width: 130px;
+
+            img {
+                width   : 130px;
                 position: absolute !important;
-                right: 0;
+                right   : 0;
 
             }
-            .ggplay{
-                top: 50px !important;
+
+            .ggplay {
+                top       : 50px !important;
                 margin-top: 50px !important;
             }
         }
     }
-    .footer-link{
-        background-image: linear-gradient(45deg,#6a78d1,#00a4bd);
-        width: 100%;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        p,a{
-            color: #f8fafd !important;
+
+    .footer-link {
+        background-image: linear-gradient(45deg, #6a78d1, #00a4bd);
+        width           : 100%;
+        height          : 50px;
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+
+        p,
+        a {
+            color     : #f8fafd !important;
             margin-top: 10px;
         }
     }
 }
+
+@media only screen and (max-width : 1400px) {
+    .footer-out {
+        text-align      : center;
+        margin-top      : 30px;
+        color           : #4b4b4e;
+        background-color: #f8fafd;
+        border-top      : 1px solid rgb(231, 231, 231);
+
+        .footer-real {
+            width      : 77.5%;
+            margin     : 0 auto;
+            padding-top: 30px;
+
+            .logo {
+                display        : flex;
+                justify-content: center;
+
+                img {
+                    width: 180px;
+                }
+            }
+
+            .infor {
+                font-size: 15px;
+
+
+                .title-footer {
+                    color      : #0352cc !important;
+                    font-weight: 610;
+                }
+            }
+
+            .appstote {
+                position       : relative;
+                display        : flex;
+                justify-content: center;
+
+                img {
+                    width   : 130px;
+                    position: relative !important;
+                    right   : 0;
+
+                }
+
+                .ggplay {
+                    top   : 50px !important;
+                    margin: 10px 10px !important;
+                }
+            }
+        }
+
+        .footer-link {
+            background-image: linear-gradient(45deg, #6a78d1, #00a4bd);
+            width           : 100%;
+            height          : 50px;
+            display         : flex;
+            justify-content : center;
+            align-items     : center;
+
+            p,
+            a {
+                color     : #f8fafd !important;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 404px) {
+    .footer-out {
+        .footer-real {
+            width: 100%;
+        }
+    }
+}
+
+// @media only screen and (min-width : 1024px) {
+// }
+// @media only screen and (min-width : 768px) {
+// }
+// @media only screen and (min-width : 320px) {
+// }

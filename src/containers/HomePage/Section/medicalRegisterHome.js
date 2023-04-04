@@ -4,6 +4,9 @@ import { languages } from '../../../utils/constant';
 import { FormattedMessage } from 'react-intl';
 import './medicalRegisterHome.scss';
 import { Link } from "react-router-dom";
+import register1 from "../../../assets/images/bannerMedpro/new1.bb081b99.jpg"
+import register7 from "../../../assets/images/bannerMedpro/thanhtoan2.png"
+import register3 from "../../../assets/images/bannerMedpro/nhanphieu.jpg"
 
 class MedicalRegisterHome extends Component {
     constructor(props) {
@@ -32,31 +35,33 @@ class MedicalRegisterHome extends Component {
                                 <FormattedMessage id="banner.medpro-8" />
                             </div>
                         </div>
-                        <div className='row content-bottom'>
-                            <div className='col-xxl-4 col-xl-4 col-lg-4 content-bottom-x'>
-                                <div className='content-bottom-1' >
+                        <div className='row content-bottom-all'>
+                            <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 content-bottom-x'>
+                                <div className='content-bottom' style={{ backgroundImage: `url(${register1})` }} >
                                     <div className='text-content'>
                                         <div className='label-combo3'><FormattedMessage id="banner.medpro-9" /></div>
                                         <div className='content-combo3'><FormattedMessage id="banner.medpro-10" /></div>
                                     </div>
                                 </div>
                             </div>
-                            <div className='col-xxl-4 col-xl-4 col-lg-4 content-bottom-x'>
-                                <div className='content-bottom-2' >
+                            <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 content-bottom-x'>
+                                <div className='content-bottom' style={{ backgroundImage: `url(${register7})` }} >
                                     <div className='text-content'>
                                         <div className='label-combo3'><FormattedMessage id="banner.medpro-11" /></div>
                                         <div className='content-combo3'><FormattedMessage id="banner.medpro-12" /></div>
                                     </div>
                                 </div>
                             </div>
-                            <div className='col-xxl-4 col-xl-4 col-lg-4 content-bottom-x'>
-                                <div className='content-bottom-3' >
+                            <div className='col-xxl-0 col-xl-0 col-lg-0 col-md-3 col-sm-3 on-off' > </div>
+                            <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 content-bottom-x'>
+                                <div className='content-bottom' style={{ backgroundImage: `url(${register3})` }} >
                                     <div className='text-content'>
                                         <div className='label-combo3'><FormattedMessage id="banner.medpro-13" /></div>
                                         <div className='content-combo3'><FormattedMessage id="banner.medpro-14" /></div>
                                     </div>
                                 </div>
                             </div>
+                            <div className='col-xxl-0 col-xl-0 col-lg-0 col-md-3 col-sm-3 '> </div>
                         </div>
                     </div>
                     <div className='link-register'>

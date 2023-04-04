@@ -1,144 +1,392 @@
-.banner-medpro{
+.banner-medpro {
     position: relative;
-    .menu-banner{
+
+    width: 100%;
+
+    .menu-banner {
         position: absolute;
-        right: 0;
-        top: 0;
-        right: 12.3rem;
-        .menu-banner-in{
-            width: 90%;
-            background-color:rgba(255, 255, 255, 0.92);
-            animation: allItemLoading 2.5s;
+        right   : 0;
+        top     : 0;
+        right   : 12.3rem;
+
+        .menu-banner-in {
+            width              : 390px;
+            background-color   : rgba(255, 255, 255, 0.92);
+            animation          : allItemLoading 2.5s;
             animation-fill-mode: forwards;
-            border-radius: 6px;
-            height: 320px;
-            margin-top: 50px;
-            text-align: center;
-            p{
+            border-radius      : 6px;
+            height             : 320px;
+            margin-top         : 50px;
+            text-align         : center;
+
+            p {
                 font-weight: 610;
-                font-size: 17px;
+                font-size  : 20px;
                 padding-top: 20px;
             }
-            .all-item{
-                .item{
-                    display: flex;
+
+            .all-item {
+                .item {
+                    display        : flex;
                     justify-content: center;
-                    .item-flex{
+
+                    .item-flex {
                         margin-top: 10px;
-                        .image-item{
-                            margin-left: 30px;
-                            background: url('../../assets/images/item-menu-banner/lich.png');
-                            height: 60px !important;
-                            width: 60px;
-                            background-repeat: no-repeat;
-                            background-size: cover;
+
+                        .image-item {
+                            margin-left        : 30px;
+                            background         : url('../../assets/images/item-menu-banner/lich.png');
+                            height             : 60px !important;
+                            width              : 60px;
+                            background-repeat  : no-repeat;
+                            background-size    : cover;
                             background-position: center;
                         }
-                        .text-item{
+
+                        .text-item {
                             margin-left: 15px;
-                            margin-top: 5px;
+                            margin-top : 5px;
                             font-weight: 610;
-                            width: 90px;
+                            width      : 90px;
                         }
                     }
                 }
             }
         }
     }
-    .install{
-        position: absolute;
-        bottom: 50px;
-        width: 600px;
-        margin-top: 70px ;
-        display: flex;
-        animation: installAnimation 2.5s;
+
+    .install {
+        position           : absolute;
+        bottom             : 50px;
+        width              : 600px;
+        margin-top         : 70px;
+        display            : flex;
+        animation          : installAnimation 2.5s;
         animation-fill-mode: forwards;
-        .qr-out{
+
+        .install-in {
             display: flex;
-            background-color: aliceblue;
-            justify-content: center;
-            align-items: center;
-            width: 100px;
-            height: 100px;
-            border-radius: 10px;
-            img{
-                height: 80px;
-                width: 80px !important;
-            }
-        }
 
-        .ch-ios{
-            p{
-                color: aliceblue;
-                font-size: 26px;
-                text-align: center;
-            }
-            .ch-ios-flex{
-                margin-left: 10px;
-                display: flex;
-                width: 320px;
-                .ios{
-                    height: 50px !important;
-                    border-radius: 10px;
-                }
-                .ch {
-                    height: 50px !important;
-                    border-radius: 10px;
+            .qr-out {
+                display         : flex;
+                background-color: aliceblue;
+                justify-content : center;
+                align-items     : center;
+                width           : 100px;
+                height          : 100px;
+                border-radius   : 10px;
+
+                img {
+                    height: 80px;
+                    width : 80px !important;
                 }
             }
 
+            .ch-ios {
+                p {
+                    color     : aliceblue;
+                    font-size : 26px;
+                    text-align: center;
+                }
+
+                .ch-ios-flex {
+                    margin-left: 10px;
+                    display    : flex;
+                    width      : 320px;
+
+                    .ios {
+                        height       : 50px !important;
+                        border-radius: 10px;
+                    }
+
+                    .ch {
+                        height       : 50px !important;
+                        border-radius: 10px;
+                    }
+                }
+
+            }
         }
+
     }
-    height: 557px !important;
+
+    height  : 557px !important;
     overflow: hidden;
-    font-family: 'Manrope', sans-serif;
-    .banner-medpro-1{
+    font-family: 'Manrope',
+    sans-serif;
 
-        background: url('../../assets//images/bannerMedpro/banner.png');
-        opacity: 0.94;
-        height: 550px !important;
-        background-repeat: no-repeat;
-        background-size: cover;
+    .banner-medpro-1 {
+
+        background         : url('../../assets//images/bannerMedpro/banner.png');
+        opacity            : 0.94;
+        height             : 550px !important;
+        background-repeat  : no-repeat;
+        background-size    : cover;
         background-position: center;
 
     }
-    .banner-medpro-2{
-        background: url('../../assets//images/bannerMedpro/home_banner_web_11.png');
-        height: 550px !important;
-        background-repeat: no-repeat;
-        background-size: cover;
+
+    .banner-medpro-2 {
+        background         : url('../../assets//images/bannerMedpro/home_banner_web_11.png');
+        height             : 550px !important;
+        background-repeat  : no-repeat;
+        background-size    : cover;
         background-position: center;
     }
-    .banner-medpro-3{
-        background: url('../../assets//images/bannerMedpro/banner3.png');
-        height: 550px !important;
-        background-repeat: no-repeat;
-        background-size: cover;
+
+    .banner-medpro-3 {
+        background         : url('../../assets//images/bannerMedpro/banner3.png');
+        height             : 550px !important;
+        background-repeat  : no-repeat;
+        background-size    : cover;
         background-position: center;
     }
-    .slick-prev,.slick-next{
+
+    .slick-prev,
+    .slick-next {
         display: none !important;
         opacity: 0 !important;
     }
 
 }
-@keyframes allItemLoading{
-    from{
+
+@keyframes allItemLoading {
+    from {
         margin-right: -700px;
-        opacity: -0.2;
+        opacity     : -0.2;
     }
-    to{
+
+    to {
         margin-right: 0px;
-        opacity: 1;
+        opacity     : 1;
     }
 }
+
 @keyframes installAnimation {
-    from{
+    from {
         margin-left: -1000px !important;
-        opacity: -0.2;
+        opacity    : -0.2;
     }
-    to{
-        opacity: 1;
+
+    to {
+        opacity    : 1;
         margin-left: 600px;
+    }
+}
+
+@media only screen and (max-width : 1440px) {
+    .banner-medpro {
+        position: relative;
+        height  : 1040px !important;
+
+        .menu-banner {
+            width   : 100%;
+            position: static;
+
+            .menu-banner-in {
+                background-color: rgba(255, 255, 255, 1);
+                width           : 600px;
+                margin-left     : auto !important;
+                margin-right    : auto !important;
+                margin-top      : -70px !important;
+
+                p {
+                    padding-bottom: 0;
+                    margin-bottom : 0;
+                    padding-bottom: 10px;
+                }
+
+                .all-item {
+                    box-shadow: 0 8px 15px rgba(63, 81, 179, 0.12);
+
+
+                    .item {
+                        .item-flex {
+                            padding: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .install {
+            margin-top      : 40 px !important;
+            margin-left     : 0 !important;
+            position        : static;
+            width           : 100%;
+            background-color: rgb(0, 0, 0);
+            height          : 200px;
+            display         : flex;
+            justify-content : center;
+            align-items     : center;
+            background-color: #1da1f2 !important;
+
+            .install-in {
+                margin: 0 !important;
+                width : 430px;
+            }
+
+        }
+
+        .banner-medpro-1 {
+            height: 500px !important;
+        }
+
+        .banner-medpro-2 {
+            height: 500px !important;
+        }
+
+        .banner-medpro-3 {
+            height: 500px !important;
+        }
+    }
+}
+
+@media only screen and (max-width : 1240px) {
+    .banner-medpro {
+        height: 970px !important;
+
+        .banner-medpro-1,
+        .banner-medpro-2,
+        .banner-medpro-3 {
+
+            height: 420px !important;
+
+        }
+    }
+}
+
+@media only screen and (max-width : 1024px) {
+    .banner-medpro {
+        height: 920px !important;
+
+        .menu-banner {
+
+            .menu-banner-in {
+                width: 500px;
+
+            }
+        }
+
+
+        .banner-medpro-1,
+        .banner-medpro-1,
+        .banner-medpro-1 {
+
+            height: 360px !important;
+
+        }
+    }
+}
+
+@media only screen and (max-width : 900px) {
+    .banner-medpro {
+        height: 870px !important;
+
+        .menu-banner {
+
+            .menu-banner-in {
+                width: 400px;
+            }
+        }
+
+        .banner-medpro-1,
+        .banner-medpro-2,
+        .banner-medpro-3 {
+
+            height: 320px !important;
+
+        }
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .banner-medpro {
+        height: 760px !important;
+
+        .menu-banner {
+            padding: 0;
+
+            .menu-banner-in {
+                width    : 400px;
+                transform: scale(0.85);
+            }
+        }
+
+        .install {
+            margin-top: 20px;
+
+            .install-in {
+                transform: scale(0.85);
+            }
+        }
+
+        .banner-medpro-1,
+        .banner-medpro-2,
+        .banner-medpro-3 {
+
+            height: 270px !important;
+
+        }
+
+    }
+}
+
+@media only screen and (max-width : 520px) {
+    .banner-medpro {
+        height: 700px !important;
+
+        .menu-banner {
+
+            .menu-banner-in {
+                width    : 400px;
+                transform: scale(0.8);
+            }
+        }
+
+        .install {
+            .install-in {
+                transform: scale(0.8);
+            }
+        }
+
+        .banner-medpro-1,
+        .banner-medpro-2,
+        .banner-medpro-3 {
+
+            height: 200px !important;
+
+        }
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .banner-medpro {
+        height: 600px !important;
+
+        .menu-banner {
+
+            .menu-banner-in {
+                width     : 250px;
+                transform : scale(0.6);
+                margin-top: -90px !important;
+            }
+        }
+
+        .install {
+            margin-top: -20px;
+
+            .install-in {
+                transform: scale(0.6);
+            }
+        }
+
+        .banner-medpro-1,
+        .banner-medpro-2,
+        .banner-medpro-3 {
+
+            height: 170px !important;
+
+        }
     }
 }

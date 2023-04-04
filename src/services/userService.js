@@ -153,6 +153,10 @@ const postStatusId = (data) => {
   return axios.post(`/api/post-statusId`, data)
 }
 
+const sendResult = (data) => {
+  return axios.post(`/api/send-result`, data)
+}
+
 export {
   handleLoginApi, getAllUsers, createNewUserService,
   deleteUserService, editUserService, getAllCodeService,
@@ -167,5 +171,5 @@ export {
   getAllPatientForDoctorS0History, getAllPatientForDoctorIsActiveHistory,
   getAllPatientForDoctorNotComeHistory, getAllPatientForDoctorDoneHistory,
   getAllPatientForDoctorChange, getAllPatientForDoctorChangeHistory, deleteBulkScheduleDoctor, findDoctor,
-  deleteClinic, editClinic
+  deleteClinic, editClinic, sendResult
 };
