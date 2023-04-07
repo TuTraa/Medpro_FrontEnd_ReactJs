@@ -1,44 +1,72 @@
-.all-specialty{
+.all-specialty {
     font-family: 'Manrope', sans-serif;
-    width: 85rem;
-    margin: 0 auto;
-    .title-all-specialty{
-        box-shadow: 0 2px 15px rgba(0,0,0,.5);
-        width: 500px;
-        margin: 50px auto;
-        height: 50px;
-        display: flex;
-        border-radius: 25px;
-        background-color: rgba(255,195,17,1.00);
-        font-family: 'Manrope', sans-serif;
-        h5{
+    width      : 77.5%;
+    margin     : 0 auto;
+
+    .title-all-specialty {
+        box-shadow      : 0 2px 15px rgba(0, 0, 0, .5);
+        width           : 30rem;
+        margin          : 50px auto;
+        height          : 50px;
+        display         : flex;
+        border-radius   : 25px;
+        background-color: rgba(255, 195, 17, 1.00);
+        font-family     : 'Manrope', sans-serif;
+
+        h5 {
             justify-content: center;
-            width: 180px;
-            margin: auto;
-            font-size: 20px;
-            font-weight: 400;
+            width          : 180px;
+            margin         : auto;
+            font-size      : 20px;
+            font-weight    : 400;
         }
     }
-    .all-item-specialty{
+
+    .all-item-specialty {
         border-radius: 10px;
-        margin-top: 50px;
-        box-shadow: 0 2px 15px rgba(0,0,0,.5);
-        .item-specialty{
-            display: flex;
-            padding: 30px 20px 30px 0;
+        margin-top   : 50px;
+        box-shadow   : 0 2px 15px rgba(0, 0, 0, .5);
+
+        .item-specialty {
+            display      : flex;
+            padding      : 30px 20px 30px 0;
             border-bottom: 1px solid rgb(230, 230, 230);
-            .image-specialty{
-                height: 80px;
-                width: 140px;
-                margin: 0 20px;
+
+            .image-specialty {
+                height          : 80px;
+                width           : 140px;
+                margin          : 0 20px;
                 background-color: aqua;
-                justify-content: center;
-                align-items: center;
-                background-size: cover;
+                justify-content : center;
+                align-items     : center;
+                background-size : cover;
             }
-            p{
+
+            p {
                 font-size: 17px;
             }
         }
+    }
+}
+
+@media only screen and (max-width : 599.5px) {
+    .all-specialty {
+
+        .title-all-specialty {
+            box-shadow      : 0 2px 15px rgba(0, 0, 0, .5);
+            width           : 290px !important;
+            margin          : 50px auto;
+            height          : 50px;
+            display         : flex;
+            border-radius   : 25px;
+            background-color: rgba(255, 195, 17, 1.00);
+            font-family     : 'Manrope', sans-serif;
+        }
+    }
+}
+
+@media only screen and (max-width : 404px) {
+    .all-specialty {
+        width: 98%;
     }
 }

@@ -1,33 +1,55 @@
-div._loading_overlay_wrapper{
+div._loading_overlay_wrapper {
     font-family: 'Manrope', sans-serif;
-    position: unset;
-    ._loading_overlay_overlay{
+    position   : unset;
+
+    ._loading_overlay_overlay {
         z-index: 1000000;
     }
 }
 
-.manage-patient-container{
-    .m-p-title{
-        p{
-            font-size: 18px;
-            margin: 10px 0;
+.manage-patient-container {
+    .m-p-title {
+        p {
+            font-size  : 18px;
+            margin     : 10px 0;
             font-weight: 600;
-            text-align: center;
+            text-align : center;
         }
 
     }
-    .manage-patient-body{
+
+    .manage-patient-body {
         margin: auto 20px;
     }
-    .all-infor-schedule{
+
+    .all-infor-schedule {
         margin: 20px 20px;
+
         tr {
-            td{
-                button{
-                    width: 100px;
-                    margin: 5px;
+            .action-click {
+
+                .click-patient {
+                    display        : flex;
+                    align-items    : center;
+                    vertical-align : middle;
+                    height         : 100%;
+                    justify-content: space-evenly;
+
+                    .cancel {
+                        font-size: 24px;
+                        color    : red;
+                    }
+                }
+
+                .confirm {
+                    font-size: 24px;
+                    color    : rgb(10, 158, 32);
                 }
             }
         }
     }
+}
+
+.color-i {
+    color: rgb(96, 96, 96);
 }

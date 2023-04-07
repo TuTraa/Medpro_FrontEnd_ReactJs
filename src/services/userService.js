@@ -157,6 +157,14 @@ const sendResult = (data) => {
   return axios.post(`/api/send-result`, data)
 }
 
+const notifyDoctor = (doctorId) => {
+  return axios.get(`/api/get-notify-doctor?doctorId=${doctorId}`)
+}
+
+const checkedNotify = (bookingId) => {
+  return axios.post(`/api/post-checked-notify`, { bookingId })
+}
+
 export {
   handleLoginApi, getAllUsers, createNewUserService,
   deleteUserService, editUserService, getAllCodeService,
@@ -171,5 +179,5 @@ export {
   getAllPatientForDoctorS0History, getAllPatientForDoctorIsActiveHistory,
   getAllPatientForDoctorNotComeHistory, getAllPatientForDoctorDoneHistory,
   getAllPatientForDoctorChange, getAllPatientForDoctorChangeHistory, deleteBulkScheduleDoctor, findDoctor,
-  deleteClinic, editClinic, sendResult
+  deleteClinic, editClinic, sendResult, notifyDoctor, checkedNotify
 };

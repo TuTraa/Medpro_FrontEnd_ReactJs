@@ -1,28 +1,47 @@
-.all-infor-schedule{
-    table{
-        tr{
-            .pay{
-                color: green;
+.all-infor-schedule {
+    table {
+        tr {
+
+            .pay {
+                color      : green;
                 font-weight: 610;
             }
-            td{
-                .buttonS0{
-                    width: 100px !important;
-                    margin-top: 10px;
+
+            .action-click-schedule {
+                .click-schedule {
+                    display        : flex;
+                    align-items    : center;
+                    vertical-align : middle;
+                    height         : 100%;
+                    justify-content: space-evenly;
+
+
+                    .cancel {
+                        font-size: 24px;
+                        color    : red;
+                    }
+
+                    .confirm {
+                        font-size: 24px;
+                        color    : rgb(10, 158, 32);
+                    }
                 }
             }
-            th{
-                .css-yk16xz-control{
+
+            th {
+                .css-yk16xz-control {
                     border-style: none !important;
-                    border-right:none !important ;
-                    .css-1okebmr-indicatorSeparator{
+                    border-right: none !important;
+
+                    .css-1okebmr-indicatorSeparator {
                         display: none !important;
                     }
-                    .css-1uccc91-singleValue{
-                        color: rgb(250, 0, 33) !important;
-                        margin: 0 !important;
-                        font-size: 13px !important;
-                        border: none !important;
+
+                    .css-1uccc91-singleValue {
+                        color           : rgb(250, 0, 33) !important;
+                        margin          : 0 !important;
+                        font-size       : 13px !important;
+                        border          : none !important;
                         // border-bottom: 1px solid gray !important;
                     }
                 }

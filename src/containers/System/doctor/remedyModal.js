@@ -92,7 +92,7 @@ class RemedyModal extends Component {
                 <div className="modal-header">
                     <h5 className="modal-title">{cancelOrFinish ? 'Hủy đơn' : 'Gửi đơn thuốc'}</h5>
                     <button type="button" className="close" aria-label="Close" onClick={this.props.closeModal}>
-                        {/* <span aria-hidden="true">×</span> */}
+                        {/* <span aria-hidden="true"><i class="fas fa-times"></i></span> */}
                     </button>
                 </div>
                 <ModalBody>
@@ -118,7 +118,7 @@ class RemedyModal extends Component {
                                 </input>
                             </div>
                             <div className='col-12 form-goup'>
-                                <label>Chuẩn đoán của bác sĩ</label>
+                                <label>Chẩn đoán của bác sĩ</label>
                                 <textarea className='form-control' type='text'
                                     onChange={(event) => { this.handleOchangeResult(event) }}
                                 />

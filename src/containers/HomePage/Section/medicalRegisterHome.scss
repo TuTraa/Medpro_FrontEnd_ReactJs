@@ -1,6 +1,6 @@
 .medical-register {
     font-family     : 'Manrope', sans-serif;
-    height          : 600px;
+    height          : 560px;
     background-color: #f8f9fa;
     ;
 
@@ -111,6 +111,18 @@
     }
 }
 
+@media only screen and (max-width : 1180.5px) {
+    .medical-register {
+        height: 620px !important;
+
+        .bg-medical-register {
+
+            .content-bottom-all {
+                margin-top: 30px;
+            }
+        }
+    }
+}
 
 @media only screen and (max-width : 991.5px) {
     .medical-register {

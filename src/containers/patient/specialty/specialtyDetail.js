@@ -99,12 +99,12 @@ class SpecialtyDetail extends Component {
                 {
                     arrDoctorId && arrDoctorId.length > 0 && arrDoctorId.map((item, index) => {
                         return (
-                            <div className='each-doctor mt-3 mb-2'>
+                            <div className='each-doctor mt-3 mb-2' key={index}>
                                 <div className='content-left'>
                                     <ProfileDoctorNormal doctorId={item} />
                                 </div>
                                 <div className='content-right'>
-                                    <DoctorSchedule doctorId={item} key={index} />
+                                    <DoctorSchedule doctorId={item} />
                                     <DoctorInfor doctorId={item} />
                                 </div>
                             </div>

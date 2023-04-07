@@ -1,49 +1,81 @@
 @import "../../styles/common.scss";
 
 .header-container {
-    font-family: 'Manrope', sans-serif;
-    z-index: 99;
-    display: flex;
-    justify-content: space-between;
+    position        : relative;
+    font-family     : 'Manrope', sans-serif;
+    z-index         : 99;
+    display         : flex;
+    justify-content : space-between;
     background-color: $colormain;
-    color: $common-text-color;
-    height: 40px;
-    position: relative;
+    color           : $common-text-color;
+    height          : 40px;
+    position        : relative;
+
     .btn-logout {
-        color: $common-text-color;
+        color      : $common-text-color;
         line-height: 40px;
-        height: 40px;
-        padding: 0 10px;
+        height     : 40px;
+        padding    : 0 10px;
+
         &:hover {
             background-color: darken($colormain, 5);
         }
+
         i {
             font-size: $base-size + 1px;
         }
     }
-    .languages{
-        .language-vi{
-            padding-right: .5rem;
-            cursor: pointer;
-            opacity: 0.5;
 
-            &.acitve{
+    .languages {
+        .language-vi {
+            padding-right: .5rem;
+            cursor       : pointer;
+            opacity      : 0.5;
+
+            &.acitve {
                 opacity: 1;
-                color: rgb(42, 248, 121);
+                color  : rgb(42, 248, 121);
             }
         }
-        .language-en{
+
+        .language-en {
             margin-right: 2rem;
-            cursor: pointer;
-            opacity: 0.5;
-            
-            &.acitve{
+            cursor      : pointer;
+            opacity     : 0.5;
+
+            &.acitve {
                 opacity: 1;
-                color: rgb(200, 242, 61);
+                color  : rgb(200, 242, 61);
             }
         }
-        .welcome{
+
+        .welcome {
             margin-right: 1.2rem;
+        }
+    }
+
+    .notification {
+        position   : absolute;
+        display    : flex;
+        right      : 17rem;
+        align-items: center;
+        margin     : auto 0;
+
+        .bell {
+            background-color: rgba(205, 229, 229, 0.5);
+            padding         : 7px 12px;
+            border-radius   : 50%;
+            margin          : 2px 8px;
+            cursor          : pointer;
+
+            span {
+                position        : absolute;
+                top             : 0;
+                background-color: red;
+                padding         : 0 5px;
+                border-radius   : 50%;
+                font-size       : 11px;
+            }
         }
     }
 }

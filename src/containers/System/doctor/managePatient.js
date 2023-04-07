@@ -116,6 +116,7 @@ class ManagePatient extends Component {
     render() {
         let yesterday = new Date(new Date().setHours(0, 0, 0, 0));
         let { dataPatient, isOpenRemedyModal, dataModal, cancelOrFinish } = this.state;
+        console.log(dataPatient)
         let { language } = this.props;
         return (
             <>
@@ -152,7 +153,7 @@ class ManagePatient extends Component {
                                         <th>Giới Tính</th>
                                         <th>Số Điện Thoại</th>
                                         <th>Lý do khám</th>
-                                        <th style={{ width: '20%' }}>Actions</th>
+                                        <th style={{ width: '10%' }}>Actions</th>
                                     </tr>
                                     {dataPatient && dataPatient.length > 0 ? dataPatient.map((item, index) => {
                                         let timeType = language === languages.VI ? item.timeTypeDataPatient.valueVi : item.timeTypeDataPatient.valueEn
@@ -166,13 +167,11 @@ class ManagePatient extends Component {
                                                 <td>{gender}</td>
                                                 <td>{item.patientData.phoneNumber}</td>
                                                 <td>{item.reason}</td>
-                                                <td>
-                                                    <button type="button" className="btn btn-success" onClick={() => this.btnConfirm(item, false)}>
-                                                        Hoàn thành
-                                                    </button>
-                                                    <button type="button" className="btn btn-danger" onClick={() => this.btnConfirm(item, true)}>
-                                                        Không đến
-                                                    </button>
+                                                <td className='action-click'>
+                                                    <div className='click-patient'>
+                                                        <i class="fas fa-check-square confirm " onClick={() => this.btnConfirm(item, false)}></i>
+                                                        <i class="fas fa-window-close cancel" onClick={() => this.btnConfirm(item, true)}></i>
+                                                    </div>
                                                 </td>
 
                                             </tr>

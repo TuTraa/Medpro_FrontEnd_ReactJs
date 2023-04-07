@@ -384,10 +384,10 @@ class ExaminationScheduleCancel extends Component {
                                                 options={listDoctors}
                                             />
                                         </th>
-                                        <th style={{ width: '10%' }}>Phòng khám</th>
+                                        <th style={{ width: '14%' }}>Phòng khám</th>
                                         <th >Lý do khám</th>
 
-                                        <th style={{ width: '10%' }} >{selectStatusId === 'S0' ? 'Action' : 'Thanh toán'}</th>
+                                        <th style={{ width: '8%' }} >{selectStatusId === 'S0' ? 'Action' : 'Thanh toán'}</th>
                                     </tr>
                                     {dataPatient && dataPatient.length > 0 ? dataPatient.map((item, index) => {
                                         let timeType = language === languages.VI ? item.timeTypeDataPatient.valueVi : item.timeTypeDataPatient.valueEn
@@ -405,12 +405,16 @@ class ExaminationScheduleCancel extends Component {
                                                 <td>{item.reason}</td>
                                                 {selectStatusId === 'S0'
                                                     ?
-                                                    <td>
-                                                        <button className="btn btn-success buttonS0" onClick={() => this.openConfirmModal(item.id)}>
+                                                    <td className='action-click-schedule'>
+                                                        <div className='click-schedule'>
+                                                            <i class="fas fa-check-square confirm " onClick={() => this.openConfirmModal(item.id)}></i>
+                                                            <i class="fas fa-window-close cancel" onClick={() => this.openRefuseModal(item.id)}></i>
+                                                            {/* <button className="btn btn-success buttonS0" onClick={() => this.openConfirmModal(item.id)}>
                                                             Xác Nhận
-                                                        </button>
-                                                        <br />
-                                                        <button className="btn btn-danger buttonS0" onClick={() => this.openRefuseModal(item.id)}>Hủy</button>
+                                                        </button> */}
+                                                            {/* <br />
+                                                        <button className="btn btn-danger buttonS0" onClick={() => this.openRefuseModal(item.id)}>Hủy</button> */}
+                                                        </div>
                                                     </td>
                                                     :
                                                     <td className='pay'>

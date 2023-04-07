@@ -51,9 +51,9 @@ class TableManageUser extends Component {
                             <th>address</th>
                             <th>Action</th>
                         </tr>
-                        {this.state.usersRedux.map(users => {
+                        {this.state.usersRedux.map((users, index) => {
                             return (
-                                <tr >
+                                <tr key={index} >
                                     <td> {users.email}</td>
                                     <td>{users.firstName}</td>
                                     <td>{users.lastName}</td>

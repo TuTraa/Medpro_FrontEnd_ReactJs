@@ -1,49 +1,78 @@
-.detail-specialty-container{
-    font-family: 'Manrope', sans-serif;
+.detail-specialty-container {
+    font-family     : 'Manrope', sans-serif;
     background-color: #eee;
-    h1,h2,h3{
-        font-size: 18px;
+
+    h1,
+    h2,
+    h3 {
+        font-size  : 18px;
         font-weight: 600;
     }
-    .description-specialty-out{
+
+    .description-specialty-out {
         background-color: #fff;
-        margin-bottom: 1rem;
-        .description-specialty{
-            width: 85rem;
+        margin-bottom   : 1rem;
+
+        .description-specialty {
+            width : 77.5%;
             margin: 0 auto;
         }
     }
-    .select-province{
-        width: 85rem;
+
+    .select-province {
+        width : 77.5%;
         margin: 0 auto;
-        select{
+
+        select {
             // padding: 5px;
-            border: 3px solid #fff;
-            outline: none;
-            cursor: pointer;
+            border : 3px solid #fff !important;
+            outline: none !important;
+            cursor : pointer;
         }
     }
-    .each-doctor{
-        width: 85rem;
-        margin: 0 auto;
+
+    .each-doctor {
+        width           : 77.5%;
+        margin          : 0 auto;
         background-color: #fff;
-        display: flex;
-        justify-content: space-between;
-        box-shadow: 0 1px 6px #20212447;
-        .content-left{
+        display         : flex;
+        justify-content : space-between;
+        box-shadow      : 0 1px 6px #20212447;
+
+        .content-left {
             width: 45%;
 
         }
-        .content-right{
+
+        .content-right {
             margin-top: 15px;
-            width: 50%;
-            .doctor-infor{
+            width     : 50%;
+
+            .doctor-infor {
                 padding-left: 0rem !important;
-                border-left: 0px !important;
-                border-top: 1px solid #ddd;
-                margin-top: 10px;
-                padding-top: 10px;
+                border-left : 0px !important;
+                border-top  : 1px solid #ddd;
+                margin-top  : 10px;
+                padding-top : 10px;
             }
+        }
+    }
+}
+
+@media only screen and (max-width : 404px) {
+    .detail-specialty-container {
+        .description-specialty-out {
+            .description-specialty {
+                width: 98%;
+            }
+        }
+
+        .select-province {
+            width: 98%;
+        }
+
+        .each-doctor {
+            width: 98%;
         }
     }
 }

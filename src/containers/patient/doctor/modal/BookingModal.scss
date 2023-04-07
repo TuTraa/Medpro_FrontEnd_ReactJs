@@ -1,35 +1,160 @@
-.booking-modal-container{
-    .booking-modal-content{
-        display: flex;
+.booking-modal-container {
+    .booking-modal-content {
+        display       : flex;
         flex-direction: column;
-        .booking-modal-header{
-            font-size: 15px;
-            padding: 10px;
+
+        .booking-modal-header {
+            font-size    : 15px;
+            padding      : 10px;
             border-bottom: 1px solid #ccc;
-            .left{
+
+            .left {
                 font-weight: 600;
-                color: #333;
+                color      : #333;
             }
-            .right{
-                float: right;
+
+            .err-exists {
+                animation        : colorBackground 5s infinite;
+                -webkit-animation: colorBackground 5s infinite;
+                -moz-animation   : colorBackground 5s infinite;
+                -o-animation     : colorBackground 5s infinite;
+                text-align       : center;
+                font-size        : 14px;
+                font-weight      : 610;
+            }
+
+            @keyframes colorBackground {
+                0% {
+                    color: #fbcf61
+                }
+
+                20% {
+                    color: #6bd57e
+                }
+
+                40% {
+                    color: #ff6f6f
+                }
+
+                60% {
+                    color: #57cff4
+                }
+
+                80% {
+                    color: #0ed4c8
+                }
+
+                100% {
+                    color: #fbcf61
+                }
+            }
+
+            @-webkit-keyframes colorBackground {
+                0% {
+                    color: #fbcf61
+                }
+
+                20% {
+                    color: #6bd57e
+                }
+
+                40% {
+                    color: #ff6f6f
+                }
+
+                60% {
+                    color: #57cff4
+                }
+
+                80% {
+                    color: #0ed4c8
+                }
+
+                100% {
+                    color: #fbcf61
+                }
+            }
+
+            @-moz-keyframes colorBackground {
+                0% {
+                    color: #fbcf61
+                }
+
+                20% {
+                    color: #6bd57e
+                }
+
+                40% {
+                    color: #ff6f6f
+                }
+
+                60% {
+                    color: #57cff4
+                }
+
+                80% {
+                    color: #0ed4c8
+                }
+
+                100% {
+                    color: #fbcf61
+                }
+            }
+
+            .right {
+                float : right;
                 cursor: pointer;
 
             }
         }
-        .booking-modal-body{
+
+        .booking-modal-body {
             padding-top: 15px;
-            height: 100%;
-            .form-control{
-                input{
+            height     : 100%;
+
+            .form-group {
+                input {
                     outline: none;
                 }
-            } 
-        }   
-        .booking-modal-footer{
-            display: flex;
+
+                .err-input {
+                    border-bottom: 2px solid red !important;
+                }
+            }
+
+            .err-validate {
+                color      : red;
+                font-style : italic;
+                font-size  : 12px;
+                padding-top: -5px !important;
+            }
+        }
+
+        .body-success {
+            margin-top: 20px;
+            text-align: center;
+
+            p {
+                font-size        : 20px;
+                text-align       : center;
+                animation        : colorBackground 5s infinite;
+                -webkit-animation: colorBackground 5s infinite;
+                -moz-animation   : colorBackground 5s infinite;
+                -o-animation     : colorBackground 5s infinite;
+            }
+
+            .link-to-my-examination,
+            a {
+                font-size: 20px !important;
+            }
+        }
+
+        .booking-modal-footer {
+            display        : flex;
             justify-content: flex-end;
-            padding: 10px;
-            .btn{
+            padding        : 10px;
+
+            .btn {
                 margin: 0 5px;
             }
         }

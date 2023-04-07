@@ -11,9 +11,7 @@ import HomeFooter from "./HomeFooter";
 import BannerMedpro from "./bannerMedpro";
 import MedicalRegisterHome from "./Section/medicalRegisterHome";
 class HomePage extends Component {
-  // handleAfterChange=(event,slick,currentSlide)=>{
-  //   console.log('tutran')
-  // }
+
   render() {
 
     let settings = {

@@ -30,7 +30,7 @@ class ConfirmModal extends Component {
                     <div className="modal-header">
                         <h5 className="modal-title">Xác nhận lịch hẹn</h5>
                         <button type="button" className="close" aria-label="Close" onClick={this.props.closeModal}>
-                            <span aria-hidden="true">×</span>
+                            <span aria-hidden="true"><i class="fas fa-times"></i></span>
                         </button>
                     </div>
                     <ModalBody >

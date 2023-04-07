@@ -112,7 +112,7 @@ class UserManage extends Component {
             updateUser={this.updateUser}
           />
         )}
-        <div className="title text-center">Manage user with tu tran </div>
+        <div className="title text-center">Manage user </div>
         <div className="mx-1">
           <button
             onClick={() => {
@@ -133,9 +133,9 @@ class UserManage extends Component {
                 <th>address</th>
                 <th>Action</th>
               </tr>
-              {this.state.arrUser.map((users) => {
+              {this.state.arrUser.map((users, index) => {
                 return (
-                  <tr key={users.id}>
+                  <tr key={index}>
                     <td> {users.email}</td>
                     <td>{users.firstName}</td>
                     <td>{users.lastName}</td>

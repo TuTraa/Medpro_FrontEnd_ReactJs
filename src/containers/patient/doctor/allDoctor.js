@@ -165,7 +165,7 @@ class AllDoctor extends Component {
                             />
                         </div>
                         <div className='row tab-select'>
-                            <div className='findByProvince col-6'>
+                            <div className='findByProvince col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12'>
                                 <Select
                                     value={this.state.selectedOption}
                                     onChange={this.handleChangeSelect}
@@ -174,7 +174,7 @@ class AllDoctor extends Component {
                                     name={'selectedProvince'}
                                 />
                             </div>
-                            <div className='findBySpecial col-6'>
+                            <div className='findBySpecial col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12'>
                                 <Select
                                     value={this.state.selectedOption}
                                     onChange={this.handleChangeSelectSpecialty}

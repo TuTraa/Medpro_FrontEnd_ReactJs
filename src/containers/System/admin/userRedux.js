@@ -231,37 +231,37 @@ class UserRedux extends Component {
                     <div className='container'>
                         <div className='row mt-4'>
                             <div className="form-group col-md-6">
-                                <label for="inputEmail4"><FormattedMessage id="manage-user.email" /></label>
+                                <label htmlFor="inputEmail4"><FormattedMessage id="manage-user.email" /></label>
                                 <input type="text" className="form-control" id="inputEmail4" placeholder="email"
                                     onChange={(event) => this.onchangeInput(event, 'email')} value={email} />
                             </div>
                             <div className="form-group col-md-6">
-                                <label for="inputPassword4"><FormattedMessage id="manage-user.password" /></label>
+                                <label htmlFor="inputPassword4"><FormattedMessage id="manage-user.password" /></label>
                                 <input type="password" className="form-control" id="inputPassword4" placeholder="Password"
                                     onChange={(event) => this.onchangeInput(event, 'password')} value={password} />
                             </div>
                         </div>
                         <div className='row mt-4'>
                             <div className="form-group col-md-6">
-                                <label for="inputEmail4"><FormattedMessage id="manage-user.firstName" /></label>
+                                <label htmlFor="inputEmail4"><FormattedMessage id="manage-user.firstName" /></label>
                                 <input type="text" className="form-control" id="inputEmail4" placeholder=""
                                     onChange={(event) => this.onchangeInput(event, 'firstName')} value={firstName} />
                             </div>
                             <div className="form-group col-md-6">
-                                <label for="inputPassword4"><FormattedMessage id="manage-user.lastName" /></label>
+                                <label htmlFor="inputPassword4"><FormattedMessage id="manage-user.lastName" /></label>
                                 <input type="text" className="form-control" id="inputPassword4" placeholder=""
                                     onChange={(event) => this.onchangeInput(event, 'lastName')} value={lastName} />
                             </div>
                         </div>
                         <div className='row mt-4' >
                             <div className="form-group  col-md-4">
-                                <label for="inputAddress2"><FormattedMessage id="manage-user.phoneNumber" /></label>
+                                <label htmlFor="inputAddress2"><FormattedMessage id="manage-user.phoneNumber" /></label>
                                 <input type="number" className="form-control" id="inputAddress2" placeholder="enter numbers only"
                                     onChange={(event) => this.onchangeInput(event, 'phoneNumber')}
                                     value={phoneNumber} />
                             </div>
                             <div className="form-group  col-md-8">
-                                <label for="inputAddress"><FormattedMessage id="manage-user.adress" /></label>
+                                <label htmlFor="inputAddress"><FormattedMessage id="manage-user.adress" /></label>
                                 <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"
                                     onChange={(event) => this.onchangeInput(event, 'address')}
                                     value={address} />
@@ -271,7 +271,7 @@ class UserRedux extends Component {
                         <div className="form-row row mt-4">
 
                             <div className="form-group col-md-3">
-                                <label for="inputState"><FormattedMessage id="manage-user.gender" /></label>
+                                <label htmlFor="inputState"><FormattedMessage id="manage-user.gender" /></label>
                                 <select id="inputState" className="form-control"
                                     onChange={(event) => this.onchangeInput(event, 'gender')}
                                     value={gender}
@@ -284,7 +284,7 @@ class UserRedux extends Component {
                                 </select>
                             </div>
                             <div className="form-group col-md-3">
-                                <label for="inputState"><FormattedMessage id="manage-user.positon" /></label>
+                                <label htmlFor="inputState"><FormattedMessage id="manage-user.positon" /></label>
                                 <select id="inputState" className="form-control"
                                     onChange={(event) => this.onchangeInput(event, 'position')} value={position}
                                 >
@@ -296,7 +296,7 @@ class UserRedux extends Component {
                                 </select>
                             </div>
                             <div className="form-group col-md-3">
-                                <label for="inputState"><FormattedMessage id="manage-user.roleId" /></label>
+                                <label htmlFor="inputState"><FormattedMessage id="manage-user.roleId" /></label>
                                 <select id="inputState" className="form-control"
                                     onChange={(event) => this.onchangeInput(event, 'role')} value={role}
                                 >
@@ -308,7 +308,7 @@ class UserRedux extends Component {
                                 </select>
                             </div>
                             <div className="form-group col-md-3">
-                                <label for="inputState"><FormattedMessage id="manage-user.image" /></label>
+                                <label htmlFor="inputState"><FormattedMessage id="manage-user.image" /></label>
                                 <div className='preview-img-container'>
                                     <input type="file"
                                         onChange={(event) => { this.handleOnchangeImage(event) }}

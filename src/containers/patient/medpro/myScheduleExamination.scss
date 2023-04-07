@@ -1,161 +1,299 @@
-.my-schedule-examination{
+.my-schedule-examination {
     font-family: 'Manrope', sans-serif;
-    color: rgb(7, 7, 78);
-    .bg-my-schedule-examination{
-        background: url('../../../assets/images/bannerMedpro/intructions.jpg');
-        height: 210px !important;
-        background-repeat: no-repeat;
-        background-size: cover;
+    color      : rgb(7, 7, 78);
+
+    .bg-my-schedule-examination {
+        background         : url('../../../assets/images/bannerMedpro/intructions.jpg');
+        height             : 210px !important;
+        background-repeat  : no-repeat;
+        background-size    : cover;
         background-position: center;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        p{
-            font-size: 27px;
+        text-align         : center;
+        display            : flex;
+        justify-content    : center;
+        align-items        : center;
+
+        p {
+            font-size  : 27px;
             font-weight: 510;
-            color: #fff;
+            color      : #fff;
         }
     }
-    .input-email-phone{
-        margin-top: 200px;
+
+    .input-email-phone {
+        margin-top : 200px;
         padding-top: 100px;
-        width: 30%;
-        margin: 0 auto;
-        .text-input-emai-phone{
-            text-align: center;
+        width      : 30%;
+        margin     : 0 auto;
+
+        .text-input-emai-phone {
+            text-align : center;
             font-weight: 610;
-            font-size: 20px;
+            font-size  : 20px;
         }
     }
-    .form-schedule-examination{
+
+    .form-schedule-examination {
         text-align: center;
-        padding: 2rem;
-        .text-hello{
-            font-weight: 610;
-            font-size: 20px;
+        padding   : 3rem 2rem 2rem 2rem;
+
+        .text-hello {
+            font-weight  : 610;
+            font-size    : 20px;
             margin-bottom: 20px;
         }
-        .table-infor{
-            margin: 50px 0;
-            table{
-                tr{
+
+        .table-infor {
+            margin: 50px 0 0 0;
+
+            table {
+                tr {
                     background-color: #fff;
-                    .pay{
-                        .qr{
-                            background: url('../../../assets/images/QR/qr.png');
-                            height: 250px !important;
-                            width: 250px;
-                            margin: 0 auto;
-                            background-repeat: no-repeat;
-                            background-size: cover;
+
+                    .pay {
+                        .qr {
+                            background         : url('../../../assets/images/QR/qr.png');
+                            height             : 250px !important;
+                            width              : 250px;
+                            margin             : 0 auto;
+                            background-repeat  : no-repeat;
+                            background-size    : cover;
                             background-position: center;
                         }
-                        .stk{
+
+                        .stk {
                             text-align: center;
-                            font-size: 15px;
-                            color: #ff6f6f;
-                            .send-image{
-                                .input-image{
-                                    color: rgb(42, 8, 74);
-                                    width: 300px;
+                            font-size : 15px;
+                            color     : #ff6f6f;
+
+                            .send-image {
+                                .input-image {
+                                    color : rgb(42, 8, 74);
+                                    width : 300px;
                                     margin: 0 auto;
-                                    .preview-image{
+
+                                    .preview-image {
                                         margin-left: 100px;
-                                        width: 70px;
-                                        margin: 0 auto;
+                                        width      : 70px;
+                                        margin     : 0 auto;
                                     }
                                 }
 
                                 .button {
-                                    display: flex;
+                                    display        : flex;
                                     justify-content: center;
                                 }
                             }
                         }
                     }
-                    .changeS2{
-                        button{
-                            width: 100px;
+
+                    .changeS2 {
+                        button {
+                            width      : 100px;
                             margin-left: 20px !important;
 
                         }
                     }
-                    .not-come{
-                        text-align: center;
-                        font-size: 19px;
+
+                    .not-come {
+                        text-align : center;
+                        font-size  : 19px;
                         font-weight: 610;
-                        color: #f0a607;
+                        color      : #f0a607;
                     }
+
                     .waiting {
-                        animation: colorBackground 5s infinite;
+                        animation        : colorBackground 5s infinite;
                         -webkit-animation: colorBackground 5s infinite;
-                        -moz-animation: colorBackground 5s infinite;
-                        -o-animation: colorBackground 5s infinite;
-                        text-align: center;
-                        font-size: 19px;
-                        font-weight: 610;
-                       }
-                       @keyframes colorBackground {
+                        -moz-animation   : colorBackground 5s infinite;
+                        -o-animation     : colorBackground 5s infinite;
+                        text-align       : center;
+                        font-size        : 19px;
+                        font-weight      : 610;
+                    }
+
+                    @keyframes colorBackground {
                         0% {
-                         color: #fbcf61
+                            color: #fbcf61
                         }
+
                         20% {
-                         color: #6bd57e
+                            color: #6bd57e
                         }
+
                         40% {
-                         color: #ff6f6f
+                            color: #ff6f6f
                         }
+
                         60% {
-                         color: #57cff4
+                            color: #57cff4
                         }
+
                         80% {
-                         color: #0ed4c8
+                            color: #0ed4c8
                         }
+
                         100% {
-                         color: #fbcf61
+                            color: #fbcf61
                         }
-                       }
-                       @-webkit-keyframes colorBackground {
+                    }
+
+                    @-webkit-keyframes colorBackground {
                         0% {
-                         color: #fbcf61
+                            color: #fbcf61
                         }
+
                         20% {
-                         color: #6bd57e
+                            color: #6bd57e
                         }
+
                         40% {
-                         color: #ff6f6f
+                            color: #ff6f6f
                         }
+
                         60% {
-                         color: #57cff4
+                            color: #57cff4
                         }
+
                         80% {
-                         color: #0ed4c8
+                            color: #0ed4c8
                         }
+
                         100% {
-                         color: #fbcf61
+                            color: #fbcf61
                         }
-                       }
-                       @-moz-keyframes colorBackground {
+                    }
+
+                    @-moz-keyframes colorBackground {
                         0% {
-                         color: #fbcf61
+                            color: #fbcf61
                         }
+
                         20% {
-                         color: #6bd57e
+                            color: #6bd57e
                         }
+
                         40% {
-                         color: #ff6f6f
+                            color: #ff6f6f
                         }
+
                         60% {
-                         color: #57cff4
+                            color: #57cff4
                         }
+
                         80% {
-                         color: #0ed4c8
+                            color: #0ed4c8
                         }
+
                         100% {
-                         color: #fbcf61
+                            color: #fbcf61
                         }
-                       }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 574PX) {
+    .my-schedule-examination {
+
+        .input-email-phone {
+            margin-top : 200px;
+            padding-top: 100px;
+            width      : 80%;
+            margin     : 0 auto;
+
+        }
+
+        .form-schedule-examination {
+
+            .text-hello {
+                font-weight  : 610;
+                font-size    : 20px;
+                margin-bottom: 20px;
+            }
+
+            .table-infor {
+                margin: 50px 0;
+
+                table {
+                    tr {
+
+                        .pay {
+                            .qr {
+                                height: 125px !important;
+                                width : 125px;
+                            }
+
+                            .stk {
+
+                                .send-image {
+                                    .input-image {
+                                        width: 200px;
+
+                                        .preview-image {
+                                            margin-left: 100px;
+                                            width      : 70px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 450px) {
+    .my-schedule-examination {
+
+        .input-email-phone {
+            width : 80%;
+            margin: 0 auto;
+
+        }
+
+        .form-schedule-examination {
+            padding: .5rem;
+
+            .text-hello {
+                font-weight  : 610;
+                font-size    : 20px;
+                margin-bottom: 20px;
+            }
+
+            .table-infor {
+                margin: 50px 0 0px 0;
+
+                table {
+                    tr {
+
+                        .pay {
+                            .qr {
+                                height: 125px !important;
+                                width : 125px;
+                            }
+
+                            .stk {
+
+                                .send-image {
+                                    .input-image {
+                                        width: 100px;
+
+                                        .preview-image {
+                                            margin-left: 20px;
+                                            width      : 70px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
                 }
             }
         }

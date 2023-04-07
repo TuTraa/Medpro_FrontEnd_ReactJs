@@ -220,6 +220,8 @@
 
 @media only screen and (max-width : 1440px) {}
 
+
+
 @media only screen and (max-width : 1024px) {
     .home-header-container {
 
@@ -236,10 +238,108 @@
     }
 }
 
+@media only screen and (max-width : 900px) {
+    .home-header-banner {
+        height: 500px;
+
+        .content-down {
+
+
+            .options {
+                width    : 100%;
+                margin   : 0 auto;
+                flex-wrap: wrap;
+                gap      : 20px;
+
+                .icon-child {
+                    background-color: white;
+                    width           : 40px;
+                    height          : 40px;
+                    padding         : 10px;
+                    margin          : 0 auto;
+
+                }
+
+                .text-child {
+                    font-size: 17px;
+                }
+            }
+        }
+
+    }
+}
+
 @media only screen and (max-width : 768px) {
     .home-header-container {
         .right-content {
             width: 40%;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width : 699.5px) {
+    .home-header-banner {
+        height: 500px;
+
+        .content-down {
+            overflow: hidden;
+
+            .options {
+                gap          : 20px;
+                margin-bottom: -120px;
+
+                .icon-child {
+                    background-color: white;
+                    width           : 40px;
+                    height          : 40px;
+                    padding         : 10px;
+                    margin          : 0 auto;
+
+                }
+
+                .text-child {
+                    font-size: 17px;
+                }
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width : 599.5px) {
+    .home-header-banner {
+        height: 338px;
+
+        .content-up {
+            height: 65%;
+
+            .title1 {
+                text-align   : center;
+                font-size    : 25px;
+                margin-bottom: 15px;
+                color        : white;
+            }
+
+            .title2 {
+                text-align   : center;
+                font-size    : 25px;
+                color        : white;
+                margin-bottom: 25px;
+            }
+
+            .search {
+
+                input {
+                    height          : 30px;
+                    width           : 250px !important;
+                    border          : none;
+                    outline         : none;
+                    background-color: #f7d800;
+
+                }
+            }
         }
     }
 }

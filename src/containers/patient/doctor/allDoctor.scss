@@ -1,76 +1,144 @@
-.all-doctors{
+.all-doctors {
     padding-top: 20px;
     font-family: 'Manrope', sans-serif;
-    width: 85rem;
-    margin: 0 auto;
-    .tab-find{
-        border-radius: 10px;
-        background-color: rgba(255,195,17,1.00);
-        box-shadow: 0 2px 15px rgba(0,0,0,.5);
-        height: 150px;
-        .search{
-            width: fit-content;
-            display: flex;
-            justify-content: center;    
-            align-items: center;
-            margin: 0 auto;
-            padding: 10px;
-            border-radius: 25px;
-            background-color: rgba(255,255,255,1.00);
-            i{
+    width      : 77.5%;
+    margin     : 0 auto;
+
+    .tab-find {
+        border-radius   : 10px;
+        width           : 100%;
+        background-color: rgba(255, 195, 17, 1.00);
+        box-shadow      : 0 2px 15px rgba(0, 0, 0, .5);
+        height          : 150px;
+
+        .search {
+            width           : 90% !important;
+            width           : fit-content;
+            display         : flex;
+            justify-content : center;
+            align-items     : center;
+            margin          : 0 auto;
+            padding         : 10px;
+            border-radius   : 25px;
+            background-color: rgba(255, 255, 255, 1.00);
+
+            i {
                 margin: 0 5px;
             }
-            input{
-                height: 30px;
-                width: 960px;
-                border: none;
-                outline: none;
-                background-color: rgba(255,255,255,1.00);
+
+            input {
+                height          : 30px;
+                width           : 100%;
+                border          : none;
+                outline         : none;
+                background-color: rgba(255, 255, 255, 1.00);
             }
         }
-        .tab-select{
-            margin-top: 20px;
+
+        .tab-select {
+            width      : 90% !important;
             padding-top: 20px;
-            width: 1030px;
-            margin: 0 auto;
+            width      : 1030px;
+            margin     : 0 auto;
         }
     }
-    .results-doctor{
+
+    .results-doctor {
         border-radius: 10px;
-        margin-top: 20px;
-        box-shadow: 0 5px 19px rgba(0,0,0,.2);
-        .title-doctor{
-            font-weight: 700;
-            font-size: 18px;
-            margin-left: 20px;
+        margin-top   : 20px;
+        box-shadow   : 0 5px 19px rgba(0, 0, 0, .2);
+
+        .title-doctor {
+            font-weight  : 700;
+            font-size    : 18px;
+            margin-left  : 20px;
             margin-bottom: -10px;
         }
-        .results-doctor-item{
-            padding: 20px;
+
+        .results-doctor-item {
+            padding      : 20px;
             border-bottom: 1px solid rgb(216, 216, 216);
-            display: flex;
-            .avatar{
-                height: 60px;
-                width: 60px;
-                display: flex;
+            display      : flex;
+
+            .avatar {
+                height         : 60px;
+                width          : 60px;
+                display        : flex;
                 justify-content: center;
-                align-items: center;
+                align-items    : center;
                 background-size: cover;
-                border-radius: 50%;
+                border-radius  : 50%;
             }
-            .content-text{
+
+            .content-text {
                 margin-left: 10px;
                 font-weight: 400;
-                font-size: 15px;
-                .name-doctor{
+                font-size  : 15px;
 
-                }
-                .special{
-                    color: rgb(120, 120, 121);
-                    margin-top: 5px;
+                .name-doctor {}
+
+                .special {
+                    color      : rgb(120, 120, 121);
+                    margin-top : 5px;
                     font-weight: 300;
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width : 767.5px) {
+    .all-doctors {
+        .tab-find {
+            height: 200px;
+
+            .search {
+                width: 90% !important;
+
+
+                input {
+                    width: 100%;
+
+                }
+            }
+
+            .tab-select {
+                width: 90% !important;
+
+                .findBySpecial {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width : 404px) {
+    .all-doctors {
+        width: 100%;
+
+        .tab-find {
+            height: 200px;
+
+            .search {
+                width: 90% !important;
+
+
+                input {
+                    width: 100%;
+
+                }
+            }
+
+            .tab-select {
+                width: 90% !important;
+
+                .findBySpecial {
+                    margin-top: 20px;
+                }
+            }
+        }
+
     }
 }

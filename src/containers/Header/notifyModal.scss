@@ -1,0 +1,17 @@
+.notify-modal {
+    font-family: 'Manrope', sans-serif;
+
+    .action {
+        text-align: center;
+
+        i {
+            cursor   : pointer;
+            color    : #06c52f;
+            font-size: 22px;
+
+            &:hover {
+                color: #117a28;
+            }
+        }
+    }
+}
