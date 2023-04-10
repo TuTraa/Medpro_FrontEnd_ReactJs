@@ -56,7 +56,7 @@ class PayModal extends Component {
                     <div className="modal-header">
                         <h5 className="modal-title">Gửi ảnh thanh toán để xác nhận</h5>
                         <button type="button" className="close" aria-label="Close" onClick={this.props.closeModal}>
-                            <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                            <span aria-hidden="true"><i class="fas fa-times color-i"></i></span>
                         </button>
                     </div>
                     <ModalBody >

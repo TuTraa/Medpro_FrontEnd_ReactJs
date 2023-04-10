@@ -31,6 +31,9 @@ class MyScheduleExamination extends Component {
             cancelOrChange: false,
             idBooking: '',
 
+            errPhone: '',
+            errEmail: '',
+
 
 
         }
@@ -71,15 +74,67 @@ class MyScheduleExamination extends Component {
 
     }
 
+    regexEmail = () => {
+        let resErrEmail = true;
+        let { email } = this.state;
+        const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+        if (!regex.test(email.trim())) {
+            this.setState({
+                errEmail: 'Email invalid !'
+            })
+            resErrEmail = false;
+        }
+        return resErrEmail;
+    }
+
+    regexPhone = () => {
+        let resErrPhone = true;
+        let { phone } = this.state;
+        var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        if (!phone.match(phoneno)) {
+            this.setState({
+                errPhone: 'Phone Number invalid !'
+            })
+            resErrPhone = false;
+        }
+        return resErrPhone;
+    }
+
+    checkErrEmpty = () => {
+        let resErrEmpty = true;
+        let err = ['errPhone', 'errEmail'];
+        let inputvalue = ['phone', 'email'];
+        let stateCopy = { ... this.state }
+        err.forEach((item, index) => {
+            let errx = item;
+            if (!stateCopy[inputvalue[index]]) {
+                resErrEmpty = false;
+                stateCopy[errx] = 'Không được bỏ trống !'
+            }
+            else {
+                stateCopy[errx] = ''
+            }
+        })
+        this.setState({
+            ...stateCopy
+        })
+        let resErrEmail = '';
+        if (stateCopy.errEmail === '') {
+            resErrEmail = this.regexEmail();
+        }
+        let resErrPhone = '';
+        if (stateCopy.errPhone === '') {
+            resErrPhone = this.regexPhone();
+        }
+        if (!resErrEmpty || !resErrEmail || !resErrPhone) {
+            console.log(resErrEmpty, resErrEmail, resErrPhone);
+            return false;
+        }
+    }
+
     findInforByEmailPhone = async () => {
-        if (this.state.email === '') {
-            alert('bạn chưa nhập email!');
-            return;
-        }
-        if (this.state.phone === '') {
-            alert('bạn chưa nhập phone');
-            return;
-        }
+        this.checkErrEmpty();
         let { email, phone } = this.state;
         let res = await getMyEmination({ email, phone });
         if (res && res.data && res.data.data && res.data.errCode === 0) {
@@ -130,6 +185,16 @@ class MyScheduleExamination extends Component {
             isOpenCancelChangeModal: false,
         })
     }
+    reload = async () => {
+        let { email, phone } = this.state;
+        let res = await getMyEmination({ email, phone });
+        if (res && res.data && res.data.data && res.data.errCode === 0) {
+            let AllData = res.data.data
+            this.setState({
+                allInforExaminaions: AllData.patientData,
+            })
+        }
+    }
     openModalCancelChange = (id, statusId) => {
         this.setState({
             cancelOrChange: statusId,
@@ -168,7 +233,7 @@ class MyScheduleExamination extends Component {
     }
     render() {
         // let timeType = this.state.allInforExaminaions.timeTypeDataPatient;
-        let { statusId, isOpenCancelChangeModal, cancelOrChange } = this.state;
+        let { statusId, isOpenCancelChangeModal, cancelOrChange, errEmail, errPhone } = this.state;
         let { name, allInforExaminaions } = this.state;
         console.log('1111:', allInforExaminaions)
         return (
@@ -182,17 +247,21 @@ class MyScheduleExamination extends Component {
                         <div className='text-input-emai-phone'>Nhập Email và Số điện thoại để xem Lịch khám của bạn</div>
                         <div className="form-group mt-5 ">
                             <label >Email</label>
-                            <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+                            <input type="text" className={errEmail ? 'form-control err-input' : 'form-control'}
+                                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
                                 value={this.state.fullName}
                                 onChange={(event) => this.handleOnchangeInput(event, 'email')}
                             />
+                            {errEmail && <span className='err-validate'>{errEmail}</span>}
                         </div>
                         <div className="form-group mt-4">
                             <label >Số điện thoại</label>
-                            <input type="phoneNumber" className="form-control" id="exampleInputPassword1" placeholder="số điện thoại"
+                            <input type="phoneNumber" className={errPhone ? 'form-control err-input' : 'form-control'}
+                                id="exampleInputPassword1" placeholder="số điện thoại"
                                 value={this.state.fullName}
                                 onChange={(event) => this.handleOnchangeInput(event, 'phone')}
                             />
+                            {errPhone && <span className='err-validate'>{errPhone}</span>}
                         </div>
                         <button className="btn btn-primary mt-3" onClick={() => this.findInforByEmailPhone()}>Submit</button>
                         {this.state.statusIdNull === 'null' && <div className='mt-3' style={{ color: 'red' }}><i>Email hoặc Số điện thoại đăng ký không chính xác ({this.state.noSuccess})</i> </div>}
@@ -208,7 +277,14 @@ class MyScheduleExamination extends Component {
                                             <tr>
                                                 <th style={{ width: '15%' }}>Danh Mục</th>
                                                 <th style={{ textAlign: 'center' }}>Thông Tin</th>
-                                                <th style={{ width: '25%', textAlign: 'center' }}>Trạng Thái</th>
+                                                <th className='status' style={{ width: '25%', textAlign: 'center' }} >
+                                                    Trạng Thái
+                                                    <i class="fas fa-sync"
+                                                        onClick={() => this.reload()}
+                                                    >
+
+                                                    </i>
+                                                </th>
                                             </tr>
                                             <tr>
                                                 <td>Thời gian</td>

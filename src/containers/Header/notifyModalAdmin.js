@@ -11,7 +11,7 @@ import { toast } from "react-toastify";
 import moment from 'moment/moment';
 
 
-class NotifyModal extends Component {
+class NotifyModalAdmin extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,8 +20,9 @@ class NotifyModal extends Component {
     }
     async componentDidMount() {
         this.props.getGenders();
-        if (this.props.doctorId) {
-            let res = await notifyDoctor({ doctorId: this.props.doctorId, result: 'no data', statusId: 'S2' });
+        if (this.props.result && this.props.statusId) {
+            let res = await notifyDoctor({ doctorId: 'All', result: this.props.result, statusId: this.props.statusId });
+            console.log('admin:', res)
             if (res && res.data && res.data.errCode === 0) {
                 this.setState({
                     arrNotify: res.data.allNotify,
@@ -41,17 +42,29 @@ class NotifyModal extends Component {
                 })
             }
         }
+        if (this.props.statusId !== prevProps.statusId) {
+            if (this.props.result && this.props.statusId) {
+                let res = await notifyDoctor({ doctorId: 'All', result: this.props.result, statusId: this.props.statusId });
+                if (res && res.data && res.data.errCode === 0) {
+                    this.setState({
+                        arrNotify: res.data.allNotify,
+                    })
+                }
+            }
+        }
     }
 
     checked = async (bookingId) => {
         let res = await checkedNotify(bookingId);
         if (res && res.data && res.data.errCode === 0) {
-            this.props.setLength();
-            let res = await notifyDoctor({ doctorId: this.props.doctorId, result: 'no data', statusId: 'S2' });
-            if (res && res.data && res.data.errCode === 0) {
-                this.setState({
-                    arrNotify: res.data.allNotify,
-                })
+            this.props.setLengthAdmin();
+            if (this.props.result && this.props.statusId) {
+                let res = await notifyDoctor({ doctorId: 'All', result: this.props.result, statusId: this.props.statusId });
+                if (res && res.data && res.data.errCode === 0) {
+                    this.setState({
+                        arrNotify: res.data.allNotify,
+                    })
+                }
             }
             toast.success('checked success!');
             return;
@@ -68,14 +81,14 @@ class NotifyModal extends Component {
 
         return (
 
-            <Modal isOpen={this.props.isOpen} className={"booking-modal-container"}
+            <Modal isOpen={this.props.isOpenAdmin} className={"booking-modal-container"}
                 size="lg"
                 centered
                 backdrop={true}
             >
                 <div className="modal-header">
-                    <h5 className="modal-title">Lịch hẹn mới</h5>
-                    <button type="button" className="close" aria-label="Close" onClick={this.props.openCloseModal}>
+                    <h5 className="modal-title">Lịch hẹn mới Admin</h5>
+                    <button type="button" className="close" aria-label="Close" onClick={this.props.closeModalAdmin}>
                         <span aria-hidden="true"><i class="fas fa-times color-i"></i></span>
                     </button>
                 </div>
@@ -120,7 +133,7 @@ class NotifyModal extends Component {
                     </div>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" onClick={this.props.openCloseModal} >Xác nhận</Button>{' '}
+                    <Button color="primary" onClick={this.props.closeModalAdmin} >Xác nhận</Button>{' '}
                 </ModalFooter>
 
             </Modal >
@@ -141,4 +154,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(NotifyModal);
+export default connect(mapStateToProps, mapDispatchToProps)(NotifyModalAdmin);

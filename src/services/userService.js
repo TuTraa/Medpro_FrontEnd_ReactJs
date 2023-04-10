@@ -157,8 +157,8 @@ const sendResult = (data) => {
   return axios.post(`/api/send-result`, data)
 }
 
-const notifyDoctor = (doctorId) => {
-  return axios.get(`/api/get-notify-doctor?doctorId=${doctorId}`)
+const notifyDoctor = (data) => {
+  return axios.get(`/api/get-notify-doctor?doctorId=${data.doctorId}&result=${data.result}&statusId=${data.statusId}`)
 }
 
 const checkedNotify = (bookingId) => {

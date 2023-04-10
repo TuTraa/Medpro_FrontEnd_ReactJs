@@ -26,6 +26,23 @@
         width      : 30%;
         margin     : 0 auto;
 
+        .form-group {
+            input {
+                outline: none;
+            }
+
+            .err-input {
+                border-bottom: 2px solid red !important;
+            }
+        }
+
+        .err-validate {
+            color      : red;
+            font-style : italic;
+            font-size  : 12px;
+            padding-top: -5px !important;
+        }
+
         .text-input-emai-phone {
             text-align : center;
             font-weight: 610;
@@ -47,6 +64,25 @@
             margin: 50px 0 0 0;
 
             table {
+                .status {
+                    position: relative;
+
+                    i {
+                        cursor    : pointer;
+                        position  : absolute;
+                        right     : 10px;
+                        top       : 14px;
+                        transform : rotate(0deg);
+                        transition: 1s;
+
+                        &:hover {
+                            color     : #07f087;
+                            transform : rotate(180deg);
+                            transition: 1s;
+                        }
+                    }
+                }
+
                 tr {
                     background-color: #fff;
 

@@ -92,7 +92,7 @@ class RemedyModal extends Component {
                 <div className="modal-header">
                     <h5 className="modal-title">{cancelOrFinish ? 'Hủy đơn' : 'Gửi đơn thuốc'}</h5>
                     <button type="button" className="close" aria-label="Close" onClick={this.props.closeModal}>
-                        {/* <span aria-hidden="true"><i class="fas fa-times"></i></span> */}
+                        {/* <span aria-hidden="true"><i class="fas fa-times color-i"></i></span> */}
                     </button>
                 </div>
                 <ModalBody>

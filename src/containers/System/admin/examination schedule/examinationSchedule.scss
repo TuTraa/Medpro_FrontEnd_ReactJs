@@ -1,13 +1,29 @@
+.manage-patient-body {
+    .form-group {
+        --bs-gutter-x: 0rem !important;
+        width        : 22%;
+
+    }
+
+    .css-2b097c-container {
+        .css-yk16xz-control {
+            border-radius: 0px !important;
+        }
+    }
+}
+
 .all-infor-schedule {
+
+
+
     table {
         tr {
 
-            .pay {
-                color      : green;
-                font-weight: 610;
-            }
+
 
             .action-click-schedule {
+                text-align: center;
+
                 .click-schedule {
                     display        : flex;
                     align-items    : center;
@@ -17,11 +33,26 @@
 
 
                     .cancel {
+                        cursor   : pointer;
                         font-size: 24px;
                         color    : red;
                     }
 
                     .confirm {
+                        cursor   : pointer;
+                        font-size: 24px;
+                        color    : rgb(10, 158, 32);
+                    }
+
+                    .pay {
+                        cursor   : pointer;
+                        font-size: 24px;
+                        color    : rgb(216, 132, 22);
+
+
+                    }
+
+                    .paied {
                         font-size: 24px;
                         color    : rgb(10, 158, 32);
                     }
@@ -29,6 +60,18 @@
             }
 
             th {
+                .form-control {
+                    border-radius: 0 !important;
+                    padding      : .5rem .325rem;
+                    border       : none;
+
+                    &:focus {
+                        outline       : 5px solid #ffffff !important;
+                        outline-offset: 0px !important;
+
+                    }
+                }
+
                 .css-yk16xz-control {
                     border-style: none !important;
                     border-right: none !important;
@@ -38,7 +81,7 @@
                     }
 
                     .css-1uccc91-singleValue {
-                        color           : rgb(250, 0, 33) !important;
+                        color           : rgb(52, 78, 209) !important;
                         margin          : 0 !important;
                         font-size       : 13px !important;
                         border          : none !important;

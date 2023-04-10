@@ -347,7 +347,7 @@ class ExaminationScheduleCancel extends Component {
                             </p>
                         </div>
                         <div className='manage-patient-body row mt-5'>
-                            <div className='col-3 form-group'>
+                            <div className=' form-group'>
                                 <label>Tình trạng lịch hẹn</label>
                                 <Select
                                     value={this.state.selectStatusId}
@@ -369,7 +369,7 @@ class ExaminationScheduleCancel extends Component {
                                         /></th>
                                         <th style={{ width: '10%' }}>Họ Và Tên</th>
                                         <th style={{ width: '10%' }}>Địa Chỉ</th>
-                                        <th style={{ width: '4%' }}>Giới Tính</th>
+                                        <th style={{ width: '7%' }}>Giới Tính</th>
                                         <th style={{ width: '10%' }}>
                                             <input className='form-control'
                                                 value={this.state.email}
@@ -387,7 +387,7 @@ class ExaminationScheduleCancel extends Component {
                                         <th style={{ width: '14%' }}>Phòng khám</th>
                                         <th >Lý do khám</th>
 
-                                        <th style={{ width: '8%' }} >{selectStatusId === 'S0' ? 'Action' : 'Thanh toán'}</th>
+                                        <th style={{ width: '7%' }} >{selectStatusId === 'S0' ? 'Action' : 'Thanh toán'}</th>
                                     </tr>
                                     {dataPatient && dataPatient.length > 0 ? dataPatient.map((item, index) => {
                                         let timeType = language === languages.VI ? item.timeTypeDataPatient.valueVi : item.timeTypeDataPatient.valueEn
@@ -417,10 +417,15 @@ class ExaminationScheduleCancel extends Component {
                                                         </div>
                                                     </td>
                                                     :
-                                                    <td className='pay'>
-                                                        {item.pay ? 'Đã hoàn thành'
-                                                            :
-                                                            <button className="btn btn-success buttonS0" onClick={() => this.payBooking(item.id)}>Thanh toán ngay</button>}
+                                                    <td className='action-click-schedule'>
+                                                        <div className='click-schedule'>
+                                                            {item.pay ?
+                                                                <i class="fas fa-check paied"></i>
+                                                                :
+                                                                <i class="fas fa-money-check-alt pay" onClick={() => this.payBooking(item.id)}></i>
+                                                                // <button className="btn btn-success buttonS0" onClick={() => this.payBooking(item.id)}>Thanh toán ngay</button>
+                                                            }
+                                                        </div>
                                                     </td>
                                                 }
 
