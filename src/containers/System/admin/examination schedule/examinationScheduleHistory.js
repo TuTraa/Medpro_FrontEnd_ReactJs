@@ -389,7 +389,6 @@ class ExaminationScheduleCancel extends Component {
                                         <th style={{ width: '7%' }} >{selectStatusId === 'S0' ? 'Action' : 'Thanh toán'}</th>
                                     </tr>
                                     {dataPatient && dataPatient.length > 0 ? dataPatient.map((item, index) => {
-                                        let timeType = language === languages.VI ? item.timeTypeDataPatient.valueVi : item.timeTypeDataPatient.valueEn
                                         let gender = language === languages.VI ? item.patientData.genderData.valueVi : item.patientData.genderData.valueEn
                                         return (
                                             <tr key={index}>
@@ -406,23 +405,17 @@ class ExaminationScheduleCancel extends Component {
                                                     ?
                                                     <td className='action-click-schedule'>
                                                         <div className='click-schedule'>
-                                                            <i class="fas fa-check-square confirm " onClick={() => this.openConfirmModal(item.id)}></i>
-                                                            <i class="fas fa-window-close cancel" onClick={() => this.openRefuseModal(item.id)}></i>
-                                                            {/* <button className="btn btn-success buttonS0" onClick={() => this.openConfirmModal(item.id)}>
-                                                            Xác Nhận
-                                                        </button> */}
-                                                            {/* <br />
-                                                        <button className="btn btn-danger buttonS0" onClick={() => this.openRefuseModal(item.id)}>Hủy</button> */}
+                                                            <i className="fas fa-check-square confirm " onClick={() => this.openConfirmModal(item.id)}></i>
+                                                            <i className="fas fa-window-close cancel" onClick={() => this.openRefuseModal(item.id)}></i>
                                                         </div>
                                                     </td>
                                                     :
                                                     <td className='action-click-schedule'>
                                                         <div className='click-schedule'>
                                                             {item.pay ?
-                                                                <i class="fas fa-check paied"></i>
+                                                                <i className="fas fa-check paied"></i>
                                                                 :
-                                                                <i class="fas fa-money-check-alt pay" onClick={() => this.payBooking(item.id)}></i>
-                                                                // <button className="btn btn-success buttonS0" onClick={() => this.payBooking(item.id)}>Thanh toán ngay</button>
+                                                                <i className="fas fa-money-check-alt pay" onClick={() => this.payBooking(item.id)}></i>
                                                             }
                                                         </div>
                                                     </td>

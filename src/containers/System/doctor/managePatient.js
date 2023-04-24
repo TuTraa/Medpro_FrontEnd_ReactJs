@@ -116,7 +116,6 @@ class ManagePatient extends Component {
     render() {
         let yesterday = new Date(new Date().setHours(0, 0, 0, 0));
         let { dataPatient, isOpenRemedyModal, dataModal, cancelOrFinish } = this.state;
-        console.log(dataPatient)
         let { language } = this.props;
         return (
             <>
@@ -169,8 +168,8 @@ class ManagePatient extends Component {
                                                 <td>{item.reason}</td>
                                                 <td className='action-click'>
                                                     <div className='click-patient'>
-                                                        <i class="fas fa-check-square confirm " onClick={() => this.btnConfirm(item, false)}></i>
-                                                        <i class="fas fa-window-close cancel" onClick={() => this.btnConfirm(item, true)}></i>
+                                                        <i className="fas fa-check-square confirm " onClick={() => this.btnConfirm(item, false)}></i>
+                                                        <i className="fas fa-window-close cancel" onClick={() => this.btnConfirm(item, true)}></i>
                                                     </div>
                                                 </td>
 

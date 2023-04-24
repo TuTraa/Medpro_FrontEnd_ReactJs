@@ -77,7 +77,6 @@ class NotifyModalAdmin extends Component {
     render() {
         let { arrNotify } = this.state;
         let { language } = this.props;
-        console.log('arrNotify', arrNotify)
 
         return (
 
@@ -89,7 +88,7 @@ class NotifyModalAdmin extends Component {
                 <div className="modal-header">
                     <h5 className="modal-title">Lịch hẹn mới Admin</h5>
                     <button type="button" className="close" aria-label="Close" onClick={this.props.closeModalAdmin}>
-                        <span aria-hidden="true"><i class="fas fa-times color-i"></i></span>
+                        <span aria-hidden="true"><i className="fas fa-times color-i"></i></span>
                     </button>
                 </div>
                 <ModalBody >
@@ -115,7 +114,7 @@ class NotifyModalAdmin extends Component {
                                             <td className='action' >
                                                 <i
                                                     onClick={() => this.checked(item.id)}
-                                                    class="fas fa-check-circle">
+                                                    className="fas fa-check-circle">
 
                                                 </i>
                                             </td>

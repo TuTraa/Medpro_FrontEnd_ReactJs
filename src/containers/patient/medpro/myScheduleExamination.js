@@ -279,7 +279,7 @@ class MyScheduleExamination extends Component {
                                                 <th style={{ textAlign: 'center' }}>Thông Tin</th>
                                                 <th className='status' style={{ width: '25%', textAlign: 'center' }} >
                                                     Trạng Thái
-                                                    <i class="fas fa-sync"
+                                                    <i className="fas fa-sync"
                                                         onClick={() => this.reload()}
                                                     >
 

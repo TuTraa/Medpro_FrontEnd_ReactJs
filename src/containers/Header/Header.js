@@ -148,7 +148,6 @@ class Header extends Component {
   render() {
     const { processLogout, language, userInfo } = this.props;
     let { isOpen, quantityCheck, quanittyPatient, quantityCancel, quantityWait, quantityChange, isOpenAdmin, statusId, result } = this.state;
-    console.log(result, statusId)
     return (
       <div className="header-container">
         {/* thanh navigator */}
@@ -170,9 +169,9 @@ class Header extends Component {
           userInfo.roleId === 'R1' &&
           <>
             <div className="notification">
-              <div className="notify-admin" onClick={() => this.openModalAdmin('no data', 'S0')}><i class="fas fa-user-plus"></i><span>{quantityWait}</span></div>
-              <div className="notify-admin" onClick={() => this.openModalAdmin('change', 'S5')}><i class="fas fa-user-edit"></i><span>{quantityChange}</span></div>
-              <div className="notify-admin" onClick={() => this.openModalAdmin('cancel', 'S4')}><i class="fas fa-user-minus"></i><span>{quantityCancel}</span></div>
+              <div className="notify-admin" onClick={() => this.openModalAdmin('no data', 'S0')}><i className="fas fa-user-plus"></i><span>{quantityWait}</span></div>
+              <div className="notify-admin" onClick={() => this.openModalAdmin('change', 'S5')}><i className="fas fa-user-edit"></i><span>{quantityChange}</span></div>
+              <div className="notify-admin" onClick={() => this.openModalAdmin('cancel', 'S4')}><i className="fas fa-user-minus"></i><span>{quantityCancel}</span></div>
             </div>
             <NotifyModalAdmin isOpenAdmin={isOpenAdmin} closeModalAdmin={this.closeModalAdmin} statusId={statusId} result={result} setLengthAdmin={this.setLengthAdmin} />
           </>

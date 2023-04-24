@@ -355,7 +355,7 @@ class ManageDoctor extends Component {
                         />
                     </div>
                 </div>
-                <div className="manage-doctor-editer">
+                <div className="manage-doctor-editer mt-3">
                     <MdEditor style={{ height: '500px' }}
                         renderHTML={text => mdParser.render(text)}
                         onChange={this.handleEditorChange}

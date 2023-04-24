@@ -98,8 +98,8 @@ class BannerMedpro extends Component {
                     <div className="banner-medpro">
                         <Slider {...settings}>
                             <div className="banner-medpro-1"></div>
-                            {/* <div className="banner-medpro-2"></div>
-                            <div className="banner-medpro-3"></div> */}
+                            <div className="banner-medpro-2"></div>
+                            <div className="banner-medpro-3"></div>
                         </Slider>
                         <div className="menu-banner">
                             <div className="menu-banner-in container">
